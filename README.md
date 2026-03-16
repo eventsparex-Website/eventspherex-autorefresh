@@ -1,1 +1,1 @@
-# eventspherex-site
+# EventSphereX Static Site
