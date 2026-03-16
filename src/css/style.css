@@ -822,3 +822,58 @@ button{cursor:pointer;font-family:inherit}
   .editors-pick-num{font-size:20px;min-width:26px}
   .editors-pick-text h4{font-size:13px}
 }
+
+/* ===== PAGE ENHANCEMENT CARDS ===== */
+.page-cards-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin:32px 0 }
+.page-card { background:#fff; border-radius:12px; padding:28px; box-shadow:0 2px 12px rgba(0,0,0,.08); border:1px solid #eee; transition:all .2s ease }
+.page-card:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.12) }
+.page-card-icon { font-size:36px; margin-bottom:12px; display:block }
+.page-card h3 { font-size:18px; font-weight:700; color:#091d1b; margin-bottom:8px }
+.page-card p { font-size:14px; color:#666; line-height:1.6 }
+
+.page-stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin:32px 0 }
+.page-stat-card { text-align:center; padding:24px; background:linear-gradient(135deg,#091d1b,#0d3d39); border-radius:12px; color:#fff }
+.page-stat-num { font-size:32px; font-weight:800; color:#b3d237; display:block }
+.page-stat-label { font-size:13px; color:rgba(255,255,255,.7); margin-top:4px }
+
+.page-cta-card { background:linear-gradient(135deg,#0d3d39,#091d1b); border-radius:12px; padding:40px; text-align:center; color:#fff; margin:40px 0 }
+.page-cta-card h3 { font-size:24px; color:#fff; margin-bottom:12px }
+.page-cta-card p { color:rgba(255,255,255,.8); margin-bottom:20px }
+.page-cta-btn { display:inline-block; background:#b3d237; color:#091d1b; padding:12px 32px; border-radius:8px; font-weight:700; text-decoration:none; font-size:15px }
+.page-cta-btn:hover { background:#c5e04a }
+
+.contact-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin:32px 0 }
+.contact-card { display:flex; align-items:flex-start; gap:16px; padding:24px; background:#fff; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,.08); border:1px solid #eee }
+.contact-card-icon { font-size:28px; flex-shrink:0 }
+.contact-card h4 { font-size:16px; font-weight:700; color:#091d1b; margin-bottom:4px }
+.contact-card p { font-size:14px; color:#666 }
+.contact-card a { color:#b3d237; text-decoration:none; font-weight:600 }
+
+.newsletter-hero { text-align:center; max-width:600px; margin:0 auto; padding:40px 0 }
+.newsletter-hero h2 { font-size:32px; font-weight:800; color:#091d1b; margin-bottom:16px }
+.newsletter-hero p { font-size:16px; color:#666; margin-bottom:32px }
+.newsletter-form-big { display:flex; gap:12px; max-width:480px; margin:0 auto }
+.newsletter-form-big input { flex:1; padding:14px 20px; border:2px solid #ddd; border-radius:8px; font-size:15px }
+.newsletter-form-big input:focus { border-color:#b3d237; outline:none }
+.newsletter-form-big button { background:#b3d237; color:#091d1b; border:none; padding:14px 28px; border-radius:8px; font-weight:700; font-size:15px; cursor:pointer }
+
+.event-card { background:#fff; border-radius:12px; padding:24px; box-shadow:0 2px 12px rgba(0,0,0,.08); border:1px solid #eee; border-left:4px solid #b3d237 }
+.event-card h3 { font-size:18px; font-weight:700; color:#091d1b; margin-bottom:12px }
+.event-meta { display:flex; flex-direction:column; gap:6px; font-size:14px; color:#666 }
+.event-meta span { display:flex; align-items:center; gap:8px }
+.event-badge { display:inline-block; background:#f0f5e0; color:#0d3d39; padding:4px 12px; border-radius:4px; font-size:12px; font-weight:600; margin-top:8px }
+
+.social-links-row { display:flex; gap:12px; margin:20px 0 }
+.social-link-btn { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; font-size:18px; text-decoration:none; color:#fff; transition:all .2s }
+
+.benefits-list { list-style:none; padding:0; max-width:500px; margin:0 auto 32px }
+.benefits-list li { display:flex; align-items:center; gap:12px; padding:12px 0; font-size:16px; color:#333; border-bottom:1px solid #eee }
+
+@media(max-width:768px){
+  .page-cards-grid,.contact-grid{grid-template-columns:1fr}
+  .page-stats-grid{grid-template-columns:repeat(2,1fr)}
+  .newsletter-form-big{flex-direction:column}
+}
+@media(max-width:480px){
+  .page-stats-grid{grid-template-columns:1fr}
+}

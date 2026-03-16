@@ -6,28 +6,50 @@ layout: page.njk
 status: publish
 ---
 
-## Join 15,000+ Event Professionals
+<div class="newsletter-hero">
+  <h2>Join 15,000+ Event Professionals</h2>
+  <p>Get the latest event industry news, insights, and opportunities delivered straight to your inbox every week. Free, always.</p>
 
-Get the latest event industry news, insights, and opportunities delivered straight to your inbox every week. Free, always.
+  <ul class="benefits-list">
+    <li>✅ Curated weekly industry news — no noise</li>
+    <li>✅ Expert tips, trends, and analysis</li>
+    <li>✅ Fresh job openings in the event industry</li>
+    <li>✅ Upcoming event and exhibition alerts</li>
+    <li>✅ First access to new free tools</li>
+  </ul>
 
-## What You Get
+  <form action="https://eventspherex.us00.list-manage.com/subscribe/post" method="POST" class="newsletter-form-big">
+    <input type="email" name="EMAIL" placeholder="Your email address" required />
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
 
-- **Weekly Industry News** -- The most important stories from India's event industry, curated and summarized so you stay informed without the noise.
-- **Expert Insights** -- Tips, trends, and analysis from experienced event professionals.
-- **Job Alerts** -- Fresh openings in event management, venue operations, production, and more.
-- **Event Listings** -- Upcoming exhibitions, conferences, and industry gatherings you should know about.
-- **Tool Updates** -- Be the first to know when we launch new free tools and resources.
+<h3 style="font-size:22px;font-weight:700;color:#091d1b;margin:36px 0 20px;text-align:center">What You'll Get</h3>
 
-## Who Reads Our Newsletter?
+<div class="page-cards-grid">
+  <div class="page-card">
+    <span class="page-card-icon">📰</span>
+    <h3>Weekly News</h3>
+    <p>The most important stories from India's event industry, curated and summarized so you stay informed.</p>
+  </div>
+  <div class="page-card">
+    <span class="page-card-icon">💡</span>
+    <h3>Industry Insights</h3>
+    <p>Tips, trends, and analysis from experienced event professionals across the country.</p>
+  </div>
+  <div class="page-card">
+    <span class="page-card-icon">💼</span>
+    <h3>Job Alerts</h3>
+    <p>Fresh openings in event management, venue operations, production, and more.</p>
+  </div>
+  <div class="page-card">
+    <span class="page-card-icon">📅</span>
+    <h3>Event Calendar</h3>
+    <p>Upcoming exhibitions, conferences, and industry gatherings you should know about.</p>
+  </div>
+</div>
 
-Event planners, venue managers, exhibitors, brand managers, AV professionals, wedding planners, and MICE specialists from 50+ cities across India.
+<h3 style="font-size:20px;font-weight:700;color:#091d1b;margin:32px 0 8px;text-align:center">Who Reads Our Newsletter?</h3>
+<p style="text-align:center;font-size:15px;color:#666;margin-bottom:24px">Event planners, venue managers, exhibitors, brand managers, AV professionals, wedding planners, and MICE specialists from 50+ cities across India.</p>
 
-## Subscribe Now
-
-<!-- Newsletter signup form -->
-<form action="https://eventspherex.us00.list-manage.com/subscribe/post" method="POST" style="max-width: 480px;">
-  <input type="email" name="EMAIL" placeholder="Your email address" required style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" />
-  <button type="submit" style="width: 100%; padding: 12px; background: #b3d237; color: #1a1a2e; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer;">Subscribe</button>
-</form>
-
-We respect your privacy. Unsubscribe anytime with one click. Read our [Privacy Policy](/privacy-policy/).
+<p style="text-align:center;font-size:13px;color:#999">We respect your privacy. Unsubscribe anytime with one click. Read our <a href="/privacy-policy/" style="color:#b3d237">Privacy Policy</a>.</p>
