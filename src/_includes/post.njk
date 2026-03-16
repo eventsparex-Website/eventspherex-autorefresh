@@ -17,10 +17,8 @@ layout: base.njk
 
 <!-- Post Hero Image -->
 {% if featured_image %}
-<div class="post-hero-banner">
-  <div class="container">
-    <img src="{{ featured_image }}" alt="{{ title }}" class="post-hero-img" loading="eager">
-  </div>
+<div class="post-hero-banner" style="width:100%;overflow:hidden">
+  <img src="{{ featured_image }}" alt="{{ title }}" class="post-hero-img" style="width:100%;max-height:500px;object-fit:cover;display:block" loading="eager">
 </div>
 {% endif %}
 
