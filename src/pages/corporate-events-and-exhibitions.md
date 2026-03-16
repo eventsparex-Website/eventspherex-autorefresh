@@ -2,7 +2,7 @@
 title: "Services"
 date: 2024-01-13 12:06:07
 slug: "corporate-events-and-exhibitions"
-layout: base.njk
+layout: page.njk
 status: draft
 ---
 

@@ -2,7 +2,7 @@
 title: "Portfolio-1"
 date: 2024-01-17 16:31:36
 slug: "portfolio"
-layout: base.njk
+layout: page.njk
 status: draft
 ---
 

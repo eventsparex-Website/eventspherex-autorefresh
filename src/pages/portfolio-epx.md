@@ -2,7 +2,7 @@
 title: "Portfolio"
 date: 2024-09-29 17:03:56
 slug: "portfolio-epx"
-layout: base.njk
+layout: page.njk
 status: draft
 ---
 

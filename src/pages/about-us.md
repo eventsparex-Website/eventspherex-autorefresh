@@ -2,7 +2,7 @@
 title: "About us"
 date: 2024-01-12 08:06:39
 slug: "about-us"
-layout: base.njk
+layout: page.njk
 status: draft
 ---
 

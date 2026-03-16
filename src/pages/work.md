@@ -2,7 +2,7 @@
 title: "Work"
 date: 2024-01-18 14:17:26
 slug: "work"
-layout: base.njk
+layout: page.njk
 status: draft
 ---
 

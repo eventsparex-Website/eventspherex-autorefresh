@@ -2,7 +2,7 @@
 title: "Home"
 date: 2024-01-10 20:18:07
 slug: "event-and-exhibiagency"
-layout: base.njk
+layout: page.njk
 status: draft
 ---
 
