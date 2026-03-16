@@ -69,47 +69,47 @@ status: publish
 <!-- Our Audience -->
 <h2 style="font-size:24px;font-weight:700;color:#091d1b;margin:56px 0 24px;text-align:center">Our Audience</h2>
 
-<div class="page-cards-grid" style="grid-template-columns:repeat(3,1fr)">
-  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #b3d237">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+  <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid #eee;border-left:4px solid #b3d237;display:flex;align-items:flex-start;gap:16px">
     <span style="font-size:32px;flex-shrink:0">🎪</span>
     <div>
-      <h3 style="margin-bottom:4px">Event Planners & Agencies</h3>
-      <p><strong style="color:#b3d237;font-size:20px">30%</strong> of our audience</p>
+      <h3 style="font-size:16px;font-weight:700;color:#091d1b;margin-bottom:4px">Event Planners & Agencies</h3>
+      <p style="font-size:14px;color:#666;margin:0"><strong style="color:#b3d237;font-size:22px">30%</strong> of our audience</p>
     </div>
   </div>
-  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #3498db">
+  <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid #eee;border-left:4px solid #3498db;display:flex;align-items:flex-start;gap:16px">
     <span style="font-size:32px;flex-shrink:0">🏨</span>
     <div>
-      <h3 style="margin-bottom:4px">Venue & Hotel Managers</h3>
-      <p><strong style="color:#3498db;font-size:20px">20%</strong> of our audience</p>
+      <h3 style="font-size:16px;font-weight:700;color:#091d1b;margin-bottom:4px">Venue & Hotel Managers</h3>
+      <p style="font-size:14px;color:#666;margin:0"><strong style="color:#3498db;font-size:22px">20%</strong> of our audience</p>
     </div>
   </div>
-  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #e67e22">
+  <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid #eee;border-left:4px solid #e67e22;display:flex;align-items:flex-start;gap:16px">
     <span style="font-size:32px;flex-shrink:0">🏷️</span>
     <div>
-      <h3 style="margin-bottom:4px">Exhibitors & Brand Managers</h3>
-      <p><strong style="color:#e67e22;font-size:20px">20%</strong> of our audience</p>
+      <h3 style="font-size:16px;font-weight:700;color:#091d1b;margin-bottom:4px">Exhibitors & Brand Managers</h3>
+      <p style="font-size:14px;color:#666;margin:0"><strong style="color:#e67e22;font-size:22px">20%</strong> of our audience</p>
     </div>
   </div>
-  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #8e44ad">
+  <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid #eee;border-left:4px solid #8e44ad;display:flex;align-items:flex-start;gap:16px">
     <span style="font-size:32px;flex-shrink:0">🎬</span>
     <div>
-      <h3 style="margin-bottom:4px">AV, Decor & Production</h3>
-      <p><strong style="color:#8e44ad;font-size:20px">15%</strong> of our audience</p>
+      <h3 style="font-size:16px;font-weight:700;color:#091d1b;margin-bottom:4px">AV, Decor & Production</h3>
+      <p style="font-size:14px;color:#666;margin:0"><strong style="color:#8e44ad;font-size:22px">15%</strong> of our audience</p>
     </div>
   </div>
-  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #27ae60">
+  <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid #eee;border-left:4px solid #27ae60;display:flex;align-items:flex-start;gap:16px">
     <span style="font-size:32px;flex-shrink:0">🌐</span>
     <div>
-      <h3 style="margin-bottom:4px">MICE & Tourism</h3>
-      <p><strong style="color:#27ae60;font-size:20px">10%</strong> of our audience</p>
+      <h3 style="font-size:16px;font-weight:700;color:#091d1b;margin-bottom:4px">MICE & Tourism</h3>
+      <p style="font-size:14px;color:#666;margin:0"><strong style="color:#27ae60;font-size:22px">10%</strong> of our audience</p>
     </div>
   </div>
-  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #95a5a6">
+  <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid #eee;border-left:4px solid #95a5a6;display:flex;align-items:flex-start;gap:16px">
     <span style="font-size:32px;flex-shrink:0">👥</span>
     <div>
-      <h3 style="margin-bottom:4px">Media & Others</h3>
-      <p><strong style="color:#95a5a6;font-size:20px">5%</strong> of our audience</p>
+      <h3 style="font-size:16px;font-weight:700;color:#091d1b;margin-bottom:4px">Media & Others</h3>
+      <p style="font-size:14px;color:#666;margin:0"><strong style="color:#95a5a6;font-size:22px">5%</strong> of our audience</p>
     </div>
   </div>
 </div>
