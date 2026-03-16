@@ -6,88 +6,145 @@ layout: page.njk
 status: publish
 ---
 
-<div style="text-align:center;margin-bottom:36px">
-  <h2 style="font-size:28px;font-weight:800;color:#091d1b;margin-bottom:12px">Advertise With EventSphereX</h2>
-  <p style="font-size:16px;color:#666;max-width:640px;margin:0 auto">Put your brand in front of India's event industry. EventSphereX reaches <strong>10,000+ event professionals every month</strong> — planners, venue managers, exhibitors, brand managers, and decision-makers.</p>
+<!-- Hero intro -->
+<div style="text-align:center;max-width:720px;margin:0 auto 56px;padding:20px 0">
+<div style="display:inline-block;background:linear-gradient(135deg,#b3d237,#8cb82b);color:#091d1b;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:20px">📢 ADVERTISE WITH US</div>
+<h2 style="font-size:36px;font-weight:800;color:#091d1b;margin-bottom:16px;line-height:1.2">Put Your Brand in Front of<br><span style="color:#b3d237">India's Event Industry</span></h2>
+<p style="font-size:17px;color:#555;line-height:1.8">EventSphereX reaches 10,000+ event professionals every month — planners, venue managers, exhibitors, brand managers, and decision-makers across 50+ cities.</p>
 </div>
 
-<div class="page-stats-grid">
-  <div class="page-stat-card">
-    <span class="page-stat-num">10,000+</span>
-    <span class="page-stat-label">Monthly Readers</span>
-  </div>
-  <div class="page-stat-card">
-    <span class="page-stat-num">100%</span>
-    <span class="page-stat-label">Industry Professionals</span>
-  </div>
-  <div class="page-stat-card">
-    <span class="page-stat-num">50+</span>
-    <span class="page-stat-label">Cities Reached</span>
-  </div>
-  <div class="page-stat-card">
-    <span class="page-stat-num">High</span>
-    <span class="page-stat-label">Engagement Rate</span>
+<!-- Stats -->
+<div style="background:linear-gradient(135deg,#091d1b,#0d3d39);border-radius:16px;padding:48px 32px;margin:0 0 56px;text-align:center">
+  <h3 style="color:#fff;font-size:22px;margin-bottom:32px">Why Brands Choose EventSphereX</h3>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+    <div>
+      <div style="font-size:36px;font-weight:800;color:#b3d237">10K+</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Monthly Readers</div>
+    </div>
+    <div>
+      <div style="font-size:36px;font-weight:800;color:#b3d237">100%</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Industry Professionals</div>
+    </div>
+    <div>
+      <div style="font-size:36px;font-weight:800;color:#b3d237">50+</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Cities Reached</div>
+    </div>
+    <div>
+      <div style="font-size:36px;font-weight:800;color:#b3d237">15K+</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Newsletter Subscribers</div>
+    </div>
   </div>
 </div>
 
-<h3 style="font-size:22px;font-weight:700;color:#091d1b;margin:36px 0 20px">Our Audience</h3>
+<!-- Ad Formats -->
+<h2 style="font-size:24px;font-weight:700;color:#091d1b;margin-bottom:24px;text-align:center">Ad Formats</h2>
 
 <div class="page-cards-grid">
-  <div class="page-card">
-    <h3>Event Planners & Agencies</h3>
-    <p>30% of our audience — the people who plan and execute events across India.</p>
-  </div>
-  <div class="page-card">
-    <h3>Venue & Hotel Managers</h3>
-    <p>20% — Decision-makers at venues, hotels, and convention centres.</p>
-  </div>
-  <div class="page-card">
-    <h3>Exhibitors & Brand Managers</h3>
-    <p>20% — Brands looking for event partnerships and exhibition opportunities.</p>
-  </div>
-  <div class="page-card">
-    <h3>AV, Decor & Production</h3>
-    <p>15% — Technical and creative professionals powering event production.</p>
-  </div>
-  <div class="page-card">
-    <h3>MICE & Tourism Professionals</h3>
-    <p>10% — Business tourism and MICE industry specialists.</p>
-  </div>
-  <div class="page-card">
-    <h3>Others</h3>
-    <p>5% — Media, students, freelancers, and other industry stakeholders.</p>
-  </div>
-</div>
-
-<h3 style="font-size:22px;font-weight:700;color:#091d1b;margin:36px 0 20px">Ad Formats</h3>
-
-<div class="page-cards-grid">
-  <div class="page-card">
+  <div class="page-card" style="border-top:4px solid #b3d237;background:linear-gradient(180deg,#f9fdf0,#fff)">
     <span class="page-card-icon">🖼️</span>
     <h3>Banner Ads</h3>
-    <p>Premium display placements across the site — homepage, article pages, and tool pages. Multiple sizes available including leaderboard, sidebar, and in-content banners.</p>
+    <p>Premium display placements across the site — homepage, article pages, and tool pages. Multiple sizes including leaderboard, sidebar, and in-content.</p>
+    <span style="display:inline-block;margin-top:12px;color:#b3d237;font-weight:600;font-size:13px">High Visibility →</span>
   </div>
-  <div class="page-card">
+  <div class="page-card" style="border-top:4px solid #3498db;background:linear-gradient(180deg,#f0f6fc,#fff)">
     <span class="page-card-icon">📝</span>
     <h3>Sponsored Articles</h3>
-    <p>A professionally written feature article published on EventSphereX and promoted across our channels. Ideal for product launches, case studies, and thought leadership.</p>
+    <p>A professionally written feature published on EventSphereX and promoted across our channels. Ideal for launches, case studies, and thought leadership.</p>
+    <span style="display:inline-block;margin-top:12px;color:#3498db;font-weight:600;font-size:13px">Most Popular →</span>
   </div>
-  <div class="page-card">
+  <div class="page-card" style="border-top:4px solid #e67e22;background:linear-gradient(180deg,#fef9f3,#fff)">
     <span class="page-card-icon">📨</span>
     <h3>Newsletter Sponsorship</h3>
-    <p>Reach our subscriber base directly in their inbox. Sponsored placement in our weekly industry newsletter with a dedicated call-to-action.</p>
+    <p>Reach our subscriber base directly in their inbox. Sponsored placement in our weekly newsletter with a dedicated call-to-action.</p>
+    <span style="display:inline-block;margin-top:12px;color:#e67e22;font-weight:600;font-size:13px">Direct Reach →</span>
   </div>
-  <div class="page-card">
+  <div class="page-card" style="border-top:4px solid #8e44ad;background:linear-gradient(180deg,#f8f3fb,#fff)">
     <span class="page-card-icon">🔧</span>
     <h3>Tool Sponsorship</h3>
-    <p>Exclusive branding on our popular free tools — Budget Calculator, Event Checklist Generator, Industry Directory, and more.</p>
+    <p>Exclusive branding on our popular free tools — Budget Calculator, Checklist Generator, Industry Directory, and more.</p>
+    <span style="display:inline-block;margin-top:12px;color:#8e44ad;font-weight:600;font-size:13px">Exclusive Placement →</span>
   </div>
 </div>
 
-<div class="page-cta-card">
-  <h3>Ready to Get Started?</h3>
-  <p>Contact us for our media kit and current rates. We typically respond within 24 hours with a customized proposal.</p>
-  <a href="mailto:contact@eventspherex.com" class="page-cta-btn">Request Media Kit</a>
+<!-- Our Audience -->
+<h2 style="font-size:24px;font-weight:700;color:#091d1b;margin:56px 0 24px;text-align:center">Our Audience</h2>
+
+<div class="page-cards-grid" style="grid-template-columns:repeat(3,1fr)">
+  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #b3d237">
+    <span style="font-size:32px;flex-shrink:0">🎪</span>
+    <div>
+      <h3 style="margin-bottom:4px">Event Planners & Agencies</h3>
+      <p><strong style="color:#b3d237;font-size:20px">30%</strong> of our audience</p>
+    </div>
+  </div>
+  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #3498db">
+    <span style="font-size:32px;flex-shrink:0">🏨</span>
+    <div>
+      <h3 style="margin-bottom:4px">Venue & Hotel Managers</h3>
+      <p><strong style="color:#3498db;font-size:20px">20%</strong> of our audience</p>
+    </div>
+  </div>
+  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #e67e22">
+    <span style="font-size:32px;flex-shrink:0">🏷️</span>
+    <div>
+      <h3 style="margin-bottom:4px">Exhibitors & Brand Managers</h3>
+      <p><strong style="color:#e67e22;font-size:20px">20%</strong> of our audience</p>
+    </div>
+  </div>
+  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #8e44ad">
+    <span style="font-size:32px;flex-shrink:0">🎬</span>
+    <div>
+      <h3 style="margin-bottom:4px">AV, Decor & Production</h3>
+      <p><strong style="color:#8e44ad;font-size:20px">15%</strong> of our audience</p>
+    </div>
+  </div>
+  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #27ae60">
+    <span style="font-size:32px;flex-shrink:0">🌐</span>
+    <div>
+      <h3 style="margin-bottom:4px">MICE & Tourism</h3>
+      <p><strong style="color:#27ae60;font-size:20px">10%</strong> of our audience</p>
+    </div>
+  </div>
+  <div class="page-card" style="display:flex;align-items:flex-start;gap:16px;border-left:4px solid #95a5a6">
+    <span style="font-size:32px;flex-shrink:0">👥</span>
+    <div>
+      <h3 style="margin-bottom:4px">Media & Others</h3>
+      <p><strong style="color:#95a5a6;font-size:20px">5%</strong> of our audience</p>
+    </div>
+  </div>
 </div>
 
-<p style="text-align:center;font-size:14px;color:#666">Or call us directly: <a href="tel:+918484981833" style="color:#b3d237;font-weight:600">+91 84849 81833</a></p>
+<!-- How It Works -->
+<div style="margin:56px 0">
+<h2 style="font-size:24px;font-weight:700;color:#091d1b;margin-bottom:32px;text-align:center">How It Works</h2>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+  <div style="text-align:center;padding:32px 20px;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.06)">
+    <div style="width:56px;height:56px;background:linear-gradient(135deg,#b3d237,#8cb82b);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px;font-weight:800;color:#091d1b">1</div>
+    <h3 style="font-size:17px;font-weight:700;color:#091d1b;margin-bottom:8px">Request Media Kit</h3>
+    <p style="font-size:14px;color:#666;line-height:1.6">Email us or WhatsApp to get our detailed media kit with rates, audience data, and placement options.</p>
+  </div>
+  <div style="text-align:center;padding:32px 20px;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.06)">
+    <div style="width:56px;height:56px;background:linear-gradient(135deg,#0d3d39,#091d1b);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px;font-weight:800;color:#b3d237">2</div>
+    <h3 style="font-size:17px;font-weight:700;color:#091d1b;margin-bottom:8px">Choose Your Plan</h3>
+    <p style="font-size:14px;color:#666;line-height:1.6">Pick the ad format and duration that works for your goals and budget. We offer flexible packages.</p>
+  </div>
+  <div style="text-align:center;padding:32px 20px;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.06)">
+    <div style="width:56px;height:56px;background:linear-gradient(135deg,#e67e22,#d35400);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px;font-weight:800;color:#fff">3</div>
+    <h3 style="font-size:17px;font-weight:700;color:#091d1b;margin-bottom:8px">Go Live</h3>
+    <p style="font-size:14px;color:#666;line-height:1.6">Your ad goes live on EventSphereX with detailed performance reports and analytics.</p>
+  </div>
+</div>
+</div>
+
+<!-- CTA -->
+<div style="background:linear-gradient(135deg,#091d1b,#0d3d39);border-radius:20px;padding:56px 40px;text-align:center;margin:48px 0">
+  <h3 style="font-size:28px;font-weight:800;color:#fff;margin-bottom:12px">Ready to Grow Your Brand?</h3>
+  <p style="color:rgba(255,255,255,.8);font-size:16px;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto">Get our media kit with rates, audience insights, and success stories. We respond within 24 hours.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <a href="mailto:contact@eventspherex.com" style="display:inline-flex;align-items:center;gap:8px;background:#b3d237;color:#091d1b;padding:14px 32px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none">📧 Request Media Kit</a>
+    <a href="https://wa.me/918484981833" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none">💬 WhatsApp Us</a>
+    <a href="tel:+918484981833" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid rgba(255,255,255,.2)">📞 Call Now</a>
+  </div>
+  <p style="margin-top:20px;font-size:13px;color:rgba(255,255,255,.5)">contact@eventspherex.com &bull; +91 84849 81833</p>
+</div>
