@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/tools");
   eleventyConfig.addPassthroughCopy("src/admin");
+  eleventyConfig.addPassthroughCopy({ "src/.htaccess": ".htaccess" });
 
   // Posts collection (sorted by date descending)
   eleventyConfig.addCollection("posts", function(collectionApi) {
