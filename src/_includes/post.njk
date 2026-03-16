@@ -1,0 +1,83 @@
+---
+layout: base.njk
+---
+
+<section class="section">
+  <div class="container">
+    <div class="main-grid">
+      <div class="main-content">
+        <article class="single-article">
+          <div class="article-header">
+            <span class="badge {{ badgeClass }}">{{ category }}</span>
+            <h1>{{ title }}</h1>
+            <div class="article-meta">
+              <div class="author">
+                <div class="author-avatar">{{ author | initials }}</div>
+                <span>{{ author }}</span>
+              </div>
+              <span>{{ date | dateFormat('long') }}</span>
+              <span class="read-time">{{ content | readTime }}</span>
+            </div>
+          </div>
+
+          {% if featured_image %}
+          <div class="featured-image">
+            <img src="{{ featured_image }}" alt="{{ title }}">
+          </div>
+          {% endif %}
+
+          <div class="article-content">
+            {{ content | safe }}
+          </div>
+
+          <!-- Share Buttons -->
+          <div class="share-buttons">
+            <span>Share:</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://eventspherex.com/posts/{{ slug }}/" target="_blank" rel="noopener" class="share-btn" style="background:#0077b5;color:#fff;border-color:#0077b5">LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?url={{ ('https://eventspherex.com/posts/' + slug + '/') | urlencode }}&text={{ title | urlencode }}" target="_blank" rel="noopener" class="share-btn">Twitter / X</a>
+            <a href="https://wa.me/?text={{ (title + ' https://eventspherex.com/posts/' + slug + '/') | urlencode }}" target="_blank" rel="noopener" class="share-btn" style="background:#25d366;color:#fff;border-color:#25d366">WhatsApp</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ ('https://eventspherex.com/posts/' + slug + '/') | urlencode }}" target="_blank" rel="noopener" class="share-btn">Facebook</a>
+            <button class="share-btn" id="copy-link-btn">Copy Link</button>
+          </div>
+        </article>
+
+        <!-- Related Posts -->
+        {% set relatedPosts = [] %}
+        {% for post in collections.posts %}
+          {% if post.data.categorySlug == categorySlug and post.data.slug != slug %}
+            {% if relatedPosts | length < 3 %}
+              {% set relatedPosts = (relatedPosts.push(post), relatedPosts) %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {% if relatedPosts | length > 0 %}
+        <div class="related-posts">
+          <div class="section-title">Related Articles</div>
+          <div class="related-posts-grid">
+            {% for post in relatedPosts %}
+            <a href="/posts/{{ post.data.slug }}/" class="cat-card" style="display:block">
+              <div class="cat-card-img">
+                {% if post.data.featured_image %}
+                  <img src="{{ post.data.featured_image }}" loading="lazy" alt="{{ post.data.title }}">
+                {% else %}
+                  <div style="height:160px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:40px">&#128240;</div>
+                {% endif %}
+              </div>
+              <div class="cat-card-body">
+                <span class="badge {{ post.data.badgeClass }}">{{ post.data.category }}</span>
+                <h4>{{ post.data.title }}</h4>
+                <div class="meta">{{ post.data.date | timeAgo }}</div>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- Sidebar -->
+      {% include "sidebar.njk" %}
+    </div>
+  </div>
+</section>

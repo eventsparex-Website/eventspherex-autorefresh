@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Industry Directory India | EventSphereX</title>
+<meta name="description" content="Find event companies, venues, vendors & service providers across India. Comprehensive directory of India's event industry professionals.">
+<link rel="canonical" href="https://eventspherex.com/tools/industry-directory.html">
+<meta property="og:title" content="Event Industry Directory India | EventSphereX">
+<meta property="og:description" content="Find event companies, venues, vendors & service providers across India.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eventspherex.com/tools/industry-directory.html">
+<meta property="og:image" content="https://eventspherex.com/wp-content/uploads/2024/10/Banner-.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Event Industry Directory India | EventSphereX">
+<meta name="twitter:description" content="Comprehensive directory of India's event industry — companies, venues & vendors.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Event Industry Directory India","url":"https://eventspherex.com/tools/industry-directory.html","description":"Find event companies, venues, vendors and service providers across India.","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"EventSphereX","url":"https://eventspherex.com"}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f9fafb;color:#091d1b;min-height:100vh}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.brand{text-align:center;padding:30px 0 20px}
+.brand h1{font-size:28px;color:#091d1b;letter-spacing:1px}
+.brand p{color:#666;font-size:14px;margin-top:5px}
+.card{background:#fff;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);border-top:4px solid #b3d237}
+.filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.filters select,.filters input{padding:10px 14px;border-radius:10px;border:1px solid #ddd;background:#fff;color:#091d1b;font-size:14px;outline:none}
+.filters input{flex:1;min-width:200px}
+.filters select:focus,.filters input:focus{border-color:#b3d237;box-shadow:0 0 0 3px rgba(197,217,58,.25)}
+.sort-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.count{color:#666;font-size:14px}
+.sort-row select{padding:8px 12px;border-radius:8px;border:1px solid #ddd;background:#fff;color:#091d1b;font-size:13px;outline:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.company-card{background:#091d1b;border-radius:20px;padding:22px;border:none;transition:.3s;position:relative}
+.company-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.15)}
+.company-card.featured{box-shadow:0 0 0 2px #b3d237}
+.featured-badge{position:absolute;top:14px;right:14px;background:#b3d237;color:#091d1b;padding:4px 12px;border-radius:20px;font-size:10px;font-weight:700}
+.company-card h3{font-size:17px;margin-bottom:6px;color:#fff}
+.company-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.cat-badge{padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600}
+.cat-em{background:rgba(90,184,255,.15);color:#5ab8ff}
+.cat-fab{background:rgba(255,179,71,.15);color:#ffb347}
+.cat-wed{background:rgba(255,122,168,.15);color:#ff7aa8}
+.cat-ven{background:rgba(196,122,255,.15);color:#c47aff}
+.cat-av{background:rgba(71,255,140,.15);color:#47ff8c}
+.cat-cat{background:rgba(197,217,58,.15);color:#b3d237}
+.cat-dec{background:rgba(184,255,90,.15);color:#b8ff5a}
+.cat-pho{background:rgba(90,255,235,.15);color:#5affeb}
+.cat-anc{background:rgba(255,138,122,.15);color:#ff8a7a}
+.cat-tec{background:rgba(138,138,255,.15);color:#8a8aff}
+.city-tag{color:#999;font-size:13px}
+.company-desc{color:#999;font-size:13px;line-height:1.5;margin:8px 0}
+.company-phone{color:#aaa;font-size:13px;margin-bottom:4px}
+.rating{color:#f5c623;font-size:14px;margin-bottom:10px}
+.card-btns{display:flex;gap:8px}
+.card-btn{flex:1;padding:8px;border-radius:10px;border:1px solid #333;background:transparent;color:#aaa;cursor:pointer;font-size:12px;text-align:center;transition:.3s;text-decoration:none}
+.card-btn:hover{border-color:#b3d237;color:#b3d237;background:rgba(197,217,58,.1)}
+.list-btn{padding:14px 30px;border:none;border-radius:10px;background:#091d1b;color:#b3d237;font-size:15px;font-weight:700;cursor:pointer;transition:.3s;display:block;margin:24px auto 0}
+.list-btn:hover{transform:translateY(-2px);box-shadow:0 4px 15px rgba(0,0,0,.15)}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:100;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modal-content{background:#fff;border-radius:16px;padding:30px;max-width:500px;width:90%;max-height:80vh;overflow-y:auto;border-top:4px solid #b3d237}
+.modal-content h2{color:#091d1b;margin-bottom:20px}
+.modal-content .fg{margin-bottom:12px}
+.modal-content label{display:block;font-size:13px;color:#666;margin-bottom:4px}
+.modal-content input,.modal-content textarea,.modal-content select{width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;background:#fff;color:#091d1b;font-size:14px;outline:none}
+.modal-content input:focus,.modal-content textarea:focus,.modal-content select:focus{border-color:#b3d237;box-shadow:0 0 0 3px rgba(197,217,58,.2)}
+.modal-content textarea{height:80px;resize:vertical}
+.modal-btns{display:flex;gap:10px;margin-top:16px}
+.modal-btns button{flex:1;padding:12px;border-radius:10px;font-size:14px;cursor:pointer;border:none;font-weight:600}
+.m-submit{background:#b3d237;color:#091d1b}
+.m-cancel{background:#091d1b;color:#fff}
+.success{background:#f0fde8;border:2px solid #b3d237;padding:14px;border-radius:10px;color:#091d1b;text-align:center;display:none;margin-top:12px}
+.premium-note{text-align:center;color:#999;font-size:12px;margin-top:20px}
+.premium-note a{color:#f5a623;text-decoration:none;font-weight:600}
+.footer{text-align:center;padding:30px 0;color:#999;font-size:13px}
+.footer a{color:#091d1b;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand">
+    <a href="/" style="text-decoration:none"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.4 64.8" width="280"><defs><style>.st0{fill:#b3d237}.st1{fill:#091d1b}.st2{fill:#0d3d39}</style></defs><g><path class="st1" d="M12.1,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7H7.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM7.3,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M51.1,27.7l-8.8,25h-6.7l-8.8-25h7l5.1,17.5,4.4-15.3c.5-1.5,1.5-2.2,3.1-2.2h4.9Z"/><path class="st1" d="M65.6,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM60.8,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M98.9,52.7c-2.1-.1-3.1-1.1-3.1-3.1v-12.9c-.1-2.6-1.6-3.9-4.4-3.9s-4.2,1.3-4.3,3.9v16h-6.4v-14.7c0-7.1,3.6-10.7,10.7-10.7s10.6,3.5,10.6,10.7v14.7h-3.2Z"/><path class="st1" d="M112.8,32.2h-.7v13.9c0,1,.6,1.6,1.8,1.6h1.9v4.8c-2,.2-4.3.2-6.6,0s-3.5-1.7-3.5-4.5v-27.3h3.3c1.7,0,3,1.5,3,3.2v4h3.8v1.4c0,1.8-1.4,3.1-3.1,3.1Z"/><path class="st1" d="M130.5,48.2c2.6,0,4-.8,4-2.4s-2.2-2.3-6.5-3.1c-5.5-1-8.4-3.5-8.4-7.4,0-5.4,4.3-7.9,10-8,3.2,0,5.8.7,7.7,2.1,1.8,1.5,2.8,3.5,3,6.1h-4c-1.5,0-2.4-.6-2.8-1.6-.4-1.1-1.7-1.7-3.8-1.7s-3.7.7-3.7,1.9,1.6,2.3,4.9,2.9c4.3.9,7,1.9,8.4,3.2,1.2,1.2,1.8,2.7,1.8,4.4,0,6.1-4.8,8.4-11.4,8.4s-6.1-.8-7.9-2.2c-1.9-1.4-2.8-3.6-2.8-6.5h6.4c.1,2.7,2.1,3.7,5.2,3.7Z"/><path class="st1" d="M151,59.4c0,2.1-1,3.1-3.1,3.1h-3.2v-23.9c.3-7.5,4.2-11.2,11.7-11.2s11.6,4.2,11.6,12.6-3.3,12.9-10,13.1c-3.1,0-5.5-1.3-7.1-3.9v10.1ZM156.3,47.5c3.4,0,5.2-2.4,5.3-7.2,0-5.1-1.8-7.6-5.4-7.6s-5.3,2.5-5.2,7.6c.2,4.8,1.9,7.2,5.3,7.2Z"/><path class="st1" d="M183.6,32.9c-3.7,0-5.3,3.1-5.3,7v12.8h-6.3V20.5h3.2c2.1,0,3.1,1.1,3.1,3.2v7.5c3.2-3.7,7.1-4.7,11.8-3.1,3.5,1.3,5.2,4.6,5,10.1v14.5h-6.2v-12.8c0-4.2-1.6-7-5.2-7Z"/><path class="st1" d="M210.3,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM205.6,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M225.5,39.8c.2-8.1,4.5-12.1,12.9-12.1h.9v6.5h-2.1c-3.5,0-5.3,1.8-5.3,5.5v13h-6.4v-12.9Z"/><path class="st1" d="M254.3,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM249.6,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/></g><g><path class="st2" d="M313.7,2.3l-21.7,31.5c-1.5-3.1-4.3-5.5-7.7-6.5l15-22.2c1-1.9,2.5-2.8,4.7-2.8h9.8Z"/><path class="st2" d="M277.4,27.4c-3.4,1-6.2,3.5-7.7,6.7l-8.8-14.1h10.3c1.2,0,2.3.7,3,1.7l3.2,5.7Z"/><path class="st2" d="M279.6,51.2l-5.1,9c-.8,1.4-2.2,2.2-3.8,2.2h-10.5l10.6-16.7c2,3,5.2,5,8.9,5.4Z"/><path class="st2" d="M301.3,62.5h-8.1c-2.9,0-5.6-1.6-7.1-4.1l-4-7.1c3.5-.4,6.6-2.2,8.6-4.9l10.5,16.2Z"/></g><g><path class="st0" d="M280.9,35.2c-2.3,0-4.1,1.8-4.1,4.1s1.8,4.1,4.1,4.1,4.1-1.8,4.1-4.1-1.8-4.1-4.1-4.1Z"/><path class="st0" d="M280.9,29.2c-5.5,0-10,4.5-10,10s4.5,10,10,10,10-4.5,10-10-4.5-10-10-10ZM273.9,39.2c0-3.1,2-5.8,4.9-6.7.7-.2,1.4-.3,2.2-.3,2.8,0,5.2,1.6,6.4,3.9,0,0,0,.1,0,.2,0,0,0,.2.1.3.3.8.5,1.8.5,2.7,0,3.9-3.2,7.1-7.1,7.1s-7.1-3.2-7.1-7.1Z"/></g></svg></div>
+    <p>India's Event Industry Directory</p>
+  </a></div>
+
+  <div class="card">
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search companies..." oninput="filter()">
+      <select id="fCat" onchange="filter()">
+        <option value="">All Categories</option>
+        <option value="Event Management">Event Management</option>
+        <option value="Exhibition Fabrication">Exhibition Fabrication</option>
+        <option value="Wedding Planning">Wedding Planning</option>
+        <option value="Venue">Venue</option>
+        <option value="AV & Technical">AV & Technical</option>
+        <option value="Catering">Catering</option>
+        <option value="Decoration">Decoration</option>
+        <option value="Photography">Photography</option>
+        <option value="Anchor & Entertainment">Anchor & Entertainment</option>
+        <option value="Event Tech">Event Tech</option>
+      </select>
+      <select id="fCity" onchange="filter()">
+        <option value="">All Cities</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Pune">Pune</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+      </select>
+    </div>
+    <div class="sort-row">
+      <div class="count" id="count">Showing 0 companies</div>
+      <select id="sortBy" onchange="filter()">
+        <option value="featured">Featured First</option>
+        <option value="name">Name (A-Z)</option>
+        <option value="rating">Highest Rated</option>
+        <option value="city">By City</option>
+      </select>
+    </div>
+    <div class="grid" id="grid"></div>
+
+    <button class="list-btn" onclick="document.getElementById('modal').classList.add('show')">List Your Company — Free</button>
+    <div class="premium-note">Want a featured listing with logo and priority placement? <a href="mailto:advertise@eventspherex.com">Contact us</a></div>
+  </div>
+
+  <div class="footer">
+    Powered by <a href="https://eventspherex.com">EventSphereX</a> | India's Event Industry Media Portal
+  </div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2>List Your Company</h2>
+    <div class="fg"><label>Company Name</label><input type="text" id="lName"></div>
+    <div class="fg"><label>Category</label>
+      <select id="lCat"><option>Event Management</option><option>Exhibition Fabrication</option><option>Wedding Planning</option><option>Venue</option><option>AV & Technical</option><option>Catering</option><option>Decoration</option><option>Photography</option><option>Anchor & Entertainment</option><option>Event Tech</option></select>
+    </div>
+    <div class="fg"><label>City</label><input type="text" id="lCity" placeholder="e.g. Mumbai"></div>
+    <div class="fg"><label>Phone</label><input type="tel" id="lPhone" placeholder="+91 98XXX XXXXX"></div>
+    <div class="fg"><label>Email</label><input type="email" id="lEmail"></div>
+    <div class="fg"><label>Website</label><input type="url" id="lWeb" placeholder="https://"></div>
+    <div class="fg"><label>Description</label><textarea id="lDesc" placeholder="What does your company do?"></textarea></div>
+    <div class="modal-btns">
+      <button class="m-cancel" onclick="document.getElementById('modal').classList.remove('show')">Cancel</button>
+      <button class="m-submit" onclick="submitListing()">Submit</button>
+    </div>
+    <div class="success" id="success">Thank you! We'll review and list your company within 24 hours.</div>
+  </div>
+</div>
+
+<script>
+const catBadge={
+  'Event Management':'cat-em','Exhibition Fabrication':'cat-fab','Wedding Planning':'cat-wed',
+  'Venue':'cat-ven','AV & Technical':'cat-av','Catering':'cat-cat','Decoration':'cat-dec',
+  'Photography':'cat-pho','Anchor & Entertainment':'cat-anc','Event Tech':'cat-tec'
+};
+
+const companies = [
+  {name:"Wizcraft International",cat:"Event Management",city:"Mumbai",phone:"+91 22 2438 XXXX",desc:"India's leading event management company. Iconic events including IIFA, Filmfare, corporate launches for Fortune 500 brands.",rating:4.8,featured:true,web:"www.wizcraft.net"},
+  {name:"Percept ICE",cat:"Event Management",city:"Mumbai",phone:"+91 22 6696 XXXX",desc:"Integrated communications and entertainment. Celebrity management, concerts, brand activations across India.",rating:4.7,featured:true,web:"www.percept.com"},
+  {name:"E-Factor Entertainment",cat:"Event Management",city:"Delhi",phone:"+91 11 4605 XXXX",desc:"North India's largest event company. Corporate events, exhibitions, MICE, government events.",rating:4.6,featured:true,web:"www.efactor.in"},
+  {name:"DNA Entertainment Networks",cat:"Event Management",city:"Mumbai",phone:"+91 22 2636 XXXX",desc:"20+ years of concerts, IPs, and live entertainment. Sunburn Festival creators.",rating:4.7,featured:false,web:"www.dnanetworks.com"},
+  {name:"70 EMG",cat:"Event Management",city:"Mumbai",phone:"+91 22 6789 XXXX",desc:"Experiential marketing group. Brand activations, product launches, immersive experiences.",rating:4.6,featured:false,web:"www.70emg.com"},
+  {name:"Cineyug Entertainment",cat:"Event Management",city:"Mumbai",phone:"+91 22 2633 XXXX",desc:"Premium celebrity events, award shows, TV show launches, Bollywood events.",rating:4.5,featured:false,web:"www.cineyug.com"},
+  {name:"Fountainhead MKTG",cat:"Event Management",city:"Mumbai",phone:"+91 22 4095 XXXX",desc:"DDB Mudra Group company. Brand experiences, activations, retail experiences.",rating:4.5,featured:false,web:"www.fountainheadmktg.com"},
+  {name:"Only Much Louder (OML)",cat:"Event Management",city:"Mumbai",phone:"+91 22 4215 XXXX",desc:"Creator economy, live entertainment, NH7 Weekender music festival.",rating:4.6,featured:false,web:"www.oml.in"},
+  {name:"Laqshya Live Experiences",cat:"Event Management",city:"Mumbai",phone:"+91 22 6772 XXXX",desc:"360-degree experiential marketing. Brand activations, retail, and MICE.",rating:4.4,featured:false,web:"www.laqshya.in"},
+  {name:"Showtime Group",cat:"Event Management",city:"Delhi",phone:"+91 11 4175 XXXX",desc:"Corporate events, exhibitions, product launches. Pan-India operations.",rating:4.4,featured:false,web:"www.showtimegroup.in"},
+  {name:"Pegasus Events",cat:"Event Management",city:"Mumbai",phone:"+91 22 4345 XXXX",desc:"Premium corporate events, conferences, award ceremonies. Blue-chip clients.",rating:4.5,featured:false,web:"www.pegasusevents.in"},
+  {name:"Encompass Events",cat:"Event Management",city:"Mumbai",phone:"+91 22 6543 XXXX",desc:"Part of Geometry network. Brand experiences, exhibitions, trade shows.",rating:4.4,featured:false,web:"www.encompassevents.com"},
+  {name:"NH1 Design",cat:"Exhibition Fabrication",city:"Delhi",phone:"+91 11 4605 XXXX",desc:"Exhibition stall design and fabrication. Award-winning designs at major trade shows.",rating:4.6,featured:true,web:"www.nh1design.com"},
+  {name:"Expo Display Service",cat:"Exhibition Fabrication",city:"Delhi",phone:"+91 11 2584 XXXX",desc:"Portable exhibition displays, modular stalls, custom fabrication across India.",rating:4.3,featured:false,web:"www.expodisplayservice.com"},
+  {name:"Skyline Exhibitions India",cat:"Exhibition Fabrication",city:"Mumbai",phone:"+91 22 2870 XXXX",desc:"International exhibition company. Custom and modular stall design.",rating:4.4,featured:false,web:"www.skyline.com"},
+  {name:"Insta Exhibitions",cat:"Exhibition Fabrication",city:"Mumbai",phone:"+91 22 4987 XXXX",desc:"End-to-end exhibition solutions. Stall design, fabrication, project management.",rating:4.3,featured:false,web:"www.instaexhibitions.com"},
+  {name:"Pinnacle Exhibits",cat:"Exhibition Fabrication",city:"Bangalore",phone:"+91 80 4123 XXXX",desc:"South India's leading exhibition fabricator. Tech expos, healthcare events.",rating:4.2,featured:false,web:"www.pinnacleexhibits.in"},
+  {name:"Devika Decor",cat:"Wedding Planning",city:"Delhi",phone:"+91 98110 XXXXX",desc:"Luxury wedding planning and decor. Destination weddings across India.",rating:4.7,featured:true,web:"www.devikadecor.com"},
+  {name:"FNP Weddings",cat:"Wedding Planning",city:"Delhi",phone:"+91 11 4606 XXXX",desc:"FNP Group's wedding division. Complete wedding management and floral decor.",rating:4.6,featured:false,web:"www.fnpweddings.com"},
+  {name:"The Wedding Design Company",cat:"Wedding Planning",city:"Mumbai",phone:"+91 98200 XXXXX",desc:"Celebrity weddings, luxury destination events. Ambani, Birla client list.",rating:4.8,featured:false,web:"www.theweddingdesigncompany.com"},
+  {name:"Shaadisaga Events",cat:"Wedding Planning",city:"Bangalore",phone:"+91 80 4567 XXXX",desc:"Modern wedding planning with tech. Budget-friendly to luxury packages.",rating:4.3,featured:false,web:"www.shaadisaga.com"},
+  {name:"Jio World Convention Centre",cat:"Venue",city:"Mumbai",phone:"+91 22 3567 XXXX",desc:"India's largest convention centre. 18,000 sqm, world-class facilities, BKC location.",rating:4.9,featured:true,web:"www.jioworldcentre.com"},
+  {name:"India Expo Mart",cat:"Venue",city:"Delhi",phone:"+91 120 2341 XXXX",desc:"Greater Noida's premier exhibition venue. 60,000+ sqm indoor space.",rating:4.5,featured:false,web:"www.indiaexpomart.com"},
+  {name:"BIEC - Bangalore International Exhibition Centre",cat:"Venue",city:"Bangalore",phone:"+91 80 6688 XXXX",desc:"South India's largest exhibition venue. 56,000 sqm total area.",rating:4.5,featured:false,web:"www.bfrec.com"},
+  {name:"Bombay Exhibition Centre",cat:"Venue",city:"Mumbai",phone:"+91 22 2878 XXXX",desc:"Mumbai's go-to exhibition venue in Goregaon. Multiple halls, ample parking.",rating:4.3,featured:false,web:"www.bombayexhibitioncentre.com"},
+  {name:"HITEX Exhibition Centre",cat:"Venue",city:"Hyderabad",phone:"+91 40 2311 XXXX",desc:"Hyderabad's premier trade fair and exhibition venue. Modern facilities.",rating:4.4,featured:false,web:"www.hitex.co.in"},
+  {name:"SoundBridge Productions",cat:"AV & Technical",city:"Mumbai",phone:"+91 98205 XXXXX",desc:"Professional AV solutions for events. Sound, lighting, LED walls, projection.",rating:4.5,featured:false,web:"www.soundbridge.in"},
+  {name:"TechnoSports",cat:"AV & Technical",city:"Delhi",phone:"+91 11 4321 XXXX",desc:"LED walls, audio systems, lighting design for large-scale events.",rating:4.4,featured:false,web:"www.technosports.co.in"},
+  {name:"Stage Pro India",cat:"AV & Technical",city:"Bangalore",phone:"+91 80 2345 XXXX",desc:"Stage engineering, truss systems, rigging, and AV integration.",rating:4.3,featured:false,web:"www.stageproindia.com"},
+  {name:"Foodlink Catering",cat:"Catering",city:"Mumbai",phone:"+91 22 6767 XXXX",desc:"India's largest event caterer. Corporate, weddings, exhibitions. Multi-cuisine.",rating:4.6,featured:true,web:"www.foodlinkcatering.com"},
+  {name:"The Leela Catering",cat:"Catering",city:"Delhi",phone:"+91 11 3960 XXXX",desc:"Premium hotel catering. Luxury events, state banquets, corporate dining.",rating:4.7,featured:false,web:"www.theleela.com"},
+  {name:"Zaffran Caterers",cat:"Catering",city:"Hyderabad",phone:"+91 40 6542 XXXX",desc:"Hyderabadi cuisine specialists. Weddings, corporate events, outdoor catering.",rating:4.4,featured:false,web:"www.zaffran.in"},
+  {name:"Rani Pink Decor",cat:"Decoration",city:"Mumbai",phone:"+91 98195 XXXXX",desc:"Luxury event decoration. Floral design, theme decor, mandap setup.",rating:4.5,featured:false,web:"www.ranipinkdecor.com"},
+  {name:"Delhi Decor Company",cat:"Decoration",city:"Delhi",phone:"+91 98765 XXXXX",desc:"Corporate event and wedding decor. Modern minimalist to grand traditional.",rating:4.3,featured:false,web:"www.delhidecorco.com"},
+  {name:"Stories by Joseph Radhik",cat:"Photography",city:"Mumbai",phone:"+91 98200 XXXXX",desc:"India's most sought-after wedding photographer. Cinematic storytelling.",rating:4.9,featured:true,web:"www.josephradhik.com"},
+  {name:"The Wedding Filmer",cat:"Photography",city:"Mumbai",phone:"+91 98200 XXXXX",desc:"Premium wedding films. Vishal Seth's iconic documentary-style coverage.",rating:4.8,featured:false,web:"www.theweddingfilmer.com"},
+  {name:"Candid Clicks Studio",cat:"Photography",city:"Bangalore",phone:"+91 98450 XXXXX",desc:"Corporate and event photography. Product launches, conferences, trade shows.",rating:4.3,featured:false,web:"www.candidclicks.in"},
+  {name:"Zariya Entertainment",cat:"Anchor & Entertainment",city:"Mumbai",phone:"+91 98200 XXXXX",desc:"Celebrity anchors, live bands, DJs, and performers for corporate events.",rating:4.4,featured:false,web:"www.zariya.in"},
+  {name:"BookMyArtist",cat:"Anchor & Entertainment",city:"Delhi",phone:"+91 11 4067 XXXX",desc:"Platform to book artists, anchors, DJs, bands for events across India.",rating:4.2,featured:false,web:"www.bookmyartist.com"},
+  {name:"Hubilo",cat:"Event Tech",city:"Ahmedabad",phone:"+91 79 4891 XXXX",desc:"Virtual and hybrid event platform. AI-powered attendee engagement.",rating:4.5,featured:true,web:"www.hubilo.com"},
+  {name:"Airmeet",cat:"Event Tech",city:"Bangalore",phone:"+91 80 4765 XXXX",desc:"Interactive virtual events and webinar platform. Built-in networking.",rating:4.4,featured:false,web:"www.airmeet.com"},
+  {name:"Eventify",cat:"Event Tech",city:"Mumbai",phone:"+91 22 4890 XXXX",desc:"Event management software — registration, check-in, engagement, analytics.",rating:4.3,featured:false,web:"www.eventify.io"},
+  {name:"KonfHub",cat:"Event Tech",city:"Bangalore",phone:"+91 80 4561 XXXX",desc:"Conference management platform. Ticketing, schedules, speaker management.",rating:4.2,featured:false,web:"www.konfhub.com"},
+  {name:"Ice Global",cat:"Event Management",city:"Delhi",phone:"+91 11 4567 XXXX",desc:"Integrated experiential marketing. Brand activations, events, digital.",rating:4.3,featured:false,web:"www.iceglobal.in"},
+  {name:"Vibgyor Brand Services",cat:"Event Management",city:"Mumbai",phone:"+91 22 4056 XXXX",desc:"Retail branding, events, in-shop activations. Pan-India network.",rating:4.2,featured:false,web:"www.vibgyorbrand.com"},
+  {name:"Brandwidth Events",cat:"Event Management",city:"Delhi",phone:"+91 11 4615 XXXX",desc:"Corporate events, exhibitions, and conferences. TCS, Infosys, HCL clients.",rating:4.3,featured:false,web:"www.brandwidth.com"},
+  {name:"Think Events",cat:"Event Management",city:"Chennai",phone:"+91 44 4567 XXXX",desc:"South India corporate events. IT company launches, dealer meets, conferences.",rating:4.2,featured:false,web:"www.thinkevents.co.in"},
+  {name:"Chennai Trade Centre",cat:"Venue",city:"Chennai",phone:"+91 44 2231 XXXX",desc:"Chennai's premier trade fair venue. CTC complex with multiple halls.",rating:4.3,featured:false,web:"www.chennaitradecentre.org"}
+];
+
+function stars(r){return '★'.repeat(Math.floor(r))+(r%1>=0.5?'½':'');}
+
+function render(list){
+  const grid=document.getElementById('grid');
+  document.getElementById('count').textContent=`Showing ${list.length} of ${companies.length} companies`;
+  if(!list.length){grid.innerHTML='<div style="text-align:center;padding:40px;color:#6a7a6a;grid-column:1/-1">No companies found.</div>';return;}
+  grid.innerHTML=list.map(c=>`<div class="company-card ${c.featured?'featured':''}">
+    ${c.featured?'<div class="featured-badge">FEATURED</div>':''}
+    <h3>${c.name}</h3>
+    <div class="company-meta">
+      <span class="cat-badge ${catBadge[c.cat]||'cat-em'}">${c.cat}</span>
+      <span class="city-tag">📍 ${c.city}</span>
+    </div>
+    <div class="rating">${stars(c.rating)} ${c.rating}</div>
+    <div class="company-desc">${c.desc}</div>
+    <div class="company-phone">📞 ${c.phone}</div>
+    <div class="card-btns">
+      <a class="card-btn" href="tel:${c.phone.replace(/\s/g,'')}">Call</a>
+      <a class="card-btn" href="https://${c.web}" target="_blank">Website</a>
+    </div>
+  </div>`).join('');
+}
+
+function filter(){
+  const s=document.getElementById('search').value.toLowerCase();
+  const cat=document.getElementById('fCat').value;
+  const city=document.getElementById('fCity').value;
+  const sort=document.getElementById('sortBy').value;
+  let list=companies.filter(c=>{
+    if(s&&!c.name.toLowerCase().includes(s)&&!c.desc.toLowerCase().includes(s))return false;
+    if(cat&&c.cat!==cat)return false;
+    if(city&&c.city!==city)return false;
+    return true;
+  });
+  if(sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
+  else if(sort==='rating')list.sort((a,b)=>b.rating-a.rating);
+  else if(sort==='city')list.sort((a,b)=>a.city.localeCompare(b.city));
+  else list.sort((a,b)=>(b.featured?1:0)-(a.featured?1:0)||b.rating-a.rating);
+  render(list);
+}
+
+function submitListing(){
+  const name=document.getElementById('lName').value;
+  if(!name){alert('Please enter company name');return;}
+  const subs=JSON.parse(localStorage.getItem('esx_dir_subs')||'[]');
+  subs.push({name,cat:document.getElementById('lCat').value,city:document.getElementById('lCity').value,phone:document.getElementById('lPhone').value,email:document.getElementById('lEmail').value,web:document.getElementById('lWeb').value,desc:document.getElementById('lDesc').value,date:new Date().toISOString()});
+  localStorage.setItem('esx_dir_subs',JSON.stringify(subs));
+  document.getElementById('success').style.display='block';
+  setTimeout(()=>{document.getElementById('modal').classList.remove('show');document.getElementById('success').style.display='none';},3000);
+}
+
+filter();
+</script>
+</body>
+</html>

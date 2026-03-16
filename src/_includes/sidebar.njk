@@ -1,0 +1,34 @@
+<!-- Sidebar -->
+<aside class="sidebar">
+  <!-- Editor's Pick -->
+  <div class="sidebar-card">
+    <div class="sidebar-card-title">&#128293; Editor's Pick</div>
+    <div class="editors-pick">
+      {% set editorPicks = collections.posts | limit(5) %}
+      {% for post in editorPicks %}
+      <div class="editors-pick-item">
+        <span class="editors-pick-num">0{{ loop.index }}</span>
+        <div class="editors-pick-text">
+          <h4><a href="/posts/{{ post.data.slug }}/">{{ post.data.title }}</a></h4>
+          <span>{{ post.data.date | timeAgo }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Newsletter Widget -->
+  <div class="sidebar-card newsletter-widget">
+    <div class="sidebar-card-title">&#128233; Daily Newsletter</div>
+    <p>Get the top event industry news delivered to your inbox every morning.</p>
+    <input type="email" placeholder="Your email address">
+    <button class="btn btn-accent" onclick="alert('Newsletter signup coming soon!')">Subscribe Free</button>
+  </div>
+
+  <!-- Ad Space -->
+  <div class="ad-space">
+    <p>Advertisement</p>
+    <p style="margin-top:8px">300x250</p>
+    <p style="margin-top:8px"><a href="/advertise/">Advertise Here</a></p>
+  </div>
+</aside>

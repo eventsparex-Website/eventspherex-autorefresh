@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: All Articles
+permalink: /posts/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="archive-header">
+      <h1>All Articles</h1>
+      <p>Latest news, insights and analysis from India's event industry</p>
+    </div>
+
+    <div class="archive-grid">
+      {% for post in collections.posts %}
+      <a href="/posts/{{ post.data.slug }}/" class="cat-card" style="display:block">
+        <div class="cat-card-img">
+          {% if post.data.featured_image %}
+            <img src="{{ post.data.featured_image }}" loading="lazy" alt="{{ post.data.title }}">
+          {% else %}
+            <div style="height:160px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:40px">&#128240;</div>
+          {% endif %}
+        </div>
+        <div class="cat-card-body">
+          <span class="badge {{ post.data.badgeClass }}">{{ post.data.category }}</span>
+          <h4>{{ post.data.title }}</h4>
+          <div class="meta">{{ post.data.date | timeAgo }}</div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

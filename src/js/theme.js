@@ -1,0 +1,221 @@
+/**
+ * EventSphereX Media Theme JavaScript
+ */
+(function() {
+  'use strict';
+
+  // === Date ===
+  var dateEl = document.getElementById('current-date');
+  if (dateEl) {
+    var d = new Date();
+    dateEl.textContent = d.toLocaleDateString('en-IN', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+    });
+  }
+
+  // === Dark mode ===
+  var toggle = document.getElementById('theme-toggle');
+  if (toggle) {
+    var saved = localStorage.getItem('esx-theme');
+    if (saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      toggle.textContent = '\u2600'; // sun
+    }
+    toggle.addEventListener('click', function() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      document.documentElement.setAttribute('data-theme', isDark ? '' : 'dark');
+      localStorage.setItem('esx-theme', isDark ? 'light' : 'dark');
+      toggle.textContent = isDark ? '\u25D0' : '\u2600';
+    });
+  }
+
+  // === Scroll progress bar ===
+  var progressBar = document.getElementById('progress-bar');
+  var backToTopBtn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement;
+    var pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    if (progressBar) {
+      progressBar.style.width = pct + '%';
+    }
+    if (backToTopBtn) {
+      backToTopBtn.classList.toggle('visible', window.scrollY > 600);
+    }
+  });
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // === Nav dropdown toggle (inline styles — cache-proof) ===
+  var ddOpenStyle = 'opacity:1;visibility:visible;position:absolute;top:100%;left:0;z-index:9999;display:block;padding:8px 0;box-shadow:0 15px 40px rgba(0,0,0,.15);min-width:220px;border-radius:0 0 8px 8px;background:#fff;color:#222';
+
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var dd = a.nextElementSibling;
+    if (!dd || !dd.classList.contains('nav-dropdown')) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var isVisible = dd.style.visibility === 'visible';
+    // Close all dropdowns
+    var allDDs = document.querySelectorAll('.nav-dropdown');
+    for (var i = 0; i < allDDs.length; i++) allDDs[i].style.cssText = '';
+    // Open this one if it was closed
+    if (!isVisible) {
+      dd.style.cssText = ddOpenStyle;
+      var links = dd.querySelectorAll('a');
+      for (var j = 0; j < links.length; j++) {
+        links[j].style.cssText = 'display:block;padding:10px 20px;font-size:13px;color:#222;text-decoration:none';
+      }
+    }
+  }, true);
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-dropdown') && !e.target.closest('.menu-item-has-children')) {
+      var allDDs = document.querySelectorAll('.nav-dropdown');
+      for (var i = 0; i < allDDs.length; i++) allDDs[i].style.cssText = '';
+    }
+  });
+
+  // === Mobile menu ===
+  var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var mobileMenuClose = document.getElementById('mobile-menu-close');
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.classList.add('open');
+    });
+  }
+  if (mobileMenuClose && mobileMenu) {
+    mobileMenuClose.addEventListener('click', function() {
+      mobileMenu.classList.remove('open');
+    });
+  }
+
+  // === Fade in on scroll ===
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // === Animated counters ===
+  var counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        var el = e.target;
+        var target = parseInt(el.getAttribute('data-target'));
+        var current = 0;
+        var step = Math.ceil(target / 60);
+        var timer = setInterval(function() {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = current.toLocaleString('en-IN') + '+';
+        }, 20);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.stat-num').forEach(function(el) {
+    counterObserver.observe(el);
+  });
+
+  // === Bookmark ===
+  document.querySelectorAll('.article-bookmark').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.classList.toggle('saved');
+      btn.textContent = btn.classList.contains('saved') ? '\u2605' : '\u2606';
+    });
+  });
+
+  // === Copy link (single post share) ===
+  var copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function() {
+      navigator.clipboard.writeText(window.location.href).then(function() {
+        copyBtn.textContent = 'Copied!';
+        setTimeout(function() { copyBtn.textContent = 'Copy Link'; }, 2000);
+      });
+    });
+  }
+
+  // === Live Updates ===
+  if (typeof esxLive !== 'undefined' && document.querySelector('.article-list')) {
+    var lastDate = esxLive.lastDate;
+
+    function checkForNewPosts() {
+      fetch(esxLive.api + '?after=' + encodeURIComponent(lastDate), {
+        headers: { 'X-WP-Nonce': esxLive.nonce }
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(posts) {
+        if (!posts.length) return;
+
+        var grid = document.querySelector('.article-list');
+        var liveBar = document.getElementById('esx-live-bar');
+
+        // Show live indicator bar
+        if (!liveBar) {
+          liveBar = document.createElement('div');
+          liveBar.id = 'esx-live-bar';
+          liveBar.innerHTML = '<span class="live-dot"></span> New articles available';
+          liveBar.style.cssText = 'background:var(--accent,#b3d237);color:#091d1b;padding:10px 20px;text-align:center;font-weight:600;font-size:14px;cursor:pointer;border-radius:8px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px;animation:fadeInFallback .4s ease forwards';
+          liveBar.addEventListener('click', function() {
+            // Reveal the hidden new cards
+            var hidden = grid.querySelectorAll('.live-new-card');
+            hidden.forEach(function(card) {
+              card.style.display = '';
+              card.classList.add('visible');
+            });
+            liveBar.remove();
+          });
+          grid.parentNode.insertBefore(liveBar, grid);
+        }
+
+        // Prepend new article cards (hidden until user clicks bar)
+        posts.reverse().forEach(function(post) {
+          // Skip if already on page
+          if (document.querySelector('[data-post-id="' + post.id + '"]')) return;
+
+          var card = document.createElement('div');
+          card.className = 'article-card fade-in live-new-card';
+          card.setAttribute('data-post-id', post.id);
+          card.style.display = 'none';
+          card.innerHTML =
+            '<div class="article-card-image">' +
+              '<img src="' + post.thumbnail + '" alt="" loading="lazy">' +
+              '<span class="article-badge ' + post.badge + '">' + post.category + '</span>' +
+              '<span class="live-badge">LIVE</span>' +
+            '</div>' +
+            '<div class="article-card-content">' +
+              '<h3><a href="' + post.url + '">' + post.title + '</a></h3>' +
+              '<p>' + post.excerpt + '</p>' +
+              '<div class="article-card-meta">' +
+                '<span>' + post.time_ago + '</span>' +
+                '<span>' + post.read_time + '</span>' +
+              '</div>' +
+            '</div>';
+
+          grid.insertBefore(card, grid.firstChild);
+          lastDate = post.date;
+        });
+      })
+      .catch(function() { /* silently retry next interval */ });
+    }
+
+    setInterval(checkForNewPosts, esxLive.interval);
+  }
+
+})();

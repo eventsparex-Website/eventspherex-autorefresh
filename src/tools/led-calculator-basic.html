@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free LED Pixel Calculator India | EventSphereX</title>
+<meta name="description" content="Free basic LED screen pixel calculator for Indian events. Calculate resolution, pixel count, modules and viewing distance for your LED wall.">
+<link rel="canonical" href="https://eventspherex.com/tools/led-calculator-basic.html">
+<meta property="og:title" content="Free LED Pixel Calculator India | EventSphereX">
+<meta property="og:description" content="Quick LED screen calculator — get resolution, pixel count & viewing distance for your event LED wall.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eventspherex.com/tools/led-calculator-basic.html">
+<meta property="og:image" content="https://eventspherex.com/wp-content/uploads/2024/10/Banner-.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Free LED Pixel Calculator India","url":"https://eventspherex.com/tools/led-calculator-basic.html","description":"Free basic LED screen pixel calculator for Indian events.","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"EventSphereX","url":"https://eventspherex.com"}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#f9fafb;color:#091d1b;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:20px}
+.brand{text-align:center;padding:30px 0 20px}
+.brand h1{font-size:26px;color:#091d1b;letter-spacing:1px}
+.brand p{color:#666;font-size:14px;margin-top:5px}
+.card{background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);border-top:4px solid #b3d237}
+.card h2{color:#091d1b;font-size:19px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid #b3d237}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:13px;color:#666;text-transform:uppercase;letter-spacing:.5px}
+.form-group select,.form-group input{padding:12px 16px;border-radius:10px;border:1px solid #ddd;background:#fff;color:#091d1b;font-size:15px;outline:none;transition:.3s}
+.form-group select:focus,.form-group input:focus{border-color:#b3d237;box-shadow:0 0 0 3px rgba(179,210,55,.25)}
+.pitch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px;margin-top:10px}
+.pitch-btn{padding:12px 8px;border-radius:10px;border:2px solid #ddd;background:#fff;color:#666;cursor:pointer;text-align:center;transition:.3s;font-size:15px;font-weight:600}
+.pitch-btn:hover{border-color:#b3d237;color:#091d1b}
+.pitch-btn.active{border-color:#b3d237;background:#b3d237;color:#091d1b}
+.pitch-btn span{display:block;font-size:10px;margin-top:3px;opacity:.7;font-weight:400}
+.btn-calculate{width:100%;padding:16px;border:none;border-radius:12px;background:#091d1b;color:#b3d237;font-size:18px;font-weight:700;cursor:pointer;transition:.3s;margin-top:20px}
+.btn-calculate:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
+.results{display:none}
+.results.show{display:block}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.results-grid{grid-template-columns:1fr}}
+.result-box{background:#091d1b;border-radius:16px;padding:20px;transition:.3s}
+.result-box:hover{transform:translateY(-2px);box-shadow:0 6px 15px rgba(0,0,0,.1)}
+.result-box .label{font-size:12px;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.result-box .value{font-size:22px;font-weight:700;color:#b3d237}
+.result-box .sub{font-size:12px;color:#777;margin-top:4px}
+.result-box.highlight{background:#b3d237;border:none}
+.result-box.highlight .label{color:#091d1b;opacity:.7}
+.result-box.highlight .value{color:#091d1b;font-size:26px}
+.result-box.highlight .sub{color:#091d1b;opacity:.6}
+.visual-screen{margin:20px auto;position:relative;background:#091d1b;border-radius:12px;display:flex;align-items:center;justify-content:center;max-width:100%;overflow:hidden}
+.visual-screen .screen-label{color:#b3d237;font-size:14px;font-weight:600;text-align:center;padding:10px}
+.pro-cta{background:linear-gradient(135deg,#091d1b 0%,#0d3d39 100%);border-radius:16px;padding:30px;text-align:center;margin-top:20px;border:2px solid #b3d237}
+.pro-cta h3{color:#b3d237;font-size:20px;margin-bottom:10px}
+.pro-cta p{color:#ccc;font-size:14px;line-height:1.6;margin-bottom:6px}
+.pro-cta ul{list-style:none;padding:0;margin:16px 0;text-align:left;display:inline-block}
+.pro-cta ul li{color:#ddd;font-size:14px;padding:4px 0}
+.pro-cta ul li::before{content:"\2713 ";color:#b3d237;font-weight:700;margin-right:6px}
+.pro-cta .cta-btn{display:inline-block;padding:14px 36px;background:#b3d237;color:#091d1b;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none;transition:.3s;margin-top:10px}
+.pro-cta .cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(179,210,55,.3)}
+.action-btns{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+.action-btn{flex:1;min-width:120px;padding:12px;border-radius:10px;border:2px solid #ddd;background:#fff;color:#091d1b;font-size:14px;cursor:pointer;transition:.3s;text-align:center}
+.action-btn:hover{border-color:#b3d237;background:#f0f5e0}
+.footer{text-align:center;padding:30px 0;color:#999;font-size:13px}
+.footer a{color:#091d1b;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand">
+    <a href="/" style="text-decoration:none"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.4 64.8" width="280"><defs><style>.st0{fill:#b3d237}.st1{fill:#091d1b}.st2{fill:#0d3d39}</style></defs><g><path class="st1" d="M12.1,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7H7.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM7.3,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M51.1,27.7l-8.8,25h-6.7l-8.8-25h7l5.1,17.5,4.4-15.3c.5-1.5,1.5-2.2,3.1-2.2h4.9Z"/><path class="st1" d="M65.6,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM60.8,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M98.9,52.7c-2.1-.1-3.1-1.1-3.1-3.1v-12.9c-.1-2.6-1.6-3.9-4.4-3.9s-4.2,1.3-4.3,3.9v16h-6.4v-14.7c0-7.1,3.6-10.7,10.7-10.7s10.6,3.5,10.6,10.7v14.7h-3.2Z"/><path class="st1" d="M112.8,32.2h-.7v13.9c0,1,.6,1.6,1.8,1.6h1.9v4.8c-2,.2-4.3.2-6.6,0s-3.5-1.7-3.5-4.5v-27.3h3.3c1.7,0,3,1.5,3,3.2v4h3.8v1.4c0,1.8-1.4,3.1-3.1,3.1Z"/><path class="st1" d="M130.5,48.2c2.6,0,4-.8,4-2.4s-2.2-2.3-6.5-3.1c-5.5-1-8.4-3.5-8.4-7.4,0-5.4,4.3-7.9,10-8,3.2,0,5.8.7,7.7,2.1,1.8,1.5,2.8,3.5,3,6.1h-4c-1.5,0-2.4-.6-2.8-1.6-.4-1.1-1.7-1.7-3.8-1.7s-3.7.7-3.7,1.9,1.6,2.3,4.9,2.9c4.3.9,7,1.9,8.4,3.2,1.2,1.2,1.8,2.7,1.8,4.4,0,6.1-4.8,8.4-11.4,8.4s-6.1-.8-7.9-2.2c-1.9-1.4-2.8-3.6-2.8-6.5h6.4c.1,2.7,2.1,3.7,5.2,3.7Z"/><path class="st1" d="M151,59.4c0,2.1-1,3.1-3.1,3.1h-3.2v-23.9c.3-7.5,4.2-11.2,11.7-11.2s11.6,4.2,11.6,12.6-3.3,12.9-10,13.1c-3.1,0-5.5-1.3-7.1-3.9v10.1ZM156.3,47.5c3.4,0,5.2-2.4,5.3-7.2,0-5.1-1.8-7.6-5.4-7.6s-5.3,2.5-5.2,7.6c.2,4.8,1.9,7.2,5.3,7.2Z"/><path class="st1" d="M183.6,32.9c-3.7,0-5.3,3.1-5.3,7v12.8h-6.3V20.5h3.2c2.1,0,3.1,1.1,3.1,3.2v7.5c3.2-3.7,7.1-4.7,11.8-3.1,3.5,1.3,5.2,4.6,5,10.1v14.5h-6.2v-12.8c0-4.2-1.6-7-5.2-7Z"/><path class="st1" d="M210.3,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM205.6,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M225.5,39.8c.2-8.1,4.5-12.1,12.9-12.1h.9v6.5h-2.1c-3.5,0-5.3,1.8-5.3,5.5v13h-6.4v-12.9Z"/><path class="st1" d="M254.3,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM249.6,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/></g><g><path class="st2" d="M313.7,2.3l-21.7,31.5c-1.5-3.1-4.3-5.5-7.7-6.5l15-22.2c1-1.9,2.5-2.8,4.7-2.8h9.8Z"/><path class="st2" d="M277.4,27.4c-3.4,1-6.2,3.5-7.7,6.7l-8.8-14.1h10.3c1.2,0,2.3.7,3,1.7l3.2,5.7Z"/><path class="st2" d="M279.6,51.2l-5.1,9c-.8,1.4-2.2,2.2-3.8,2.2h-10.5l10.6-16.7c2,3,5.2,5,8.9,5.4Z"/><path class="st2" d="M301.3,62.5h-8.1c-2.9,0-5.6-1.6-7.1-4.1l-4-7.1c3.5-.4,6.6-2.2,8.6-4.9l10.5,16.2Z"/></g><g><path class="st0" d="M280.9,35.2c-2.3,0-4.1,1.8-4.1,4.1s1.8,4.1,4.1,4.1,4.1-1.8,4.1-4.1-1.8-4.1-4.1-4.1Z"/><path class="st0" d="M280.9,29.2c-5.5,0-10,4.5-10,10s4.5,10,10,10,10-4.5,10-10-4.5-10-10-10ZM273.9,39.2c0-3.1,2-5.8,4.9-6.7.7-.2,1.4-.3,2.2-.3,2.8,0,5.2,1.6,6.4,3.9,0,0,0,.1,0,.2,0,0,0,.2.1.3.3.8.5,1.8.5,2.7,0,3.9-3.2,7.1-7.1,7.1s-7.1-3.2-7.1-7.1Z"/></g></svg></div>
+    <h1>LED Pixel Calculator</h1>
+    <p>Quick screen resolution &amp; pixel count for your event LED wall</p>
+  </a></div>
+
+  <!-- ===== INPUT CARD ===== -->
+  <div class="card">
+    <h2>Screen Setup</h2>
+
+    <div class="form-group" style="margin-bottom:16px">
+      <label>Pixel Pitch</label>
+      <div class="pitch-grid" id="pitchGrid">
+        <div class="pitch-btn" data-pitch="2.5" onclick="selectPitch(this)">P2.5<span>Indoor HD</span></div>
+        <div class="pitch-btn" data-pitch="3" onclick="selectPitch(this)">P3<span>Indoor</span></div>
+        <div class="pitch-btn active" data-pitch="3.91" onclick="selectPitch(this)">P3.91<span>Popular</span></div>
+        <div class="pitch-btn" data-pitch="4.81" onclick="selectPitch(this)">P4.81<span>In/Out</span></div>
+        <div class="pitch-btn" data-pitch="5" onclick="selectPitch(this)">P5<span>Outdoor</span></div>
+        <div class="pitch-btn" data-pitch="10" onclick="selectPitch(this)">P10<span>Billboard</span></div>
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Screen Width</label>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input type="number" id="widthVal" placeholder="e.g. 12" min="1" max="100" value="12" style="flex:1">
+          <select id="widthUnit" style="width:70px" onchange="syncUnits()">
+            <option value="ft" selected>Feet</option>
+            <option value="m">Meters</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Screen Height</label>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input type="number" id="heightVal" placeholder="e.g. 8" min="1" max="50" value="8" style="flex:1">
+          <select id="heightUnit" style="width:70px" onchange="syncUnits()">
+            <option value="ft" selected>Feet</option>
+            <option value="m">Meters</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-calculate" onclick="calculate()">Calculate</button>
+  </div>
+
+  <!-- ===== RESULTS ===== -->
+  <div class="results" id="results">
+
+    <div class="card">
+      <h2>Screen Resolution &amp; Pixels</h2>
+      <div class="results-grid" id="pixelResults"></div>
+      <div style="margin:20px 0;text-align:center">
+        <div class="visual-screen" id="screenVisual"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Viewing Distance</h2>
+      <div class="results-grid" id="viewResults"></div>
+    </div>
+
+    <div class="card">
+      <h2>Modules / Cabinets</h2>
+      <div class="results-grid" id="moduleResults"></div>
+    </div>
+
+    <!-- Pro CTA -->
+    <div class="pro-cta">
+      <h3>Need More Details?</h3>
+      <p>Get rental costs, power consumption, technical specs &amp; content guides with our advanced calculator.</p>
+      <ul>
+        <li>Rental cost estimates (Indian market rates)</li>
+        <li>Power consumption &amp; amperage</li>
+        <li>Weight &amp; rigging specs</li>
+        <li>Content resolution guide</li>
+        <li>Event-type pitch recommendations</li>
+        <li>WhatsApp sharing &amp; PDF export</li>
+      </ul>
+      <a href="https://eventspherex.com/tools/pro/?tool=led-pixel-calculator" class="cta-btn">Try Pro Calculator</a>
+    </div>
+
+    <div class="action-btns">
+      <button class="action-btn" onclick="resetCalc()">Reset</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    Powered by <a href="https://eventspherex.com">EventSphereX</a> | India's Event Industry Media Portal
+  </div>
+</div>
+
+<script>
+var selectedPitch = 3.91;
+
+function selectPitch(el) {
+  document.querySelectorAll('.pitch-btn').forEach(function(b) { b.classList.remove('active'); });
+  el.classList.add('active');
+  selectedPitch = parseFloat(el.dataset.pitch);
+}
+
+function syncUnits() {
+  var wu = document.getElementById('widthUnit').value;
+  document.getElementById('heightUnit').value = wu;
+}
+
+function toMeters(val, unit) {
+  return unit === 'ft' ? val * 0.3048 : val;
+}
+
+function toFeet(val, unit) {
+  return unit === 'm' ? val * 3.28084 : val;
+}
+
+function fmt(n) {
+  return Math.round(n).toLocaleString('en-IN');
+}
+
+function calculate() {
+  var widthVal = parseFloat(document.getElementById('widthVal').value) || 12;
+  var heightVal = parseFloat(document.getElementById('heightVal').value) || 8;
+  var unit = document.getElementById('widthUnit').value;
+  var pitch = selectedPitch;
+
+  var widthM = toMeters(widthVal, unit);
+  var heightM = toMeters(heightVal, unit);
+  var widthFt = toFeet(widthVal, unit);
+  var heightFt = toFeet(heightVal, unit);
+  var areaSqFt = widthFt * heightFt;
+  var areaSqM = widthM * heightM;
+
+  // Pixel calculations
+  var pxPerM = 1000 / pitch;
+  var hPixels = Math.round(widthM * pxPerM);
+  var vPixels = Math.round(heightM * pxPerM);
+  var totalPixels = hPixels * vPixels;
+
+  // Viewing distance
+  var minDist = pitch;
+  var optDist = pitch * 3;
+
+  // Cabinet count (500x500mm standard)
+  var cabW = Math.ceil(widthM / 0.5);
+  var cabH = Math.ceil(heightM / 0.5);
+  var totalCabs = cabW * cabH;
+
+  // Aspect ratio
+  function gcd(a, b) { return b === 0 ? a : gcd(b, a % b); }
+  var g = gcd(hPixels, vPixels);
+  var ratio = hPixels / vPixels;
+  var aspectLabel = (hPixels / g) + ':' + (vPixels / g);
+  if (Math.abs(ratio - 16 / 9) < 0.05) aspectLabel = '16:9 (Widescreen)';
+  else if (Math.abs(ratio - 4 / 3) < 0.05) aspectLabel = '4:3 (Standard)';
+
+  // Pixel Results
+  document.getElementById('pixelResults').innerHTML =
+    '<div class="result-box highlight">' +
+      '<div class="label">Screen Resolution</div>' +
+      '<div class="value">' + fmt(hPixels) + ' x ' + fmt(vPixels) + '</div>' +
+      '<div class="sub">' + fmt(totalPixels) + ' total pixels</div>' +
+    '</div>' +
+    '<div class="result-box">' +
+      '<div class="label">Screen Area</div>' +
+      '<div class="value">' + areaSqM.toFixed(1) + ' m\u00B2</div>' +
+      '<div class="sub">' + areaSqFt.toFixed(0) + ' sq ft (' + widthFt.toFixed(1) + "' x " + heightFt.toFixed(1) + "')</div>" +
+    '</div>' +
+    '<div class="result-box">' +
+      '<div class="label">Pixel Pitch</div>' +
+      '<div class="value">P' + pitch + '</div>' +
+      '<div class="sub">' + pitch + 'mm between pixels</div>' +
+    '</div>' +
+    '<div class="result-box">' +
+      '<div class="label">Aspect Ratio</div>' +
+      '<div class="value">' + aspectLabel + '</div>' +
+      '<div class="sub">' + widthM.toFixed(2) + 'm x ' + heightM.toFixed(2) + 'm</div>' +
+    '</div>';
+
+  // Screen Visual
+  var maxVisW = 350;
+  var scale = maxVisW / Math.max(widthFt, heightFt * 2);
+  var visW = Math.min(maxVisW, widthFt * scale);
+  var visH = heightFt * scale;
+  document.getElementById('screenVisual').innerHTML =
+    '<div style="width:' + visW + 'px;height:' + visH + 'px;background:#091d1b;border-radius:8px;border:2px solid #b3d237;display:flex;align-items:center;justify-content:center">' +
+      '<div class="screen-label">P' + pitch + '<br>' + fmt(hPixels) + ' x ' + fmt(vPixels) + ' px</div>' +
+    '</div>';
+  document.getElementById('screenVisual').style.width = (visW + 20) + 'px';
+  document.getElementById('screenVisual').style.height = (visH + 20) + 'px';
+
+  // Viewing Distance
+  document.getElementById('viewResults').innerHTML =
+    '<div class="result-box">' +
+      '<div class="label">Minimum Viewing Distance</div>' +
+      '<div class="value">' + minDist.toFixed(1) + ' m</div>' +
+      '<div class="sub">' + (minDist * 3.28084).toFixed(0) + ' feet \u2014 pixels not visible beyond this</div>' +
+    '</div>' +
+    '<div class="result-box highlight">' +
+      '<div class="label">Optimal Viewing Distance</div>' +
+      '<div class="value">' + optDist.toFixed(1) + ' m</div>' +
+      '<div class="sub">' + (optDist * 3.28084).toFixed(0) + ' feet \u2014 best visual experience</div>' +
+    '</div>';
+
+  // Module Results
+  document.getElementById('moduleResults').innerHTML =
+    '<div class="result-box">' +
+      '<div class="label">Cabinet Layout</div>' +
+      '<div class="value">' + cabW + ' x ' + cabH + '</div>' +
+      '<div class="sub">Standard 500mm x 500mm cabinets</div>' +
+    '</div>' +
+    '<div class="result-box">' +
+      '<div class="label">Total Cabinets Needed</div>' +
+      '<div class="value">' + totalCabs + '</div>' +
+      '<div class="sub">Die-cast aluminium panels</div>' +
+    '</div>';
+
+  // Show results
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+}
+
+function resetCalc() {
+  document.getElementById('results').classList.remove('show');
+  document.getElementById('widthVal').value = 12;
+  document.getElementById('heightVal').value = 8;
+  document.querySelectorAll('.pitch-btn').forEach(function(b) {
+    b.classList.remove('active');
+    if (parseFloat(b.dataset.pitch) === 3.91) b.classList.add('active');
+  });
+  selectedPitch = 3.91;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

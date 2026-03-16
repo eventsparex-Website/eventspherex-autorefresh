@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Industry Jobs India | EventSphereX</title>
+<meta name="description" content="Browse event industry jobs across India — event managers, exhibition designers, wedding planners, MICE professionals & more. Updated daily.">
+<link rel="canonical" href="https://eventspherex.com/tools/job-board.html">
+<meta property="og:title" content="Event Industry Jobs India | EventSphereX">
+<meta property="og:description" content="Browse event industry jobs across India — event managers, exhibition designers, wedding planners & more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eventspherex.com/tools/job-board.html">
+<meta property="og:image" content="https://eventspherex.com/wp-content/uploads/2024/10/Banner-.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Event Industry Jobs India | EventSphereX">
+<meta name="twitter:description" content="Browse event management jobs across India — updated daily.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Event Industry Jobs India","url":"https://eventspherex.com/tools/job-board.html","description":"Browse event industry jobs across India including event managers, exhibition designers, wedding planners and more.","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"EventSphereX","url":"https://eventspherex.com"}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f9fafb;color:#091d1b;min-height:100vh}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.brand{text-align:center;padding:30px 0 20px}
+.brand h1{font-size:28px;color:#091d1b;letter-spacing:1px}
+.brand p{color:#666;font-size:14px;margin-top:5px}
+.card{background:#fff;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);border-top:4px solid #b3d237}
+.filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.filters select,.filters input{padding:10px 14px;border-radius:10px;border:1px solid #ddd;background:#fff;color:#091d1b;font-size:14px;outline:none}
+.filters input{flex:1;min-width:200px}
+.filters select:focus,.filters input:focus{border-color:#b3d237;box-shadow:0 0 0 3px rgba(197,217,58,.25)}
+.sort-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.count{color:#666;font-size:14px}
+.sort-row select{padding:8px 12px;border-radius:8px;border:1px solid #ddd;background:#fff;color:#091d1b;font-size:13px;outline:none}
+.jobs-list{display:flex;flex-direction:column;gap:12px}
+.job-card{background:#091d1b;border-radius:20px;padding:22px;border:none;transition:.3s}
+.job-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.15)}
+.job-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.job-card h3{font-size:17px;margin-bottom:4px;color:#fff}
+.job-company{color:#b3d237;font-size:14px;font-weight:600;margin-bottom:8px}
+.job-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.tag{padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600}
+.tag-city{background:rgba(90,184,255,.15);color:#5ab8ff}
+.tag-type{background:rgba(196,122,255,.15);color:#c47aff}
+.tag-exp{background:rgba(255,179,71,.15);color:#ffb347}
+.tag-cat{background:rgba(71,255,140,.15);color:#47ff8c}
+.job-salary{font-size:18px;font-weight:700;color:#b3d237;white-space:nowrap}
+.job-desc{color:#999;font-size:13px;line-height:1.5;margin-bottom:12px}
+.job-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.job-date{color:#777;font-size:12px}
+.job-btns{display:flex;gap:8px}
+.job-btn{padding:8px 18px;border-radius:10px;border:none;cursor:pointer;font-size:13px;font-weight:600;transition:.3s}
+.btn-apply{background:#b3d237;color:#091d1b}
+.btn-apply:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(197,217,58,.3)}
+.btn-share{background:transparent;border:1px solid #25d366;color:#25d366}
+.btn-share:hover{background:#25d366;color:#fff}
+.post-section{text-align:center;margin-top:24px;padding:24px;background:#091d1b;border-radius:12px}
+.post-section h3{color:#b3d237;margin-bottom:8px}
+.post-section p{color:#aaa;font-size:14px;margin-bottom:16px}
+.post-btn{padding:12px 30px;border:none;border-radius:10px;background:#b3d237;color:#091d1b;font-size:15px;font-weight:700;cursor:pointer}
+.post-note{color:#888;font-size:12px;margin-top:10px}
+.alert-section{background:#fff;border-radius:12px;padding:20px;margin-top:16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;border:2px solid #b3d237}
+.alert-section input{flex:1;min-width:200px;padding:10px 14px;border-radius:8px;border:1px solid #ddd;background:#fff;color:#091d1b;font-size:14px;outline:none}
+.alert-btn{padding:10px 20px;border:none;border-radius:8px;background:#091d1b;color:#b3d237;font-size:14px;font-weight:600;cursor:pointer}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:100;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modal-content{background:#fff;border-radius:16px;padding:30px;max-width:500px;width:90%;max-height:80vh;overflow-y:auto;border-top:4px solid #b3d237}
+.modal-content h2{color:#091d1b;margin-bottom:20px}
+.fg{margin-bottom:12px}
+.fg label{display:block;font-size:13px;color:#666;margin-bottom:4px}
+.fg input,.fg textarea,.fg select{width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;background:#fff;color:#091d1b;font-size:14px;outline:none}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:#b3d237;box-shadow:0 0 0 3px rgba(197,217,58,.2)}
+.fg textarea{height:80px;resize:vertical}
+.modal-btns{display:flex;gap:10px;margin-top:16px}
+.modal-btns button{flex:1;padding:12px;border-radius:10px;font-size:14px;cursor:pointer;border:none;font-weight:600}
+.m-sub{background:#b3d237;color:#091d1b}
+.m-can{background:#091d1b;color:#fff}
+.success{background:#f0fde8;border:2px solid #b3d237;padding:14px;border-radius:10px;color:#091d1b;text-align:center;display:none;margin-top:12px}
+.footer{text-align:center;padding:30px 0;color:#999;font-size:13px}
+.footer a{color:#091d1b;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand">
+    <a href="/" style="text-decoration:none"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.4 64.8" width="280"><defs><style>.st0{fill:#b3d237}.st1{fill:#091d1b}.st2{fill:#0d3d39}</style></defs><g><path class="st1" d="M12.1,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7H7.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM7.3,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M51.1,27.7l-8.8,25h-6.7l-8.8-25h7l5.1,17.5,4.4-15.3c.5-1.5,1.5-2.2,3.1-2.2h4.9Z"/><path class="st1" d="M65.6,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM60.8,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M98.9,52.7c-2.1-.1-3.1-1.1-3.1-3.1v-12.9c-.1-2.6-1.6-3.9-4.4-3.9s-4.2,1.3-4.3,3.9v16h-6.4v-14.7c0-7.1,3.6-10.7,10.7-10.7s10.6,3.5,10.6,10.7v14.7h-3.2Z"/><path class="st1" d="M112.8,32.2h-.7v13.9c0,1,.6,1.6,1.8,1.6h1.9v4.8c-2,.2-4.3.2-6.6,0s-3.5-1.7-3.5-4.5v-27.3h3.3c1.7,0,3,1.5,3,3.2v4h3.8v1.4c0,1.8-1.4,3.1-3.1,3.1Z"/><path class="st1" d="M130.5,48.2c2.6,0,4-.8,4-2.4s-2.2-2.3-6.5-3.1c-5.5-1-8.4-3.5-8.4-7.4,0-5.4,4.3-7.9,10-8,3.2,0,5.8.7,7.7,2.1,1.8,1.5,2.8,3.5,3,6.1h-4c-1.5,0-2.4-.6-2.8-1.6-.4-1.1-1.7-1.7-3.8-1.7s-3.7.7-3.7,1.9,1.6,2.3,4.9,2.9c4.3.9,7,1.9,8.4,3.2,1.2,1.2,1.8,2.7,1.8,4.4,0,6.1-4.8,8.4-11.4,8.4s-6.1-.8-7.9-2.2c-1.9-1.4-2.8-3.6-2.8-6.5h6.4c.1,2.7,2.1,3.7,5.2,3.7Z"/><path class="st1" d="M151,59.4c0,2.1-1,3.1-3.1,3.1h-3.2v-23.9c.3-7.5,4.2-11.2,11.7-11.2s11.6,4.2,11.6,12.6-3.3,12.9-10,13.1c-3.1,0-5.5-1.3-7.1-3.9v10.1ZM156.3,47.5c3.4,0,5.2-2.4,5.3-7.2,0-5.1-1.8-7.6-5.4-7.6s-5.3,2.5-5.2,7.6c.2,4.8,1.9,7.2,5.3,7.2Z"/><path class="st1" d="M183.6,32.9c-3.7,0-5.3,3.1-5.3,7v12.8h-6.3V20.5h3.2c2.1,0,3.1,1.1,3.1,3.2v7.5c3.2-3.7,7.1-4.7,11.8-3.1,3.5,1.3,5.2,4.6,5,10.1v14.5h-6.2v-12.8c0-4.2-1.6-7-5.2-7Z"/><path class="st1" d="M210.3,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM205.6,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M225.5,39.8c.2-8.1,4.5-12.1,12.9-12.1h.9v6.5h-2.1c-3.5,0-5.3,1.8-5.3,5.5v13h-6.4v-12.9Z"/><path class="st1" d="M254.3,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM249.6,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/></g><g><path class="st2" d="M313.7,2.3l-21.7,31.5c-1.5-3.1-4.3-5.5-7.7-6.5l15-22.2c1-1.9,2.5-2.8,4.7-2.8h9.8Z"/><path class="st2" d="M277.4,27.4c-3.4,1-6.2,3.5-7.7,6.7l-8.8-14.1h10.3c1.2,0,2.3.7,3,1.7l3.2,5.7Z"/><path class="st2" d="M279.6,51.2l-5.1,9c-.8,1.4-2.2,2.2-3.8,2.2h-10.5l10.6-16.7c2,3,5.2,5,8.9,5.4Z"/><path class="st2" d="M301.3,62.5h-8.1c-2.9,0-5.6-1.6-7.1-4.1l-4-7.1c3.5-.4,6.6-2.2,8.6-4.9l10.5,16.2Z"/></g><g><path class="st0" d="M280.9,35.2c-2.3,0-4.1,1.8-4.1,4.1s1.8,4.1,4.1,4.1,4.1-1.8,4.1-4.1-1.8-4.1-4.1-4.1Z"/><path class="st0" d="M280.9,29.2c-5.5,0-10,4.5-10,10s4.5,10,10,10,10-4.5,10-10-4.5-10-10-10ZM273.9,39.2c0-3.1,2-5.8,4.9-6.7.7-.2,1.4-.3,2.2-.3,2.8,0,5.2,1.6,6.4,3.9,0,0,0,.1,0,.2,0,0,0,.2.1.3.3.8.5,1.8.5,2.7,0,3.9-3.2,7.1-7.1,7.1s-7.1-3.2-7.1-7.1Z"/></g></svg></div>
+    <p>Event Industry Jobs in India</p>
+  </a></div>
+
+  <div class="card">
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search jobs..." oninput="filter()">
+      <select id="fCat" onchange="filter()">
+        <option value="">All Categories</option>
+        <option value="Event Management">Event Management</option>
+        <option value="Exhibition Design">Exhibition Design</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Sales">Sales</option>
+        <option value="Operations">Operations</option>
+        <option value="Technical">Technical / AV</option>
+        <option value="Creative">Creative / Design</option>
+        <option value="Photography">Photography / Video</option>
+        <option value="Hospitality">Hospitality</option>
+      </select>
+      <select id="fCity" onchange="filter()">
+        <option value="">All Cities</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Pune">Pune</option>
+        <option value="Remote">Remote</option>
+      </select>
+      <select id="fType" onchange="filter()">
+        <option value="">All Types</option>
+        <option value="Full-time">Full-time</option>
+        <option value="Part-time">Part-time</option>
+        <option value="Freelance">Freelance</option>
+        <option value="Contract">Contract</option>
+        <option value="Internship">Internship</option>
+      </select>
+    </div>
+    <div class="sort-row">
+      <div class="count" id="count"></div>
+      <select id="sortBy" onchange="filter()">
+        <option value="newest">Newest First</option>
+        <option value="salary-high">Salary (High to Low)</option>
+        <option value="salary-low">Salary (Low to High)</option>
+      </select>
+    </div>
+    <div class="jobs-list" id="jobsList"></div>
+
+    <div class="post-section">
+      <h3>Hiring for Your Event Company?</h3>
+      <p>Post your job listing and reach 10,000+ event professionals</p>
+      <button class="post-btn" onclick="document.getElementById('postModal').classList.add('show')">Post a Job — Free</button>
+      <div class="post-note">Basic listing: Free | Featured listing: ₹2,000</div>
+    </div>
+
+    <div class="alert-section">
+      <span style="color:#2d4a3e;font-weight:600">🔔 Get Job Alerts</span>
+      <input type="email" id="alertEmail" placeholder="Enter your email">
+      <button class="alert-btn" onclick="subscribeAlert()">Subscribe</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    Powered by <a href="https://eventspherex.com">EventSphereX</a> | India's Event Industry Media Portal
+  </div>
+</div>
+
+<!-- Apply Modal -->
+<div class="modal" id="applyModal">
+  <div class="modal-content">
+    <h2 id="applyTitle">Apply for Job</h2>
+    <p style="color:#666;font-size:14px;margin-bottom:20px">Choose a platform to find and apply for this role:</p>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <a id="applyLinkedIn" href="#" target="_blank" style="display:flex;align-items:center;gap:12px;padding:14px 20px;background:#0077b5;color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;transition:.3s">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Apply on LinkedIn
+      </a>
+      <a id="applyNaukri" href="#" target="_blank" style="display:flex;align-items:center;gap:12px;padding:14px 20px;background:#4a90d9;color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;transition:.3s">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90d9">N</text></svg>
+        Apply on Naukri
+      </a>
+      <a id="applyIndeed" href="#" target="_blank" style="display:flex;align-items:center;gap:12px;padding:14px 20px;background:#2164f3;color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;transition:.3s">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><rect width="24" height="24" rx="4"/><text x="12" y="17" text-anchor="middle" font-size="14" font-weight="bold" fill="#2164f3">in</text></svg>
+        Apply on Indeed
+      </a>
+    </div>
+    <p style="color:#999;font-size:12px;margin-top:16px;text-align:center">You'll be redirected to the platform where similar roles are listed</p>
+    <div style="text-align:center;margin-top:12px">
+      <button class="m-can" onclick="document.getElementById('applyModal').classList.remove('show')" style="padding:10px 24px;border-radius:8px;border:1px solid #ddd;background:#fff;color:#666;cursor:pointer;font-size:13px">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Post Job Modal -->
+<div class="modal" id="postModal">
+  <div class="modal-content">
+    <h2>Post a Job</h2>
+    <div class="fg"><label>Company Name</label><input type="text" id="pCompany"></div>
+    <div class="fg"><label>Job Title</label><input type="text" id="pTitle"></div>
+    <div class="fg"><label>Category</label>
+      <select id="pCat"><option>Event Management</option><option>Exhibition Design</option><option>Marketing</option><option>Sales</option><option>Operations</option><option>Technical / AV</option><option>Creative / Design</option><option>Photography / Video</option><option>Hospitality</option></select>
+    </div>
+    <div class="fg"><label>City</label><input type="text" id="pCity" placeholder="e.g. Mumbai"></div>
+    <div class="fg"><label>Job Type</label>
+      <select id="pType"><option>Full-time</option><option>Part-time</option><option>Freelance</option><option>Contract</option><option>Internship</option></select>
+    </div>
+    <div class="fg"><label>Salary Range</label><input type="text" id="pSalary" placeholder="e.g. 5-8 LPA or 25K/month"></div>
+    <div class="fg"><label>Job Description</label><textarea id="pDesc"></textarea></div>
+    <div class="fg"><label>Contact Email</label><input type="email" id="pEmail"></div>
+    <div class="modal-btns">
+      <button class="m-can" onclick="document.getElementById('postModal').classList.remove('show')">Cancel</button>
+      <button class="m-sub" onclick="submitJob()">Post Job</button>
+    </div>
+    <div class="success" id="postSuccess">Job posted! We'll review and publish within 24 hours.</div>
+  </div>
+</div>
+
+<script>
+const jobs = [
+  {title:"Senior Event Manager",company:"Wizcraft International",cat:"Event Management",city:"Mumbai",type:"Full-time",exp:"5-10 years",salary:"₹12-18 LPA",salaryNum:15,desc:"Lead end-to-end event management for corporate clients. Handle team of 5, vendor management, P&L responsibility. Must have managed 50+ events.",posted:"2026-03-08"},
+  {title:"Exhibition Designer",company:"NH1 Design",cat:"Exhibition Design",city:"Delhi",type:"Full-time",exp:"3-5 years",salary:"₹6-9 LPA",salaryNum:7.5,desc:"Design exhibition stalls and trade show booths. Proficiency in 3ds Max, AutoCAD, and Photoshop required.",posted:"2026-03-07"},
+  {title:"Event Sales Executive",company:"Percept ICE",cat:"Sales",city:"Mumbai",type:"Full-time",exp:"1-3 years",salary:"₹4-6 LPA + Incentives",salaryNum:5,desc:"Generate leads and close event deals with corporate clients. Must have own vehicle and willingness to travel.",posted:"2026-03-06"},
+  {title:"Wedding Planner",company:"FNP Weddings",cat:"Event Management",city:"Delhi",type:"Full-time",exp:"3-5 years",salary:"₹5-8 LPA",salaryNum:6.5,desc:"Plan and execute luxury weddings. Vendor coordination, budget management, and on-site supervision.",posted:"2026-03-05"},
+  {title:"Event Coordinator",company:"E-Factor Entertainment",cat:"Event Management",city:"Delhi",type:"Full-time",exp:"1-3 years",salary:"₹3-5 LPA",salaryNum:4,desc:"Coordinate logistics for corporate events. Vendor follow-up, timeline management, on-ground execution.",posted:"2026-03-05"},
+  {title:"Social Media Manager (Events)",company:"70 EMG",cat:"Marketing",city:"Mumbai",type:"Full-time",exp:"1-3 years",salary:"₹3.5-5 LPA",salaryNum:4.25,desc:"Manage social media for event brand. Content creation, campaign management, influencer coordination.",posted:"2026-03-04"},
+  {title:"Stall Fabrication Supervisor",company:"Expo Display Service",cat:"Exhibition Design",city:"Delhi",type:"Full-time",exp:"5-10 years",salary:"₹4-6 LPA",salaryNum:5,desc:"Supervise fabrication of exhibition stalls. Manage labor, materials, quality, and deadlines.",posted:"2026-03-04"},
+  {title:"AV Technician",company:"SoundBridge Productions",cat:"Technical",city:"Mumbai",type:"Full-time",exp:"3-5 years",salary:"₹3-4.5 LPA",salaryNum:3.75,desc:"Setup and operate sound, lighting, and projection for events. Willing to work weekends and travel.",posted:"2026-03-03"},
+  {title:"Graphic Designer — Events",company:"Showtime Group",cat:"Creative",city:"Delhi",type:"Full-time",exp:"1-3 years",salary:"₹3-5 LPA",salaryNum:4,desc:"Design event branding — invitations, backdrops, standees, social media. Expert in Illustrator, Photoshop.",posted:"2026-03-03"},
+  {title:"Senior Project Director",company:"Fountainhead MKTG",cat:"Event Management",city:"Mumbai",type:"Full-time",exp:"10+ years",salary:"₹20-30 LPA",salaryNum:25,desc:"Lead large-scale brand experiences and activations. P&L, client relationships, team management.",posted:"2026-03-02"},
+  {title:"Event Operations Manager",company:"Laqshya Live",cat:"Operations",city:"Mumbai",type:"Full-time",exp:"5-10 years",salary:"₹8-12 LPA",salaryNum:10,desc:"Manage event operations — vendor procurement, logistics, on-ground execution for major brand events.",posted:"2026-03-01"},
+  {title:"Freelance Event Photographer",company:"Multiple Clients",cat:"Photography",city:"Mumbai",type:"Freelance",exp:"3-5 years",salary:"₹15-30K/event",salaryNum:3.6,desc:"Corporate event and conference photography. Must have professional DSLR kit and portfolio.",posted:"2026-02-28"},
+  {title:"Freelance Anchor / Emcee",company:"Various Events",cat:"Hospitality",city:"Delhi",type:"Freelance",exp:"3-5 years",salary:"₹20-50K/event",salaryNum:4.2,desc:"Host corporate events, product launches, award ceremonies. Hindi and English fluency required.",posted:"2026-02-28"},
+  {title:"Event Marketing Executive",company:"Hubilo",cat:"Marketing",city:"Ahmedabad",type:"Full-time",exp:"1-3 years",salary:"₹4-7 LPA",salaryNum:5.5,desc:"B2B marketing for event tech platform. Email campaigns, content marketing, webinars.",posted:"2026-02-27"},
+  {title:"Video Editor — Events",company:"DNA Entertainment",cat:"Creative",city:"Mumbai",type:"Full-time",exp:"1-3 years",salary:"₹3-5 LPA",salaryNum:4,desc:"Edit event highlight reels, after-movies, and social media clips. Premiere Pro, After Effects.",posted:"2026-02-26"},
+  {title:"Event Coordinator Intern",company:"Cineyug Entertainment",cat:"Event Management",city:"Mumbai",type:"Internship",exp:"Fresher",salary:"₹12-15K/month",salaryNum:1.8,desc:"3-month internship. Assist in event planning, vendor coordination, on-site management. Learn from the best.",posted:"2026-02-25"},
+  {title:"Venue Sales Manager",company:"Jio World Convention Centre",cat:"Sales",city:"Mumbai",type:"Full-time",exp:"5-10 years",salary:"₹10-15 LPA",salaryNum:12.5,desc:"Sell convention centre space to corporate clients and event organizers. High-ticket B2B sales.",posted:"2026-02-24"},
+  {title:"Content Writer — Event Industry",company:"EventSphereX",cat:"Marketing",city:"Remote",type:"Freelance",exp:"1-3 years",salary:"₹2-3K/article",salaryNum:2.4,desc:"Write news articles, interviews, and opinion pieces about India's event industry for our media portal.",posted:"2026-02-23"},
+  {title:"Event Tech Support Engineer",company:"Airmeet",cat:"Technical",city:"Bangalore",type:"Full-time",exp:"1-3 years",salary:"₹5-8 LPA",salaryNum:6.5,desc:"Provide technical support for virtual event platform. Troubleshoot streaming, audio, and integration issues.",posted:"2026-02-22"},
+  {title:"Catering Manager",company:"Foodlink Catering",cat:"Hospitality",city:"Mumbai",type:"Full-time",exp:"5-10 years",salary:"₹6-10 LPA",salaryNum:8,desc:"Manage catering operations for large events. Menu planning, team management, quality control, P&L.",posted:"2026-02-20"},
+  {title:"3D Visualizer — Exhibitions",company:"Pinnacle Exhibits",cat:"Exhibition Design",city:"Bangalore",type:"Full-time",exp:"3-5 years",salary:"₹5-8 LPA",salaryNum:6.5,desc:"Create 3D renders and walkthroughs for exhibition stall designs. 3ds Max, V-Ray, Lumion expertise required.",posted:"2026-02-18"},
+  {title:"Brand Activation Lead",company:"Ice Global",cat:"Event Management",city:"Delhi",type:"Full-time",exp:"5-10 years",salary:"₹10-15 LPA",salaryNum:12.5,desc:"Lead brand activation campaigns for FMCG and tech clients. Strategy, execution, team management.",posted:"2026-02-15"},
+  {title:"Event Decorator",company:"Rani Pink Decor",cat:"Creative",city:"Mumbai",type:"Full-time",exp:"3-5 years",salary:"₹3.5-5 LPA",salaryNum:4.25,desc:"Floral and theme decoration for weddings and corporate events. On-site setup and team supervision.",posted:"2026-02-14"},
+  {title:"Digital Marketing Manager",company:"Encompass Events",cat:"Marketing",city:"Mumbai",type:"Full-time",exp:"3-5 years",salary:"₹6-9 LPA",salaryNum:7.5,desc:"Lead digital marketing for event agency. SEO, social media, paid ads, lead generation.",posted:"2026-02-12"},
+  {title:"Freelance Videographer",company:"Various Clients",cat:"Photography",city:"Bangalore",type:"Freelance",exp:"3-5 years",salary:"₹20-40K/event",salaryNum:3.6,desc:"Shoot and deliver event videos. Corporate conferences, product launches. Own equipment needed.",posted:"2026-02-10"},
+  {title:"Event Logistics Coordinator",company:"Brandwidth Events",cat:"Operations",city:"Delhi",type:"Full-time",exp:"1-3 years",salary:"₹3-4.5 LPA",salaryNum:3.75,desc:"Manage material transport, vendor deliveries, on-site setup logistics for corporate events.",posted:"2026-02-08"},
+  {title:"Event App Developer",company:"KonfHub",cat:"Technical",city:"Bangalore",type:"Full-time",exp:"3-5 years",salary:"₹8-14 LPA",salaryNum:11,desc:"Build features for event management platform. React, Node.js, PostgreSQL. Remote-friendly.",posted:"2026-02-05"},
+  {title:"Junior Event Planner",company:"Think Events",cat:"Event Management",city:"Chennai",type:"Full-time",exp:"1-3 years",salary:"₹2.5-4 LPA",salaryNum:3.25,desc:"Assist senior planners with corporate events. Vendor coordination, documentation, client communication.",posted:"2026-02-03"}
+];
+
+let currentApplyJob = '';
+
+function render(list){
+  const container = document.getElementById('jobsList');
+  document.getElementById('count').textContent = `Showing ${list.length} jobs`;
+  if(!list.length){container.innerHTML='<div style="text-align:center;padding:40px;color:#6a7a6a">No jobs found. Try different filters.</div>';return;}
+  container.innerHTML = list.map((j,i)=>`<div class="job-card">
+    <div class="job-top">
+      <div>
+        <h3>${j.title}</h3>
+        <div class="job-company">${j.company}</div>
+      </div>
+      <div class="job-salary">${j.salary}</div>
+    </div>
+    <div class="job-tags">
+      <span class="tag tag-city">📍 ${j.city}</span>
+      <span class="tag tag-type">${j.type}</span>
+      <span class="tag tag-exp">${j.exp}</span>
+      <span class="tag tag-cat">${j.cat}</span>
+    </div>
+    <div class="job-desc">${j.desc}</div>
+    <div class="job-footer">
+      <div class="job-date">Posted: ${j.posted}</div>
+      <div class="job-btns">
+        <button class="job-btn btn-share" onclick="shareJob(${i})">💬 Share</button>
+        <button class="job-btn btn-apply" onclick="applyJob('${j.title}','${j.company}')">Apply Now</button>
+      </div>
+    </div>
+  </div>`).join('');
+}
+
+function filter(){
+  const s=document.getElementById('search').value.toLowerCase();
+  const cat=document.getElementById('fCat').value;
+  const city=document.getElementById('fCity').value;
+  const type=document.getElementById('fType').value;
+  const sort=document.getElementById('sortBy').value;
+  let list=jobs.filter(j=>{
+    if(s&&!j.title.toLowerCase().includes(s)&&!j.company.toLowerCase().includes(s)&&!j.desc.toLowerCase().includes(s))return false;
+    if(cat&&j.cat!==cat)return false;
+    if(city&&j.city!==city)return false;
+    if(type&&j.type!==type)return false;
+    return true;
+  });
+  if(sort==='salary-high')list.sort((a,b)=>b.salaryNum-a.salaryNum);
+  else if(sort==='salary-low')list.sort((a,b)=>a.salaryNum-b.salaryNum);
+  else list.sort((a,b)=>new Date(b.posted)-new Date(a.posted));
+  render(list);
+}
+
+function applyJob(title,company){
+  const query=encodeURIComponent(title+' '+company+' India');
+  const titleOnly=encodeURIComponent(title);
+  document.getElementById('applyTitle').textContent='Apply: '+title;
+  document.getElementById('applyLinkedIn').href='https://www.linkedin.com/jobs/search/?keywords='+query+'&location=India';
+  document.getElementById('applyNaukri').href='https://www.naukri.com/'+titleOnly.replace(/%20/g,'-')+'-jobs?k='+titleOnly;
+  document.getElementById('applyIndeed').href='https://www.indeed.co.in/jobs?q='+query;
+  document.getElementById('applyModal').classList.add('show');
+}
+
+function shareJob(idx){
+  const j=jobs[idx];
+  const text=`💼 *${j.title}*\n🏢 ${j.company}\n📍 ${j.city} | ${j.type}\n💰 ${j.salary}\n\n${j.desc}\n\nApply on EventSphereX\nhttps://eventspherex.com/tools/job-board.html`;
+  window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank');
+}
+
+
+function submitJob(){
+  const company=document.getElementById('pCompany').value;
+  if(!company){alert('Please enter company name');return;}
+  const title=document.getElementById('pTitle').value;
+  const cat=document.getElementById('pCat').value;
+  const city=document.getElementById('pCity').value;
+  const type=document.getElementById('pType').value;
+  const salary=document.getElementById('pSalary').value;
+  const desc=document.getElementById('pDesc').value;
+  const email=document.getElementById('pEmail').value;
+  const subject=encodeURIComponent('Job Posting Request: '+title+' at '+company);
+  const body=encodeURIComponent('Job Posting Request\n\nCompany: '+company+'\nJob Title: '+title+'\nCategory: '+cat+'\nCity: '+city+'\nJob Type: '+type+'\nSalary: '+salary+'\nContact Email: '+email+'\n\nDescription:\n'+desc+'\n\n---\nSubmitted via EventSphereX Job Board');
+  window.location.href='mailto:contact@eventspherex.com?subject='+subject+'&body='+body;
+  document.getElementById('postSuccess').style.display='block';
+  setTimeout(()=>{document.getElementById('postModal').classList.remove('show');document.getElementById('postSuccess').style.display='none';},3000);
+}
+
+function subscribeAlert(){
+  const email=document.getElementById('alertEmail').value;
+  if(!email){alert('Please enter email');return;}
+  const subject=encodeURIComponent('Job Alert Subscription Request');
+  const body=encodeURIComponent('I would like to subscribe to EventSphereX job alerts.\n\nEmail: '+email+'\n\nPlease add me to your job notification list.');
+  window.location.href='mailto:contact@eventspherex.com?subject='+subject+'&body='+body;
+  document.getElementById('alertEmail').value='';
+}
+
+filter();
+</script>
+</body>
+</html>

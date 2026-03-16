@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Calendar India 2026 | EventSphereX</title>
+<meta name="description" content="Complete calendar of upcoming exhibitions, trade shows, conferences & events across India in 2026. Filter by city, category & month.">
+<link rel="canonical" href="https://eventspherex.com/tools/event-calendar.html">
+<meta property="og:title" content="Event Calendar India 2026 | EventSphereX">
+<meta property="og:description" content="Complete calendar of upcoming exhibitions, trade shows, conferences & events across India in 2026.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eventspherex.com/tools/event-calendar.html">
+<meta property="og:image" content="https://eventspherex.com/wp-content/uploads/2024/10/Banner-.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Event Calendar India 2026 | EventSphereX">
+<meta name="twitter:description" content="Upcoming exhibitions, trade shows & conferences across India in 2026.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Event Calendar India 2026","url":"https://eventspherex.com/tools/event-calendar.html","description":"Complete calendar of upcoming exhibitions, trade shows, conferences and events across India in 2026.","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"EventSphereX","url":"https://eventspherex.com"}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f9fafb;color:#091d1b;min-height:100vh}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.brand{text-align:center;padding:30px 0 20px}
+.brand h1{font-size:28px;color:#091d1b;letter-spacing:1px}
+.brand p{color:#666;font-size:14px;margin-top:5px}
+.card{background:#fff;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);border-top:4px solid #b3d237}
+.filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
+.filters select,.filters input{padding:10px 14px;border-radius:10px;border:1px solid #ddd;background:#fff;color:#091d1b;font-size:14px;outline:none}
+.filters select:focus,.filters input:focus{border-color:#b3d237;box-shadow:0 0 0 3px rgba(197,217,58,.25)}
+.filters input[type="text"]{flex:1;min-width:200px}
+.view-toggle{display:flex;gap:8px;margin-left:auto}
+.view-btn{padding:8px 16px;border-radius:8px;border:1px solid #ddd;background:#fff;color:#666;cursor:pointer;font-size:13px;transition:.3s}
+.view-btn.active{background:#091d1b;color:#b3d237;border-color:#091d1b;font-weight:700}
+.count{color:#666;font-size:14px;margin-bottom:16px}
+.events-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+@media(max-width:600px){.events-grid{grid-template-columns:1fr}}
+.event-card{background:#091d1b;border-radius:20px;padding:22px;transition:.3s;border:none}
+.event-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.15)}
+.event-date{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.event-date .month{background:#b3d237;color:#091d1b;padding:5px 12px;border-radius:8px;font-size:12px;font-weight:700;text-transform:uppercase}
+.event-date .days{color:#999;font-size:13px}
+.event-card h3{font-size:17px;margin-bottom:8px;line-height:1.3;color:#fff}
+.event-card .location{color:#aaa;font-size:13px;margin-bottom:8px;display:flex;align-items:center;gap:4px}
+.event-card .desc{color:#999;font-size:13px;line-height:1.5;margin-bottom:10px}
+.cat-tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600}
+.cat-exhibition{background:rgba(90,184,255,.15);color:#5ab8ff}
+.cat-conference{background:rgba(196,122,255,.15);color:#c47aff}
+.cat-tradeshow{background:rgba(255,179,71,.15);color:#ffb347}
+.cat-summit{background:rgba(71,255,140,.15);color:#47ff8c}
+.cat-award{background:rgba(255,122,168,.15);color:#ff7aa8}
+.cat-fair{background:rgba(197,217,58,.15);color:#b3d237}
+.submit-section{background:#091d1b;border-radius:12px;padding:24px;margin-top:20px;text-align:center}
+.submit-section h3{color:#b3d237;margin-bottom:10px}
+.submit-section p{color:#aaa;font-size:14px;margin-bottom:16px}
+.submit-btn{padding:12px 30px;border:none;border-radius:10px;background:#b3d237;color:#091d1b;font-size:15px;font-weight:700;cursor:pointer;transition:.3s}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 4px 15px rgba(197,217,58,.4)}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:100;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modal-content{background:#fff;border-radius:16px;padding:30px;max-width:500px;width:90%;max-height:80vh;overflow-y:auto;border-top:4px solid #b3d237}
+.modal-content h2{color:#091d1b;margin-bottom:20px}
+.modal-content .form-group{margin-bottom:14px}
+.modal-content label{display:block;font-size:13px;color:#666;margin-bottom:4px}
+.modal-content input,.modal-content textarea,.modal-content select{width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;background:#fff;color:#091d1b;font-size:14px;outline:none}
+.modal-content input:focus,.modal-content textarea:focus,.modal-content select:focus{border-color:#b3d237;box-shadow:0 0 0 3px rgba(197,217,58,.2)}
+.modal-content textarea{height:80px;resize:vertical}
+.modal-btns{display:flex;gap:10px;margin-top:16px}
+.modal-btns button{flex:1;padding:12px;border-radius:10px;font-size:14px;cursor:pointer;border:none;font-weight:600}
+.modal-btns .btn-submit{background:#b3d237;color:#091d1b}
+.modal-btns .btn-cancel{background:#091d1b;color:#fff}
+.success-msg{background:#f0fde8;border:2px solid #b3d237;padding:16px;border-radius:10px;color:#091d1b;text-align:center;display:none;margin-top:12px}
+.footer{text-align:center;padding:30px 0;color:#999;font-size:13px}
+.footer a{color:#091d1b;text-decoration:none;font-weight:600}
+.list-view .events-grid{grid-template-columns:1fr}
+.list-view .event-card{display:flex;align-items:center;gap:20px;padding:16px 20px}
+.list-view .event-card h3{font-size:15px;margin-bottom:4px}
+@media(max-width:600px){.list-view .event-card{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand">
+    <a href="/" style="text-decoration:none"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.4 64.8" width="280"><defs><style>.st0{fill:#b3d237}.st1{fill:#091d1b}.st2{fill:#0d3d39}</style></defs><g><path class="st1" d="M12.1,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7H7.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM7.3,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M51.1,27.7l-8.8,25h-6.7l-8.8-25h7l5.1,17.5,4.4-15.3c.5-1.5,1.5-2.2,3.1-2.2h4.9Z"/><path class="st1" d="M65.6,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM60.8,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M98.9,52.7c-2.1-.1-3.1-1.1-3.1-3.1v-12.9c-.1-2.6-1.6-3.9-4.4-3.9s-4.2,1.3-4.3,3.9v16h-6.4v-14.7c0-7.1,3.6-10.7,10.7-10.7s10.6,3.5,10.6,10.7v14.7h-3.2Z"/><path class="st1" d="M112.8,32.2h-.7v13.9c0,1,.6,1.6,1.8,1.6h1.9v4.8c-2,.2-4.3.2-6.6,0s-3.5-1.7-3.5-4.5v-27.3h3.3c1.7,0,3,1.5,3,3.2v4h3.8v1.4c0,1.8-1.4,3.1-3.1,3.1Z"/><path class="st1" d="M130.5,48.2c2.6,0,4-.8,4-2.4s-2.2-2.3-6.5-3.1c-5.5-1-8.4-3.5-8.4-7.4,0-5.4,4.3-7.9,10-8,3.2,0,5.8.7,7.7,2.1,1.8,1.5,2.8,3.5,3,6.1h-4c-1.5,0-2.4-.6-2.8-1.6-.4-1.1-1.7-1.7-3.8-1.7s-3.7.7-3.7,1.9,1.6,2.3,4.9,2.9c4.3.9,7,1.9,8.4,3.2,1.2,1.2,1.8,2.7,1.8,4.4,0,6.1-4.8,8.4-11.4,8.4s-6.1-.8-7.9-2.2c-1.9-1.4-2.8-3.6-2.8-6.5h6.4c.1,2.7,2.1,3.7,5.2,3.7Z"/><path class="st1" d="M151,59.4c0,2.1-1,3.1-3.1,3.1h-3.2v-23.9c.3-7.5,4.2-11.2,11.7-11.2s11.6,4.2,11.6,12.6-3.3,12.9-10,13.1c-3.1,0-5.5-1.3-7.1-3.9v10.1ZM156.3,47.5c3.4,0,5.2-2.4,5.3-7.2,0-5.1-1.8-7.6-5.4-7.6s-5.3,2.5-5.2,7.6c.2,4.8,1.9,7.2,5.3,7.2Z"/><path class="st1" d="M183.6,32.9c-3.7,0-5.3,3.1-5.3,7v12.8h-6.3V20.5h3.2c2.1,0,3.1,1.1,3.1,3.2v7.5c3.2-3.7,7.1-4.7,11.8-3.1,3.5,1.3,5.2,4.6,5,10.1v14.5h-6.2v-12.8c0-4.2-1.6-7-5.2-7Z"/><path class="st1" d="M210.3,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM205.6,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/><path class="st1" d="M225.5,39.8c.2-8.1,4.5-12.1,12.9-12.1h.9v6.5h-2.1c-3.5,0-5.3,1.8-5.3,5.5v13h-6.4v-12.9Z"/><path class="st1" d="M254.3,53.3c-7.6-.2-11.4-4.6-11.4-13.1s3.8-12.8,11.4-12.8c7.9,0,11.7,4.9,11.2,14.7h-16.2c.2,3.8,1.9,5.8,5,5.8s2.8-.6,4.1-1.8c.6-.6,1.3-.9,2.1-.9h4.6c-1.4,5.3-4.8,8.2-10.9,8.2ZM249.6,37.5h9.4c-.4-3.3-1.9-5-4.6-5s-4.3,1.7-4.8,5Z"/></g><g><path class="st2" d="M313.7,2.3l-21.7,31.5c-1.5-3.1-4.3-5.5-7.7-6.5l15-22.2c1-1.9,2.5-2.8,4.7-2.8h9.8Z"/><path class="st2" d="M277.4,27.4c-3.4,1-6.2,3.5-7.7,6.7l-8.8-14.1h10.3c1.2,0,2.3.7,3,1.7l3.2,5.7Z"/><path class="st2" d="M279.6,51.2l-5.1,9c-.8,1.4-2.2,2.2-3.8,2.2h-10.5l10.6-16.7c2,3,5.2,5,8.9,5.4Z"/><path class="st2" d="M301.3,62.5h-8.1c-2.9,0-5.6-1.6-7.1-4.1l-4-7.1c3.5-.4,6.6-2.2,8.6-4.9l10.5,16.2Z"/></g><g><path class="st0" d="M280.9,35.2c-2.3,0-4.1,1.8-4.1,4.1s1.8,4.1,4.1,4.1,4.1-1.8,4.1-4.1-1.8-4.1-4.1-4.1Z"/><path class="st0" d="M280.9,29.2c-5.5,0-10,4.5-10,10s4.5,10,10,10,10-4.5,10-10-4.5-10-10-10ZM273.9,39.2c0-3.1,2-5.8,4.9-6.7.7-.2,1.4-.3,2.2-.3,2.8,0,5.2,1.6,6.4,3.9,0,0,0,.1,0,.2,0,0,0,.2.1.3.3.8.5,1.8.5,2.7,0,3.9-3.2,7.1-7.1,7.1s-7.1-3.2-7.1-7.1Z"/></g></svg></div>
+    <p>India Event Calendar 2026</p>
+  </a></div>
+
+  <div class="card">
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search events..." oninput="filterEvents()">
+      <select id="filterCity" onchange="filterEvents()">
+        <option value="">All Cities</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Pune">Pune</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Goa">Goa</option>
+      </select>
+      <select id="filterCat" onchange="filterEvents()">
+        <option value="">All Categories</option>
+        <option value="Exhibition">Exhibition</option>
+        <option value="Conference">Conference</option>
+        <option value="Trade Show">Trade Show</option>
+        <option value="Summit">Summit</option>
+        <option value="Award">Award Ceremony</option>
+        <option value="Fair">Fair / Expo</option>
+      </select>
+      <select id="filterMonth" onchange="filterEvents()">
+        <option value="">All Months</option>
+        <option value="1">January</option><option value="2">February</option>
+        <option value="3">March</option><option value="4">April</option>
+        <option value="5">May</option><option value="6">June</option>
+        <option value="7">July</option><option value="8">August</option>
+        <option value="9">September</option><option value="10">October</option>
+        <option value="11">November</option><option value="12">December</option>
+      </select>
+      <div class="view-toggle">
+        <button class="view-btn active" onclick="setView('grid',this)">Grid</button>
+        <button class="view-btn" onclick="setView('list',this)">List</button>
+      </div>
+    </div>
+    <div class="count" id="count"></div>
+    <div id="eventsContainer" class="events-grid"></div>
+
+    <div class="submit-section">
+      <h3>Have an Event to List?</h3>
+      <p>Submit your exhibition, conference, or trade show for free listing</p>
+      <button class="submit-btn" onclick="document.getElementById('modal').classList.add('show')">Submit Your Event</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    Powered by <a href="https://eventspherex.com">EventSphereX</a> | India's Event Industry Media Portal
+  </div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2>Submit Your Event</h2>
+    <div class="form-group"><label>Event Name</label><input type="text" id="subName"></div>
+    <div class="form-group"><label>Category</label>
+      <select id="subCat"><option>Exhibition</option><option>Conference</option><option>Trade Show</option><option>Summit</option><option>Award Ceremony</option><option>Fair / Expo</option></select>
+    </div>
+    <div class="form-group"><label>Start Date</label><input type="date" id="subStart"></div>
+    <div class="form-group"><label>End Date</label><input type="date" id="subEnd"></div>
+    <div class="form-group"><label>City</label><input type="text" id="subCity" placeholder="e.g. Mumbai"></div>
+    <div class="form-group"><label>Venue</label><input type="text" id="subVenue" placeholder="e.g. BKC Convention Center"></div>
+    <div class="form-group"><label>Description</label><textarea id="subDesc" placeholder="Brief description of your event"></textarea></div>
+    <div class="form-group"><label>Your Email</label><input type="email" id="subEmail" placeholder="your@email.com"></div>
+    <div class="modal-btns">
+      <button class="btn-cancel" onclick="document.getElementById('modal').classList.remove('show')">Cancel</button>
+      <button class="btn-submit" onclick="submitEvent()">Submit</button>
+    </div>
+    <div class="success-msg" id="successMsg">Thank you! We'll review and add your event within 24 hours.</div>
+  </div>
+</div>
+
+<script>
+const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const catClass = {Exhibition:'cat-exhibition',Conference:'cat-conference','Trade Show':'cat-tradeshow',Summit:'cat-summit',Award:'cat-award','Fair':'cat-fair'};
+
+const events = [
+  {name:"Auto Expo Components",cat:"Exhibition",start:"2026-01-15",end:"2026-01-18",city:"Delhi",venue:"Pragati Maidan",desc:"India's largest automotive components exhibition"},
+  {name:"Vibrant Gujarat Global Summit",cat:"Summit",start:"2026-01-20",end:"2026-01-22",city:"Ahmedabad",venue:"Mahatma Mandir",desc:"Biennial global business summit by Gujarat government"},
+  {name:"India International Jewellery Show",cat:"Trade Show",start:"2026-02-05",end:"2026-02-08",city:"Mumbai",venue:"BKC MMRDA Grounds",desc:"Asia's largest gems and jewellery trade show"},
+  {name:"Aero India",cat:"Exhibition",start:"2026-02-11",end:"2026-02-15",city:"Bangalore",venue:"Yelahanka Air Force Station",desc:"International aerospace and defence exhibition"},
+  {name:"India Fashion Forum",cat:"Conference",start:"2026-02-18",end:"2026-02-19",city:"Mumbai",venue:"JW Marriott Sahar",desc:"India's premier fashion retail conference"},
+  {name:"REI Expo - Renewable Energy India",cat:"Exhibition",start:"2026-03-04",end:"2026-03-06",city:"Delhi",venue:"India Expo Mart, Greater Noida",desc:"South Asia's largest renewable energy expo"},
+  {name:"India Stonemart",cat:"Trade Show",start:"2026-03-12",end:"2026-03-15",city:"Jaipur",venue:"Jaipur Exhibition & Convention Centre",desc:"International stone and natural stone technology fair"},
+  {name:"PackEx India",cat:"Exhibition",start:"2026-03-18",end:"2026-03-20",city:"Mumbai",venue:"Bombay Exhibition Centre",desc:"Packaging industry exhibition and conference"},
+  {name:"India Food Forum",cat:"Conference",start:"2026-03-24",end:"2026-03-25",city:"Mumbai",venue:"Sahara Star Hotel",desc:"India's largest food retail & FMCG conference"},
+  {name:"IPHEX - Pharma & Healthcare Expo",cat:"Exhibition",start:"2026-04-08",end:"2026-04-10",city:"Hyderabad",venue:"HITEX Exhibition Centre",desc:"International pharma and healthcare exhibition"},
+  {name:"India Wood",cat:"Trade Show",start:"2026-04-15",end:"2026-04-18",city:"Bangalore",venue:"Bangalore International Exhibition Centre",desc:"International trade fair for woodworking and furniture"},
+  {name:"ACETECH Mumbai",cat:"Exhibition",start:"2026-04-22",end:"2026-04-25",city:"Mumbai",venue:"Bombay Exhibition Centre",desc:"Architecture, construction, engineering & technology expo"},
+  {name:"CII Annual Session 2026",cat:"Conference",start:"2026-05-06",end:"2026-05-07",city:"Delhi",venue:"The Leela Palace",desc:"CII's flagship annual business conference"},
+  {name:"India Electronics Week",cat:"Exhibition",start:"2026-05-13",end:"2026-05-15",city:"Bangalore",venue:"BIEC",desc:"Electronics manufacturing and design exhibition"},
+  {name:"India Retail Forum",cat:"Conference",start:"2026-05-20",end:"2026-05-21",city:"Mumbai",venue:"Grand Hyatt Mumbai",desc:"India's largest retail industry conference"},
+  {name:"IndiaPlast",cat:"Trade Show",start:"2026-06-03",end:"2026-06-07",city:"Delhi",venue:"India Expo Mart, Greater Noida",desc:"International plastics exhibition"},
+  {name:"IFSEC India",cat:"Exhibition",start:"2026-06-17",end:"2026-06-19",city:"Delhi",venue:"Pragati Maidan",desc:"India's largest security, fire, and safety expo"},
+  {name:"India Foodex",cat:"Trade Show",start:"2026-06-25",end:"2026-06-27",city:"Bangalore",venue:"BIEC",desc:"International food and beverage trade show"},
+  {name:"Advertising Week India",cat:"Conference",start:"2026-07-08",end:"2026-07-10",city:"Mumbai",venue:"Jio World Convention Centre",desc:"Global advertising and marketing conference"},
+  {name:"India EdTech Summit",cat:"Summit",start:"2026-07-15",end:"2026-07-16",city:"Delhi",venue:"The Ashok Hotel",desc:"Education technology conference and expo"},
+  {name:"India Textile Expo",cat:"Trade Show",start:"2026-07-22",end:"2026-07-25",city:"Chennai",venue:"Chennai Trade Centre",desc:"Textile and garment manufacturing trade fair"},
+  {name:"Smart Cities India Expo",cat:"Exhibition",start:"2026-08-05",end:"2026-08-07",city:"Delhi",venue:"Pragati Maidan",desc:"Smart urbanization, transport, and clean energy expo"},
+  {name:"India International Hospitality Expo",cat:"Exhibition",start:"2026-08-12",end:"2026-08-14",city:"Delhi",venue:"India Expo Mart, Greater Noida",desc:"Hotel and hospitality industry exhibition"},
+  {name:"Bangalore Tech Summit",cat:"Summit",start:"2026-08-20",end:"2026-08-22",city:"Bangalore",venue:"BIEC",desc:"Global technology innovation summit"},
+  {name:"India Chem",cat:"Exhibition",start:"2026-09-02",end:"2026-09-04",city:"Mumbai",venue:"Bombay Exhibition Centre",desc:"International chemical industry exhibition"},
+  {name:"India Mobile Congress",cat:"Conference",start:"2026-09-10",end:"2026-09-12",city:"Delhi",venue:"Pragati Maidan",desc:"Asia's largest telecom and digital tech congress"},
+  {name:"Print Pack India",cat:"Trade Show",start:"2026-09-18",end:"2026-09-21",city:"Delhi",venue:"India Expo Mart, Greater Noida",desc:"Printing and packaging industry trade show"},
+  {name:"India Art Fair",cat:"Fair",start:"2026-09-25",end:"2026-09-28",city:"Delhi",venue:"NSIC Exhibition Complex",desc:"South Asia's premier modern and contemporary art fair"},
+  {name:"India Health Expo",cat:"Exhibition",start:"2026-10-07",end:"2026-10-09",city:"Hyderabad",venue:"HITEX Exhibition Centre",desc:"Healthcare and medical devices exhibition"},
+  {name:"India Real Estate Summit",cat:"Summit",start:"2026-10-14",end:"2026-10-15",city:"Mumbai",venue:"Hotel Trident BKC",desc:"Real estate developers and investors conference"},
+  {name:"Media & Entertainment Expo",cat:"Exhibition",start:"2026-10-21",end:"2026-10-23",city:"Mumbai",venue:"Jio World Convention Centre",desc:"Broadcasting, film tech, and entertainment expo"},
+  {name:"India Water Expo",cat:"Exhibition",start:"2026-10-28",end:"2026-10-30",city:"Delhi",venue:"India Expo Mart, Greater Noida",desc:"Water treatment and management exhibition"},
+  {name:"India International Trade Fair (IITF)",cat:"Fair",start:"2026-11-14",end:"2026-11-27",city:"Delhi",venue:"Pragati Maidan",desc:"India's biggest annual trade fair — 14 days"},
+  {name:"ACETECH Delhi",cat:"Exhibition",start:"2026-11-05",end:"2026-11-08",city:"Delhi",venue:"Pragati Maidan",desc:"Architecture and construction technology expo"},
+  {name:"India FinTech Summit",cat:"Summit",start:"2026-11-18",end:"2026-11-19",city:"Mumbai",venue:"The Lalit Mumbai",desc:"Financial technology and banking innovation conference"},
+  {name:"Indian Marketing Awards",cat:"Award",start:"2026-12-03",end:"2026-12-03",city:"Delhi",venue:"The Leela Ambience",desc:"Premier marketing excellence awards by industry leaders"},
+  {name:"EV India Expo",cat:"Exhibition",start:"2026-12-10",end:"2026-12-12",city:"Delhi",venue:"India Expo Mart, Greater Noida",desc:"Electric vehicle and clean mobility exhibition"},
+  {name:"India Design Week",cat:"Fair",start:"2026-12-15",end:"2026-12-18",city:"Mumbai",venue:"NESCO Centre",desc:"Design, architecture, and interior exhibition"},
+  {name:"Goa Fest — Advertising Awards",cat:"Award",start:"2026-04-02",end:"2026-04-04",city:"Goa",venue:"Grand Hyatt Goa",desc:"India's premier advertising festival and awards"},
+  {name:"India Startup Summit",cat:"Summit",start:"2026-06-10",end:"2026-06-11",city:"Bangalore",venue:"Taj Yeshwantpur",desc:"Startup ecosystem conference with investors and founders"}
+];
+
+events.sort((a,b) => new Date(a.start) - new Date(b.start));
+
+function renderEvents(list) {
+  const container = document.getElementById('eventsContainer');
+  if (list.length === 0) {
+    container.innerHTML = '<div style="text-align:center;padding:40px;color:#6a7a6a">No events found. Try different filters.</div>';
+    document.getElementById('count').textContent = '0 events found';
+    return;
+  }
+  document.getElementById('count').textContent = `Showing ${list.length} events`;
+  container.innerHTML = list.map(e => {
+    const s = new Date(e.start);
+    const en = new Date(e.end);
+    const catKey = Object.keys(catClass).find(k => e.cat.includes(k)) || '';
+    return `<div class="event-card">
+      <div class="event-date">
+        <span class="month">${months[s.getMonth()]}</span>
+        <span class="days">${s.getDate()}${e.start!==e.end?' - '+en.getDate()+' '+months[en.getMonth()]:''}, 2026</span>
+      </div>
+      <h3>${e.name}</h3>
+      <div class="location">📍 ${e.venue}, ${e.city}</div>
+      <div class="desc">${e.desc}</div>
+      <span class="cat-tag ${catClass[catKey]||'cat-exhibition'}">${e.cat}</span>
+    </div>`;
+  }).join('');
+}
+
+function filterEvents() {
+  const search = document.getElementById('search').value.toLowerCase();
+  const city = document.getElementById('filterCity').value;
+  const cat = document.getElementById('filterCat').value;
+  const month = document.getElementById('filterMonth').value;
+
+  const filtered = events.filter(e => {
+    if (search && !e.name.toLowerCase().includes(search) && !e.desc.toLowerCase().includes(search)) return false;
+    if (city && e.city !== city) return false;
+    if (cat && !e.cat.includes(cat)) return false;
+    if (month && (new Date(e.start).getMonth() + 1) !== parseInt(month)) return false;
+    return true;
+  });
+  renderEvents(filtered);
+}
+
+function setView(view, btn) {
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const container = document.getElementById('eventsContainer').parentElement;
+  container.classList.toggle('list-view', view === 'list');
+}
+
+function submitEvent() {
+  const name = document.getElementById('subName').value;
+  if (!name) { alert('Please enter event name'); return; }
+  // Save to localStorage
+  const submissions = JSON.parse(localStorage.getItem('esx_submissions') || '[]');
+  submissions.push({
+    name, cat: document.getElementById('subCat').value,
+    start: document.getElementById('subStart').value,
+    end: document.getElementById('subEnd').value,
+    city: document.getElementById('subCity').value,
+    venue: document.getElementById('subVenue').value,
+    desc: document.getElementById('subDesc').value,
+    email: document.getElementById('subEmail').value,
+    date: new Date().toISOString()
+  });
+  localStorage.setItem('esx_submissions', JSON.stringify(submissions));
+  document.getElementById('successMsg').style.display = 'block';
+  setTimeout(() => {
+    document.getElementById('modal').classList.remove('show');
+    document.getElementById('successMsg').style.display = 'none';
+  }, 3000);
+}
+
+renderEvents(events);
+</script>
+</body>
+</html>

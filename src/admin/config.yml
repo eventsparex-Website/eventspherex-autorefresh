@@ -1,0 +1,77 @@
+backend:
+  name: github
+  repo: ManojSharma93/eventspherex-site
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", default: "EventSphereX" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Exhibitions & Trade Shows"
+          - "Corporate Events"
+          - "Brand Activations"
+          - "MICE & Conferences"
+          - "Event Technology & Innovation"
+          - "Weddings & Social"
+          - "Industry Reports"
+          - "Opinion & Editorial"
+          - "Venues & Infrastructure"
+          - "Interviews & Profiles"
+      - label: "Category Slug"
+        name: "categorySlug"
+        widget: "select"
+        options:
+          - "exhibitions-trade-shows"
+          - "corporate-events"
+          - "brand-activations"
+          - "mice-conferences"
+          - "event-technology-innovation"
+          - "weddings-social"
+          - "industry-reports"
+          - "opinion-editorial"
+          - "venues-infrastructure"
+          - "interviews-profiles"
+      - label: "Badge Class"
+        name: "badgeClass"
+        widget: "select"
+        options:
+          - "badge-exhibitions"
+          - "badge-corporate"
+          - "badge-brand"
+          - "badge-mice"
+          - "badge-tech"
+          - "badge-weddings"
+          - "badge-reports"
+          - "badge-opinion"
+          - "badge-venues"
+          - "badge-interviews"
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Status", name: "status", widget: "select", options: ["publish", "draft"], default: "publish" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Body", name: "body", widget: "markdown" }

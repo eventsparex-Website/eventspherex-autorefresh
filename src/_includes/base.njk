@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if title %}{{ title }} - EventSphereX{% else %}EventSphereX - India's Event Industry Portal{% endif %}</title>
+<meta name="description" content="{{ description or excerpt or "India's leading event industry portal — news, insights, tools & jobs for event professionals." }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@EventSphereX">
+<meta name="twitter:title" content="{{ title or "EventSphereX - India's Event Industry Portal" }}">
+<meta name="twitter:description" content="{{ excerpt or "India's leading event industry portal — news, insights, tools & jobs for event professionals." }}">
+{% if featured_image %}<meta name="twitter:image" content="{{ featured_image }}">{% endif %}
+<meta property="og:title" content="{{ title or "EventSphereX - India's Event Industry Portal" }}">
+<meta property="og:description" content="{{ excerpt or "India's leading event industry portal — news, insights, tools & jobs for event professionals." }}">
+<meta property="og:type" content="{% if layout == 'post.njk' %}article{% else %}website{% endif %}">
+<meta property="og:url" content="https://eventspherex.com{{ page.url }}">
+{% if featured_image %}<meta property="og:image" content="{{ featured_image }}">{% endif %}
+<link rel="canonical" href="https://eventspherex.com{{ page.url }}">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div id="progress-bar"></div>
+
+{% include "header.njk" %}
+
+{{ content | safe }}
+
+{% include "footer.njk" %}
+
+<!-- Back to top -->
+<button class="back-to-top" id="back-to-top">&uarr;</button>
+
+<script src="/js/theme.js"></script>
+</body>
+</html>
