@@ -7,7 +7,7 @@ category: "Events"
 categorySlug: "events"
 badgeClass: "badge-exhibitions"
 excerpt: "Introduction In today's fast-paced corporate world, fostering a positive team spirit is crucial for success. Corporate events can be a powerful tool to strengthen bonds, boost morale, and enhance employee..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/corporate-activity-2025.jpg"
 status: publish
 tags:
   - posts

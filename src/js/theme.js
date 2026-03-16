@@ -42,43 +42,13 @@
       backToTopBtn.classList.toggle('visible', window.scrollY > 600);
     }
   });
+
+  // === Back to top ===
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-
-  // === Nav dropdown toggle (inline styles — cache-proof) ===
-  var ddOpenStyle = 'opacity:1;visibility:visible;position:absolute;top:100%;left:0;z-index:9999;display:block;padding:8px 0;box-shadow:0 15px 40px rgba(0,0,0,.15);min-width:220px;border-radius:0 0 8px 8px;background:#fff;color:#222';
-
-  document.addEventListener('click', function(e) {
-    var a = e.target.closest('a');
-    if (!a) return;
-    var dd = a.nextElementSibling;
-    if (!dd || !dd.classList.contains('nav-dropdown')) return;
-    e.preventDefault();
-    e.stopPropagation();
-    var isVisible = dd.style.visibility === 'visible';
-    // Close all dropdowns
-    var allDDs = document.querySelectorAll('.nav-dropdown');
-    for (var i = 0; i < allDDs.length; i++) allDDs[i].style.cssText = '';
-    // Open this one if it was closed
-    if (!isVisible) {
-      dd.style.cssText = ddOpenStyle;
-      var links = dd.querySelectorAll('a');
-      for (var j = 0; j < links.length; j++) {
-        links[j].style.cssText = 'display:block;padding:10px 20px;font-size:13px;color:#222;text-decoration:none';
-      }
-    }
-  }, true);
-
-  // Close dropdowns when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.nav-dropdown') && !e.target.closest('.menu-item-has-children')) {
-      var allDDs = document.querySelectorAll('.nav-dropdown');
-      for (var i = 0; i < allDDs.length; i++) allDDs[i].style.cssText = '';
-    }
-  });
 
   // === Mobile menu ===
   var mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -114,6 +84,7 @@
       if (e.isIntersecting) {
         var el = e.target;
         var target = parseInt(el.getAttribute('data-target'));
+        if (isNaN(target)) return;
         var current = 0;
         var step = Math.ceil(target / 60);
         var timer = setInterval(function() {
@@ -146,7 +117,7 @@
     copyBtn.addEventListener('click', function() {
       navigator.clipboard.writeText(window.location.href).then(function() {
         copyBtn.textContent = 'Copied!';
-        setTimeout(function() { copyBtn.textContent = 'Copy Link'; }, 2000);
+        setTimeout(function() { copyBtn.innerHTML = '&#128279; Copy Link'; }, 2000);
       });
     });
   }
@@ -166,14 +137,12 @@
         var grid = document.querySelector('.article-list');
         var liveBar = document.getElementById('esx-live-bar');
 
-        // Show live indicator bar
         if (!liveBar) {
           liveBar = document.createElement('div');
           liveBar.id = 'esx-live-bar';
           liveBar.innerHTML = '<span class="live-dot"></span> New articles available';
-          liveBar.style.cssText = 'background:var(--accent,#b3d237);color:#091d1b;padding:10px 20px;text-align:center;font-weight:600;font-size:14px;cursor:pointer;border-radius:8px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px;animation:fadeInFallback .4s ease forwards';
+          liveBar.style.cssText = 'background:var(--accent,#b3d237);color:#091d1b;padding:10px 20px;text-align:center;font-weight:600;font-size:14px;cursor:pointer;border-radius:8px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px';
           liveBar.addEventListener('click', function() {
-            // Reveal the hidden new cards
             var hidden = grid.querySelectorAll('.live-new-card');
             hidden.forEach(function(card) {
               card.style.display = '';
@@ -184,9 +153,7 @@
           grid.parentNode.insertBefore(liveBar, grid);
         }
 
-        // Prepend new article cards (hidden until user clicks bar)
         posts.reverse().forEach(function(post) {
-          // Skip if already on page
           if (document.querySelector('[data-post-id="' + post.id + '"]')) return;
 
           var card = document.createElement('div');

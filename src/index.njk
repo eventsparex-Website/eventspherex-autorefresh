@@ -64,7 +64,7 @@ title: "EventSphereX - India's #1 Event Industry Portal"
         <div class="article-list">
           {% set latestPosts = collections.posts | offset(3) | limit(8) %}
           {% for post in latestPosts %}
-          <article class="article-card">
+          <article class="article-card fade-in">
             <div class="article-card-img">
               <a href="/posts/{{ post.data.slug }}/">
                 {% if post.data.featured_image %}
@@ -100,6 +100,45 @@ title: "EventSphereX - India's #1 Event Industry Portal"
   </div>
 </section>
 
+<!-- ===== CATEGORY CARDS SECTION ===== -->
+<section class="category-cards-section">
+  <div class="container">
+    <h2 class="section-title">Explore Categories</h2>
+    <div class="category-cards-grid">
+      <a href="/category/exhibitions-trade-shows/" class="category-icon-card">
+        <div class="category-icon-wrap">&#127978;</div>
+        <h4>Exhibitions &amp; Trade Shows</h4>
+        <p>Latest from India's top expos</p>
+      </a>
+      <a href="/category/corporate-events/" class="category-icon-card">
+        <div class="category-icon-wrap">&#127970;</div>
+        <h4>Corporate Events</h4>
+        <p>Conferences, summits &amp; more</p>
+      </a>
+      <a href="/category/brand-activations/" class="category-icon-card">
+        <div class="category-icon-wrap">&#127775;</div>
+        <h4>Brand Activations</h4>
+        <p>Experiential marketing insights</p>
+      </a>
+      <a href="/category/mice-conferences/" class="category-icon-card">
+        <div class="category-icon-wrap">&#9992;</div>
+        <h4>MICE &amp; Conferences</h4>
+        <p>Business travel &amp; meetings</p>
+      </a>
+      <a href="/category/event-technology-innovation/" class="category-icon-card">
+        <div class="category-icon-wrap">&#128187;</div>
+        <h4>Event Technology</h4>
+        <p>AI, AR/VR &amp; digital tools</p>
+      </a>
+      <a href="/category/weddings-social/" class="category-icon-card">
+        <div class="category-icon-wrap">&#128141;</div>
+        <h4>Weddings &amp; Social</h4>
+        <p>Trends in social celebrations</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== CATEGORY: EXHIBITIONS ===== -->
 {% set exhibitionPosts = [] %}
 {% for post in collections.posts %}
@@ -108,7 +147,7 @@ title: "EventSphereX - India's #1 Event Industry Portal"
   {% endif %}
 {% endfor %}
 {% if exhibitionPosts | length > 0 %}
-<div class="category-section">
+<div class="category-section fade-in">
   <div class="container">
     <h2 class="section-title">Exhibitions &amp; Trade Shows <a href="/category/exhibitions-trade-shows/">View All &rarr;</a></h2>
     <div class="category-scroll">
@@ -141,7 +180,7 @@ title: "EventSphereX - India's #1 Event Industry Portal"
   {% endif %}
 {% endfor %}
 {% if techPosts | length > 0 %}
-<div class="category-section">
+<div class="category-section fade-in">
   <div class="container">
     <h2 class="section-title">Event Technology &amp; Innovation <a href="/category/event-technology-innovation/">View All &rarr;</a></h2>
     <div class="category-scroll">
@@ -167,16 +206,16 @@ title: "EventSphereX - India's #1 Event Industry Portal"
 {% endif %}
 
 <!-- ===== STATS BAR ===== -->
-<section class="stats-bar">
+<section class="stats-bar fade-in">
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item">
-        <div class="stat-num" data-target="500">0</div>
-        <div class="stat-label">Events Covered</div>
+        <div class="stat-num" data-target="10000">0</div>
+        <div class="stat-label">Industry Professionals</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num" data-target="15000">0</div>
-        <div class="stat-label">Industry Professionals</div>
+        <div class="stat-num" data-target="500">0</div>
+        <div class="stat-label">Events Covered</div>
       </div>
       <div class="stat-item">
         <div class="stat-num" data-target="50">0</div>
@@ -191,7 +230,7 @@ title: "EventSphereX - India's #1 Event Industry Portal"
 </section>
 
 <!-- ===== TOOLS SECTION ===== -->
-<section class="tools-section">
+<section class="tools-section fade-in">
   <div class="container">
     <h2 class="section-title">Free Tools &amp; Resources</h2>
     <div class="tools-grid">
@@ -230,7 +269,7 @@ title: "EventSphereX - India's #1 Event Industry Portal"
 </section>
 
 <!-- ===== EVENT INDUSTRY JOBS ===== -->
-<section class="jobs-section">
+<section class="jobs-section fade-in">
   <div class="container">
     <h2 class="section-title">Event Industry Jobs <a href="https://www.linkedin.com/jobs/search/?keywords=event%20management&location=India" target="_blank" rel="noopener">View All Jobs &rarr;</a></h2>
     <div class="jobs-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">

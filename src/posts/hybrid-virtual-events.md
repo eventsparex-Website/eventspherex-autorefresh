@@ -7,7 +7,7 @@ category: "Event Technology"
 categorySlug: "event-technology"
 badgeClass: "badge-tech"
 excerpt: "Virtual and hybrid events have evolved beyond Zoom calls. Learn what's working in India — platforms, pricing, engagement strategies, and production tips."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2025/03/Hybrid-Virtual-Events-in-India.png"
 status: publish
 tags:
   - posts

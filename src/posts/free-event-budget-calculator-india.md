@@ -7,7 +7,7 @@ category: "Event Technology"
 categorySlug: "event-technology"
 badgeClass: "badge-tech"
 excerpt: "Planning an event in India? The first question every organiser faces is: \"How much will this cost?\"&nbsp;Whether you're setting up an exhibition stall at Pragati Maidan, organising a 500-guest corporate..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2026/03/Event_Budget_Calculat_EventSphereX_01.jpg"
 status: publish
 tags:
   - posts

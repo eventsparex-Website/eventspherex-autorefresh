@@ -7,7 +7,7 @@ category: "Exhibitions &amp; Trade Shows"
 categorySlug: "exhibitions-trade-shows"
 badgeClass: "badge-exhibitions"
 excerpt: "Your exhibition stall design should drive business, not just look pretty. Learn how top exhibitors design stalls that maximize footfall, engagement, and lead conversion."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2025/03/Exhibition-Stall-Design-That-Drives-ROI.png"
 status: publish
 tags:
   - posts

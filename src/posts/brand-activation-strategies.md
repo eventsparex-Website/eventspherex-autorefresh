@@ -7,7 +7,7 @@ category: "Brand Activations &amp; Launches"
 categorySlug: "brand-activations-launches"
 badgeClass: "badge-exhibitions"
 excerpt: "Learn 5 proven brand activation strategies for the Indian market — from mall activations to college campaigns and guerrilla marketing that delivers real ROI."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.jpg"
 status: publish
 tags:
   - posts

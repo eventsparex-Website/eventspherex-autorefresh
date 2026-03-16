@@ -7,7 +7,7 @@ category: "Event Operations"
 categorySlug: "event-operations"
 badgeClass: "badge-exhibitions"
 excerpt: "Food makes or breaks an event. This guide covers catering styles, pricing, menu planning, dietary considerations, and vendor selection for events in India."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2025/03/Event-Catering-in-India.png"
 status: publish
 tags:
   - posts

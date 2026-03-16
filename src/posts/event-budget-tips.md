@@ -7,7 +7,7 @@ category: "Corporate Events"
 categorySlug: "corporate-events"
 badgeClass: "badge-corporate"
 excerpt: "Planning an event with limited budget? These 8 proven tips from Indian event professionals will help you deliver a great event without overspending."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Corporate-theme.jpg"
 status: publish
 tags:
   - posts

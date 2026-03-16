@@ -7,7 +7,7 @@ category: "Exhibitions &amp; Trade Shows"
 categorySlug: "exhibitions-trade-shows"
 badgeClass: "badge-exhibitions"
 excerpt: "Stop losing leads at exhibitions. These proven digital lead capture strategies help exhibitors collect 3x more qualified leads and convert them faster."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2025/02/Capture-3x-More-Leads-at-Exhibition.png"
 status: publish
 tags:
   - posts

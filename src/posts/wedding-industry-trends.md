@@ -7,7 +7,7 @@ category: "Weddings &amp; Social Events"
 categorySlug: "weddings-social-events"
 badgeClass: "badge-exhibitions"
 excerpt: "India's massive wedding industry is evolving — destination weddings, tech integration, sustainability, and intimate celebrations are reshaping how India gets married."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.jpg"
 status: publish
 tags:
   - posts

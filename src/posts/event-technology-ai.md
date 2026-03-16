@@ -7,7 +7,7 @@ category: "Event Technology &amp; Innovation"
 categorySlug: "event-technology-innovation"
 badgeClass: "badge-tech"
 excerpt: "From AI-powered registration to smart matchmaking and automated content — here's how artificial intelligence is reshaping India's event management industry in 2026."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.jpg"
 status: publish
 tags:
   - posts

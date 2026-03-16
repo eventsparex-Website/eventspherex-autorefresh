@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   // Ignore tools HTML files from template processing (they are passthrough only)
   eleventyConfig.ignores.add("src/tools/**");
   eleventyConfig.ignores.add("src/admin/**");
+  eleventyConfig.ignores.add("src/pages/.md");
 
   // Passthrough copy
   eleventyConfig.addPassthroughCopy("src/css");

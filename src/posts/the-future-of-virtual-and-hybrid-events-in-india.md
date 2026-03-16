@@ -7,7 +7,7 @@ category: "Events"
 categorySlug: "events"
 badgeClass: "badge-exhibitions"
 excerpt: "As technology evolves, the way we organize events is changing too. In recent years, virtual and hybrid events have gained popularity in India, especially due to the pandemic. These events..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/6.jpg"
 status: publish
 tags:
   - posts

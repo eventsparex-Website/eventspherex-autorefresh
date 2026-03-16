@@ -7,7 +7,7 @@ category: "Industry Reports"
 categorySlug: "industry-reports"
 badgeClass: "badge-reports"
 excerpt: "India's event and exhibition industry is projected to cross ₹15,000 crore in 2026, driven by MICE tourism, corporate events, and brand activations. Full analysis inside."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.jpg"
 status: publish
 tags:
   - posts

@@ -7,7 +7,7 @@ category: "Industry Insights"
 categorySlug: "industry-insights"
 badgeClass: "badge-exhibitions"
 excerpt: "Want to build a career in India's booming event industry? This guide covers job roles, required skills, salary ranges, and career paths from entry to leadership."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2025/03/Building-a-Career-in-Indias-Event-Industry-1.png"
 status: publish
 tags:
   - posts

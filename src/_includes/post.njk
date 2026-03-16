@@ -2,6 +2,13 @@
 layout: base.njk
 ---
 
+<!-- Post Hero Image -->
+{% if featured_image %}
+<div class="post-hero-image">
+  <img src="{{ featured_image }}" alt="{{ title }}">
+</div>
+{% endif %}
+
 <section class="section">
   <div class="container">
     <div class="main-grid">
@@ -20,24 +27,18 @@ layout: base.njk
             </div>
           </div>
 
-          {% if featured_image %}
-          <div class="featured-image">
-            <img src="{{ featured_image }}" alt="{{ title }}">
-          </div>
-          {% endif %}
-
           <div class="article-content">
             {{ content | safe }}
           </div>
 
           <!-- Share Buttons -->
           <div class="share-buttons">
-            <span>Share:</span>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://eventspherex.com/posts/{{ slug }}/" target="_blank" rel="noopener" class="share-btn" style="background:#0077b5;color:#fff;border-color:#0077b5">LinkedIn</a>
-            <a href="https://twitter.com/intent/tweet?url={{ ('https://eventspherex.com/posts/' + slug + '/') | urlencode }}&text={{ title | urlencode }}" target="_blank" rel="noopener" class="share-btn">Twitter / X</a>
-            <a href="https://wa.me/?text={{ (title + ' https://eventspherex.com/posts/' + slug + '/') | urlencode }}" target="_blank" rel="noopener" class="share-btn" style="background:#25d366;color:#fff;border-color:#25d366">WhatsApp</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{ ('https://eventspherex.com/posts/' + slug + '/') | urlencode }}" target="_blank" rel="noopener" class="share-btn">Facebook</a>
-            <button class="share-btn" id="copy-link-btn">Copy Link</button>
+            <span>Share this article:</span>
+            <a href="https://wa.me/?text={{ (title + ' https://eventspherex.com/posts/' + slug + '/') | urlencode }}" target="_blank" rel="noopener" class="share-btn share-btn-whatsapp">&#9742; WhatsApp</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://eventspherex.com/posts/{{ slug }}/" target="_blank" rel="noopener" class="share-btn share-btn-linkedin">in LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?url={{ ('https://eventspherex.com/posts/' + slug + '/') | urlencode }}&text={{ title | urlencode }}" target="_blank" rel="noopener" class="share-btn share-btn-twitter">&#120143; Twitter</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ ('https://eventspherex.com/posts/' + slug + '/') | urlencode }}" target="_blank" rel="noopener" class="share-btn share-btn-facebook">f Facebook</a>
+            <button class="share-btn" id="copy-link-btn">&#128279; Copy Link</button>
           </div>
         </article>
 

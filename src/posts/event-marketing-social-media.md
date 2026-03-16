@@ -7,7 +7,7 @@ category: "Event Marketing"
 categorySlug: "event-marketing"
 badgeClass: "badge-exhibitions"
 excerpt: "Master social media marketing for events in India. From pre-event buzz to post-event content, this playbook covers Instagram, LinkedIn, WhatsApp, and YouTube strategies."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2025/02/Gemini_Generated_Image_1aoslg1aoslg1aos.png"
 status: publish
 tags:
   - posts

@@ -7,7 +7,7 @@ category: "Events"
 categorySlug: "events"
 badgeClass: "badge-exhibitions"
 excerpt: "Our Philosophy: Creating Experiences Beyond Events At Eventspherex, we believe that the essence of exceptional event planning transcends the basic logistics. Our philosophy is rooted in a commitment to transforming..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/09/2.jpg"
 status: publish
 tags:
   - posts

@@ -7,7 +7,7 @@ category: "Events"
 categorySlug: "events"
 badgeClass: "badge-exhibitions"
 excerpt: "Planning a corporate event can be a challenging task, but with the right approach, it can lead to great success. Whether it’s a product launch, company conference, or team-building event,..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Corporate-theme.jpg"
 status: publish
 tags:
   - posts

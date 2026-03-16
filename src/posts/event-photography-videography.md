@@ -7,7 +7,7 @@ category: "Event Production"
 categorySlug: "event-production"
 badgeClass: "badge-exhibitions"
 excerpt: "A practical guide to event photography and videography in India — what to hire, what to budget, shot lists, and how to use event content for marketing."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2025/03/Event-Photography-Videography.png"
 status: publish
 tags:
   - posts

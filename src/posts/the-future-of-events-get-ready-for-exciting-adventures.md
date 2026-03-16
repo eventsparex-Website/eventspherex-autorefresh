@@ -7,7 +7,7 @@ category: "Events"
 categorySlug: "events"
 badgeClass: "badge-exhibitions"
 excerpt: "The event industry has been on a wild ride lately! Thanks to tech leaps, changing habits, and, well, a global pandemic, things have transformed in a big way. But where..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.jpg"
 status: publish
 tags:
   - posts

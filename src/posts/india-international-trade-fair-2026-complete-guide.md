@@ -7,7 +7,7 @@ category: "Exhibition and Trade Show"
 categorySlug: "exhibition"
 badgeClass: "badge-exhibitions"
 excerpt: "The India International Trade Fair (IITF) is the country's largest and most iconic trade fair, drawing over 25 lakh visitors across 14 days every November. Organised by the India Trade..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2026/03/EventSphereX_India_International_Trade_Fair_2026-—-Complete-Guide.png"
 status: publish
 tags:
   - posts

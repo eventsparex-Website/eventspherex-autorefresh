@@ -7,7 +7,7 @@ category: "Events"
 categorySlug: "events"
 badgeClass: "badge-exhibitions"
 excerpt: "The event industry is rapidly changing, and new technology is making a big impact. As we look ahead to 2025, several tech trends are set to reshape how events are..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.png"
 status: publish
 tags:
   - posts

@@ -7,7 +7,7 @@ category: "Venues &amp; Spaces"
 categorySlug: "venues-spaces"
 badgeClass: "badge-exhibitions"
 excerpt: "How to choose the perfect event venue in India — factors to consider, venue types, pricing across cities, and a printable checklist for venue visits."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.jpg"
 status: publish
 tags:
   - posts

@@ -7,7 +7,7 @@ category: "Corporate Events"
 categorySlug: "corporate-events"
 badgeClass: "badge-corporate"
 excerpt: "Tired of boring team building events? These 15 activities are tested and loved by Indian corporate teams — from adventure challenges to creative workshops."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2025/03/Corporate-Team-Building-Activities.png"
 status: publish
 tags:
   - posts

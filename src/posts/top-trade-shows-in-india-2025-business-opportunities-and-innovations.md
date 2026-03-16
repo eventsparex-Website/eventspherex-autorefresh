@@ -7,7 +7,7 @@ category: "Exhibition and Trade Show"
 categorySlug: "exhibition"
 badgeClass: "badge-exhibitions"
 excerpt: "As 2025 kicks off, businesses across industries are gearing up for India's most prominent trade shows and exhibitions. These events provide excellent opportunities for networking, showcasing innovations, and expanding business..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/www.eventspherex.com-top-trade-show-2025.jpg"
 status: publish
 tags:
   - posts

@@ -7,7 +7,7 @@ category: "Event Business"
 categorySlug: "event-business"
 badgeClass: "badge-exhibitions"
 excerpt: "How to attract, price, and retain event sponsors in India. Includes sponsorship tier templates, pricing benchmarks, and proposal frameworks."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2025/03/Event-Sponsorship-Guide.png"
 status: publish
 tags:
   - posts

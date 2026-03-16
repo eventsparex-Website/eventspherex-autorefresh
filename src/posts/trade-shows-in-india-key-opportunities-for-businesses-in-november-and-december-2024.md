@@ -7,7 +7,7 @@ category: "Exhibition and Trade Show"
 categorySlug: "exhibition"
 badgeClass: "badge-exhibitions"
 excerpt: "As 2024 comes to a close, India’s trade show landscape remains vibrant with key events across industries. November and December offer businesses a final chance to make an impact, showcase..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Trade-shows-in-india-key-opportunities.jpg"
 status: publish
 tags:
   - posts

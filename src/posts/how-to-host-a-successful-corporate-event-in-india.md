@@ -7,7 +7,7 @@ category: "Events"
 categorySlug: "events"
 badgeClass: "badge-exhibitions"
 excerpt: "Hosting a corporate event in India requires thoughtful planning, creativity, and flawless execution. Whether it’s a product launch, a company anniversary, or a client appreciation event, each element must align..."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/4.jpg"
 status: publish
 tags:
   - posts

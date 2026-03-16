@@ -7,7 +7,7 @@ category: "Event Operations"
 categorySlug: "event-operations"
 badgeClass: "badge-exhibitions"
 excerpt: "Event safety isn't optional. This guide covers crowd management, fire safety, medical preparedness, and security protocols for events in India."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2025/03/Event-Safety-Security.png"
 status: publish
 tags:
   - posts

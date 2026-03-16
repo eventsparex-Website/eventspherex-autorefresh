@@ -7,7 +7,7 @@ category: "Exhibitions &amp; Trade Shows"
 categorySlug: "exhibitions-trade-shows"
 badgeClass: "badge-exhibitions"
 excerpt: "Discover the 7 biggest exhibition and trade show trends in India for 2026 — from AI-powered stalls to sustainable design and data-driven ROI tracking."
-featured_image: ""
+featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.jpg"
 status: publish
 tags:
   - posts
