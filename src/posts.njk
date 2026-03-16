@@ -4,27 +4,62 @@ title: All Articles
 permalink: /posts/
 ---
 
-<section class="section">
+<!-- Page Hero -->
+<div class="page-hero">
   <div class="container">
-    <div class="archive-header">
-      <h1>All Articles</h1>
-      <p>Latest news, insights and analysis from India's event industry</p>
-    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">All Articles</span>
+    </nav>
+    <h1 class="page-hero-title">All Articles</h1>
+    <p class="page-hero-desc">Latest news, insights and analysis from India's event industry <span class="page-hero-count">{{ collections.posts | length }} articles</span></p>
+  </div>
+</div>
 
-    <div class="archive-grid">
+<!-- Category Tabs -->
+<div class="category-tabs-wrapper">
+  <div class="container">
+    <div class="category-tabs">
+      <a href="/posts/" class="category-tab active">All</a>
+      <a href="/category/exhibitions-trade-shows/" class="category-tab">Exhibitions</a>
+      <a href="/category/corporate-events/" class="category-tab">Corporate</a>
+      <a href="/category/brand-activations-launches/" class="category-tab">Brand Activations</a>
+      <a href="/category/mice-conferences/" class="category-tab">MICE</a>
+      <a href="/category/event-technology-innovation/" class="category-tab">Technology</a>
+      <a href="/category/weddings-social-events/" class="category-tab">Weddings</a>
+      <a href="/category/industry-reports/" class="category-tab">Reports</a>
+      <a href="/category/industry-insights/" class="category-tab">Insights</a>
+    </div>
+  </div>
+</div>
+
+<!-- Posts Archive Grid -->
+<section class="section posts-archive">
+  <div class="container">
+    <div class="posts-archive-grid">
       {% for post in collections.posts %}
-      <a href="/posts/{{ post.data.slug }}/" class="cat-card" style="display:block">
-        <div class="cat-card-img">
+      <a href="/posts/{{ post.data.slug }}/" class="archive-card">
+        <div class="archive-card-img">
           {% if post.data.featured_image %}
             <img src="{{ post.data.featured_image }}" loading="lazy" alt="{{ post.data.title }}">
           {% else %}
-            <div style="height:160px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:40px">&#128240;</div>
+            <div class="archive-card-placeholder">&#128240;</div>
           {% endif %}
         </div>
-        <div class="cat-card-body">
+        <div class="archive-card-body">
           <span class="badge {{ post.data.badgeClass }}">{{ post.data.category }}</span>
-          <h4>{{ post.data.title }}</h4>
-          <div class="meta">{{ post.data.date | timeAgo }}</div>
+          <h3 class="archive-card-title">{{ post.data.title }}</h3>
+          {% if post.data.excerpt %}
+          <p class="archive-card-excerpt">{{ post.data.excerpt | truncate(120) }}</p>
+          {% endif %}
+          <div class="archive-card-footer">
+            <div class="archive-card-author">
+              <div class="author-avatar">{{ post.data.author | initials }}</div>
+              <span>{{ post.data.author }}</span>
+            </div>
+            <span class="read-time">{{ post.templateContent | readTime }}</span>
+          </div>
         </div>
       </a>
       {% endfor %}

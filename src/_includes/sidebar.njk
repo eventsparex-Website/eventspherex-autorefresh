@@ -1,18 +1,21 @@
 <!-- Sidebar -->
-<aside class="sidebar">
+<aside class="sidebar sidebar-sticky">
   <!-- Editor's Pick -->
-  <div class="sidebar-card">
+  <div class="sidebar-card sidebar-editors-pick">
     <div class="sidebar-card-title">&#128293; Editor's Pick</div>
     <div class="editors-pick">
       {% set editorPicks = collections.posts | limit(5) %}
       {% for post in editorPicks %}
-      <div class="editors-pick-item">
+      <a href="/posts/{{ post.data.slug }}/" class="editors-pick-item">
         <span class="editors-pick-num">0{{ loop.index }}</span>
         <div class="editors-pick-text">
-          <h4><a href="/posts/{{ post.data.slug }}/">{{ post.data.title }}</a></h4>
-          <span>{{ post.data.date | timeAgo }}</span>
+          <h4>{{ post.data.title }}</h4>
+          <span class="editors-pick-meta">
+            <span>{{ post.data.author }}</span>
+            <span>{{ post.data.date | timeAgo }}</span>
+          </span>
         </div>
-      </div>
+      </a>
       {% endfor %}
     </div>
   </div>
@@ -21,17 +24,32 @@
   <div class="sidebar-card newsletter-widget">
     <div class="sidebar-card-title">&#128233; Daily Newsletter</div>
     <p>Get the top event industry news delivered to your inbox every morning.</p>
-    <form action="https://eventspherex.us22.list-manage.com/subscribe/post" method="POST">
+    <form action="https://eventspherex.us22.list-manage.com/subscribe/post" method="POST" class="sidebar-newsletter-form">
       <input type="email" name="EMAIL" placeholder="Your email address" required>
       <button type="submit" class="btn btn-accent">Subscribe Free</button>
     </form>
   </div>
 
   <!-- Advertise CTA -->
-  <div class="sidebar-card" style="background:var(--bg-dark);color:#fff;text-align:center;padding:28px 20px;border-radius:12px">
-    <div style="font-size:28px;margin-bottom:8px">&#128226;</div>
-    <h4 style="color:#fff;margin-bottom:8px">Advertise With Us</h4>
-    <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:16px">Reach 10,000+ event professionals across India</p>
-    <a href="/advertise/" class="btn btn-accent" style="display:inline-block;width:100%">Get Started</a>
+  <div class="sidebar-card sidebar-advertise">
+    <div class="sidebar-advertise-icon">&#128226;</div>
+    <h4>Advertise With Us</h4>
+    <p>Reach 10,000+ event professionals across India</p>
+    <a href="/advertise/" class="btn btn-accent sidebar-advertise-btn">Get Started</a>
+  </div>
+
+  <!-- Category Tags Cloud -->
+  <div class="sidebar-card sidebar-tags">
+    <div class="sidebar-card-title">&#127991; Categories</div>
+    <div class="sidebar-tags-cloud">
+      <a href="/category/exhibitions-trade-shows/" class="sidebar-tag">Exhibitions</a>
+      <a href="/category/corporate-events/" class="sidebar-tag">Corporate Events</a>
+      <a href="/category/brand-activations-launches/" class="sidebar-tag">Brand Activations</a>
+      <a href="/category/mice-conferences/" class="sidebar-tag">MICE</a>
+      <a href="/category/event-technology-innovation/" class="sidebar-tag">Event Technology</a>
+      <a href="/category/weddings-social-events/" class="sidebar-tag">Weddings</a>
+      <a href="/category/industry-reports/" class="sidebar-tag">Industry Reports</a>
+      <a href="/category/industry-insights/" class="sidebar-tag">Industry Insights</a>
+    </div>
   </div>
 </aside>

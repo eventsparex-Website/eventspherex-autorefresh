@@ -1,9 +1,22 @@
 ---
 layout: base.njk
 ---
-<div class="page-content">
+<!-- Page Hero Banner -->
+<div class="page-hero">
   <div class="container">
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">{{ title }}</span>
+    </nav>
+    <h1 class="page-hero-title">{{ title }}</h1>
   </div>
 </div>
+
+<section class="section page-section">
+  <div class="container">
+    <div class="page-content-enhanced">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>
