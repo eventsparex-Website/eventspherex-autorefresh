@@ -4,7 +4,7 @@
   "description": "EventSphereX Media - India's Event Industry Portal (Static Site)",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
+    "build": "npx @11ty/eleventy && npx pagefind --site _site",
     "serve": "npx @11ty/eleventy --serve",
     "import": "node scripts/import-wp.js"
   },
@@ -15,5 +15,8 @@
     "@11ty/eleventy": "^3.0.0",
     "xml2js": "^0.6.2",
     "turndown": "^7.2.0"
+  },
+  "devDependencies": {
+    "pagefind": "^1.0.0"
   }
 }

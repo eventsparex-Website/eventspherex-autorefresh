@@ -21,14 +21,17 @@
   <div class="sidebar-card newsletter-widget">
     <div class="sidebar-card-title">&#128233; Daily Newsletter</div>
     <p>Get the top event industry news delivered to your inbox every morning.</p>
-    <input type="email" placeholder="Your email address">
-    <button class="btn btn-accent" onclick="alert('Newsletter signup coming soon!')">Subscribe Free</button>
+    <form action="https://eventspherex.us22.list-manage.com/subscribe/post" method="POST">
+      <input type="email" name="EMAIL" placeholder="Your email address" required>
+      <button type="submit" class="btn btn-accent">Subscribe Free</button>
+    </form>
   </div>
 
-  <!-- Ad Space -->
-  <div class="ad-space">
-    <p>Advertisement</p>
-    <p style="margin-top:8px">300x250</p>
-    <p style="margin-top:8px"><a href="/advertise/">Advertise Here</a></p>
+  <!-- Advertise CTA -->
+  <div class="sidebar-card" style="background:var(--bg-dark);color:#fff;text-align:center;padding:28px 20px;border-radius:12px">
+    <div style="font-size:28px;margin-bottom:8px">&#128226;</div>
+    <h4 style="color:#fff;margin-bottom:8px">Advertise With Us</h4>
+    <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:16px">Reach 10,000+ event professionals across India</p>
+    <a href="/advertise/" class="btn btn-accent" style="display:inline-block;width:100%">Get Started</a>
   </div>
 </aside>

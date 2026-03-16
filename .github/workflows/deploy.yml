@@ -22,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build site with Eleventy
-        run: npx @11ty/eleventy
+      - name: Build site with Eleventy and Pagefind
+        run: npx @11ty/eleventy && npx pagefind --site _site
 
       - name: Setup SSH key
         run: |
