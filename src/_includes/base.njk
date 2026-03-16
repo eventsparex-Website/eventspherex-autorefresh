@@ -26,7 +26,11 @@
 
 {% include "header.njk" %}
 
-{{ content | safe }}
+<div class="page-content">
+  <div class="container">
+    {{ content | safe }}
+  </div>
+</div>
 
 {% include "footer.njk" %}
 

@@ -600,3 +600,14 @@ button{cursor:pointer;font-family:inherit}
 .article-content blockquote{border-left:4px solid var(--accent);padding:16px 24px;margin:24px 0;background:var(--bg-alt);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-style:italic;color:var(--text2)}
 .article-content a{color:var(--accent-hover);text-decoration:underline;text-underline-offset:2px}
 .article-content a:hover{color:var(--accent)}
+
+/* Page content wrapper */
+.page-content{padding:60px 0;min-height:50vh}
+.page-content h2{font-size:28px;font-weight:700;color:var(--heading,#091d1b);margin:32px 0 16px}
+.page-content h3{font-size:22px;font-weight:600;color:var(--heading,#091d1b);margin:24px 0 12px}
+.page-content p{font-size:16px;line-height:1.8;color:var(--text,#333);margin-bottom:16px}
+.page-content ul,.page-content ol{margin:16px 0;padding-left:24px}
+.page-content li{font-size:16px;line-height:1.8;color:var(--text,#333);margin-bottom:8px}
+.page-content a{color:var(--accent,#b3d237);text-decoration:underline}
+.page-content strong{color:var(--heading,#091d1b)}
+
