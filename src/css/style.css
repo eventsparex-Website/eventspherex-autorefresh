@@ -920,3 +920,79 @@ button{cursor:pointer;font-family:inherit}
   div[style*="padding:48px 32px"]{padding:32px 20px!important}
   div[style*="padding:56px 40px"]{padding:32px 20px!important}
 }
+
+/* === Dark mode fixes for all pages === */
+[data-theme="dark"] .page-hero{background:#000!important}
+[data-theme="dark"] .page-section{background:var(--bg)!important}
+[data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3,[data-theme="dark"] h4{color:var(--text)!important}
+[data-theme="dark"] p{color:var(--text2)!important}
+[data-theme="dark"] strong{color:var(--text)!important}
+[data-theme="dark"] a{color:var(--accent)!important}
+
+/* Dark mode: inline styled cards */
+[data-theme="dark"] [style*="background:#fff"],
+[data-theme="dark"] [style*="background: #fff"]{background:var(--card)!important}
+[data-theme="dark"] [style*="border:1px solid #eee"],
+[data-theme="dark"] [style*="border: 1px solid #eee"]{border-color:var(--border)!important}
+[data-theme="dark"] [style*="color:#091d1b"],
+[data-theme="dark"] [style*="color: #091d1b"]{color:var(--text)!important}
+[data-theme="dark"] [style*="color:#222"],
+[data-theme="dark"] [style*="color: #222"]{color:var(--text)!important}
+[data-theme="dark"] [style*="color:#333"],
+[data-theme="dark"] [style*="color: #333"]{color:var(--text)!important}
+[data-theme="dark"] [style*="color:#555"],
+[data-theme="dark"] [style*="color: #555"]{color:var(--text2)!important}
+[data-theme="dark"] [style*="color:#666"],
+[data-theme="dark"] [style*="color: #666"]{color:var(--text2)!important}
+
+/* Dark mode: card backgrounds */
+[data-theme="dark"] .page-card,
+[data-theme="dark"] .sidebar-card,
+[data-theme="dark"] .article-card{background:var(--card)!important;border-color:var(--border)!important}
+[data-theme="dark"] .page-card h3{color:var(--text)!important}
+[data-theme="dark"] .page-card p{color:var(--text2)!important}
+
+/* Dark mode: gradient card backgrounds - keep dark ones, fix light ones */
+[data-theme="dark"] [style*="background:linear-gradient(180deg,#f9fdf0"],
+[data-theme="dark"] [style*="background:linear-gradient(180deg,#f0f6fc"],
+[data-theme="dark"] [style*="background:linear-gradient(180deg,#fef9f3"],
+[data-theme="dark"] [style*="background:linear-gradient(180deg,#f8f3fb"]{background:var(--card)!important}
+
+/* Dark mode: pastel background chips */
+[data-theme="dark"] [style*="background:#f9fdf0"],
+[data-theme="dark"] [style*="background:#f0f6fc"],
+[data-theme="dark"] [style*="background:#fef9f3"],
+[data-theme="dark"] [style*="background:#f8f3fb"],
+[data-theme="dark"] [style*="background:#fef3f3"],
+[data-theme="dark"] [style*="background:#f0faf5"]{background:var(--bg-alt)!important}
+
+/* Dark mode: shadow cards */
+[data-theme="dark"] [style*="box-shadow:0 2px 12px"],
+[data-theme="dark"] [style*="box-shadow:0 4px 20px"]{box-shadow:0 2px 12px rgba(0,0,0,.3)!important}
+
+/* Dark mode: search, forms */
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] #search-input{background:var(--bg-alt)!important;color:var(--text)!important;border-color:var(--border)!important}
+
+/* Dark mode: editor's pick sidebar */
+[data-theme="dark"] .editors-pick-item{border-color:var(--border)!important}
+[data-theme="dark"] .editors-pick-item h4{color:var(--text)!important}
+
+/* Dark mode: article content */
+[data-theme="dark"] .article-content h2,
+[data-theme="dark"] .article-content h3{color:var(--text)!important}
+[data-theme="dark"] .article-content p,
+[data-theme="dark"] .article-content li{color:var(--text2)!important}
+
+/* Dark mode: nav dropdown */
+[data-theme="dark"] .esx-dropdown{background:var(--card)!important}
+[data-theme="dark"] .esx-dropdown a{color:var(--text)!important}
+[data-theme="dark"] .esx-dropdown a:hover{background:var(--bg-alt)!important}
+
+/* Dark mode: footer newsletter */
+[data-theme="dark"] .newsletter-cta{background:var(--bg-dark2)!important}
+
+/* Dark mode: breadcrumb */
+[data-theme="dark"] .breadcrumb a{color:var(--text2)!important}
+[data-theme="dark"] .breadcrumb-current{color:var(--text)!important}
