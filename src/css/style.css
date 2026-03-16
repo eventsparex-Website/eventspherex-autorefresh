@@ -877,3 +877,46 @@ button{cursor:pointer;font-family:inherit}
 @media(max-width:480px){
   .page-stats-grid{grid-template-columns:1fr}
 }
+
+/* === Mobile responsive for inline grid pages === */
+@media(max-width:768px){
+  [style*="grid-template-columns: 1fr 1fr 1fr"],
+  [style*="grid-template-columns:1fr 1fr 1fr"],
+  [style*="grid-template-columns:repeat(3,1fr)"],
+  [style*="grid-template-columns:repeat(4,1fr)"],
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr!important
+  }
+  .page-hero-title{font-size:28px!important}
+  .nav{overflow-x:hidden}
+  .nav-links{display:none!important}
+  .nav-mobile-toggle{display:block!important}
+  .topbar{display:none}
+  .header .container{flex-wrap:wrap}
+  .header-search{max-width:100%;order:3;flex-basis:100%;margin-top:12px}
+  .header-actions{gap:8px}
+  .header-actions .btn{padding:8px 12px;font-size:13px}
+  .hero-grid{grid-template-columns:1fr!important}
+  .hero-side{grid-template-columns:1fr!important}
+  .main-grid{grid-template-columns:1fr!important}
+  .article-card{grid-template-columns:1fr!important}
+  .article-card-img{height:200px!important}
+  .stats-grid{grid-template-columns:1fr 1fr!important}
+  .category-cards-grid{grid-template-columns:1fr!important}
+  .tools-grid{grid-template-columns:1fr!important}
+  .sidebar{margin-top:32px}
+  .footer-grid{grid-template-columns:1fr 1fr!important;gap:24px!important}
+  div[style*="display:flex;gap:16px;justify-content:center"]{flex-direction:column!important;align-items:center!important}
+  div[style*="display:grid;grid-template-columns:1fr 1fr;gap:24px"]{grid-template-columns:1fr!important}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr!important}
+  .stats-grid{grid-template-columns:1fr!important}
+  div[style*="font-size:36px;font-weight:800"]{font-size:28px!important}
+  div[style*="font-size:32px;font-weight:800"]{font-size:24px!important}
+  h2[style*="font-size:36px"]{font-size:26px!important}
+  h2[style*="font-size:32px"]{font-size:24px!important}
+  div[style*="padding:48px 32px"]{padding:32px 20px!important}
+  div[style*="padding:56px 40px"]{padding:32px 20px!important}
+}
