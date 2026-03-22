@@ -10,13 +10,13 @@ status: publish
 
 **Effective Date:** March 16, 2026
 
-This Refund Policy applies to paid Pro membership subscriptions purchased on [eventspherex.com](https://eventspherex.com).
+This Refund Policy applies to any paid services or subscriptions purchased on [eventspherex.com](https://eventspherex.com).
 
 ## 7-Day Refund Window
 
-If you are not satisfied with your Pro membership, you may request a full refund within **7 days** of your purchase date. No questions asked.
+If you are not satisfied with your purchase, you may request a full refund within **7 days** of your purchase date. No questions asked.
 
-After 7 days, subscription payments are non-refundable for the current billing period. You will continue to have access to Pro features until the end of your billing cycle.
+After 7 days, subscription payments are non-refundable for the current billing period. You will continue to have access to your purchased services until the end of your billing cycle.
 
 ## How to Request a Refund
 
@@ -36,7 +36,7 @@ To request a refund, contact us with the following details:
 
 ## Cancellation
 
-You can cancel your Pro membership at any time from your account settings. Cancellation stops future billing but does not trigger an automatic refund. If you are within the 7-day window, please contact us separately to request a refund.
+You can cancel any active subscription at any time by contacting us. Cancellation stops future billing but does not trigger an automatic refund. If you are within the 7-day window, please contact us separately to request a refund.
 
 ## Exceptions
 

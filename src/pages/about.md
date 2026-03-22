@@ -68,8 +68,8 @@ status: publish
   <h3 style="color:#fff;font-size:22px;margin-bottom:32px">By the Numbers</h3>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
     <div>
-      <div style="font-size:36px;font-weight:800;color:#b3d237">10K+</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Monthly Readers</div>
+      <div style="font-size:36px;font-weight:800;color:#b3d237">200+</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Articles Published</div>
     </div>
     <div>
       <div style="font-size:36px;font-weight:800;color:#b3d237">200+</div>

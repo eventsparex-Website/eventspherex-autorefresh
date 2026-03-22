@@ -10,7 +10,7 @@ status: publish
 <div style="text-align:center;max-width:720px;margin:0 auto 56px;padding:20px 0">
 <div style="display:inline-block;background:linear-gradient(135deg,#b3d237,#8cb82b);color:#091d1b;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:20px">📢 ADVERTISE WITH US</div>
 <h2 style="font-size:36px;font-weight:800;color:#091d1b;margin-bottom:16px;line-height:1.2">Put Your Brand in Front of<br><span style="color:#b3d237">India's Event Industry</span></h2>
-<p style="font-size:17px;color:#555;line-height:1.8">EventSphereX reaches 10,000+ event professionals every month — planners, venue managers, exhibitors, brand managers, and decision-makers across 50+ cities.</p>
+<p style="font-size:17px;color:#555;line-height:1.8">EventSphereX reaches event professionals across India — planners, venue managers, exhibitors, brand managers, and decision-makers across 50+ cities.</p>
 </div>
 
 <!-- Stats -->
@@ -18,8 +18,8 @@ status: publish
   <h3 style="color:#fff;font-size:22px;margin-bottom:32px">Why Brands Choose EventSphereX</h3>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
     <div>
-      <div style="font-size:36px;font-weight:800;color:#b3d237">10K+</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Monthly Readers</div>
+      <div style="font-size:36px;font-weight:800;color:#b3d237">200+</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Articles Published</div>
     </div>
     <div>
       <div style="font-size:36px;font-weight:800;color:#b3d237">100%</div>
@@ -30,8 +30,8 @@ status: publish
       <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Cities Reached</div>
     </div>
     <div>
-      <div style="font-size:36px;font-weight:800;color:#b3d237">15K+</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Newsletter Subscribers</div>
+      <div style="font-size:36px;font-weight:800;color:#b3d237">18</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">News Categories</div>
     </div>
   </div>
 </div>

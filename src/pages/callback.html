@@ -1,0 +1,64 @@
+---
+layout: false
+permalink: /callback/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Authorization - EventSphereX</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f7fa; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .card { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); max-width: 500px; width: 100%; text-align: center; padding: 48px 32px; }
+    .icon { font-size: 56px; margin-bottom: 16px; }
+    h1 { font-size: 22px; color: #1a1a1a; margin-bottom: 12px; }
+    p { font-size: 15px; color: #666; line-height: 1.6; margin-bottom: 16px; }
+    .code-box { background: #f0f4f8; border: 1px solid #ddd; border-radius: 8px; padding: 16px; font-family: monospace; font-size: 14px; word-break: break-all; margin-bottom: 16px; color: #333; }
+    .btn { display: inline-block; background: #b3d237; color: #091d1b; padding: 12px 24px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; }
+    .btn:hover { background: #a1c030; }
+    .error { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon" id="icon">&#9203;</div>
+    <h1 id="title">Processing Authorization...</h1>
+    <p id="message">Please wait while we complete the LinkedIn connection.</p>
+    <div class="code-box" id="code-box" style="display:none;"></div>
+    <button class="btn" id="copy-btn" style="display:none;" onclick="copyCode()">Copy Authorization Code</button>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const error = params.get('error');
+    const errorDesc = params.get('error_description');
+
+    if (error) {
+      document.getElementById('icon').textContent = '\u274C';
+      document.getElementById('title').textContent = 'Authorization Failed';
+      document.getElementById('message').innerHTML = '<span class="error">' + (errorDesc || error) + '</span>';
+    } else if (code) {
+      document.getElementById('icon').textContent = '\u2705';
+      document.getElementById('title').textContent = 'Authorization Successful!';
+      document.getElementById('message').textContent = 'Copy this code and share it to complete the setup:';
+      document.getElementById('code-box').style.display = 'block';
+      document.getElementById('code-box').textContent = code;
+      document.getElementById('copy-btn').style.display = 'inline-block';
+    } else {
+      document.getElementById('icon').textContent = '\u26A0\uFE0F';
+      document.getElementById('title').textContent = 'No Authorization Code';
+      document.getElementById('message').textContent = 'No authorization code was received. Please try the login link again.';
+    }
+
+    function copyCode() {
+      navigator.clipboard.writeText(code);
+      document.getElementById('copy-btn').textContent = 'Copied!';
+      setTimeout(() => { document.getElementById('copy-btn').textContent = 'Copy Authorization Code'; }, 2000);
+    }
+  </script>
+</body>
+</html>

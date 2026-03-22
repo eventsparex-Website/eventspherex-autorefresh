@@ -51,6 +51,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f9fafb;color:#091d1
 .cat-pho{background:rgba(90,255,235,.15);color:#5affeb}
 .cat-anc{background:rgba(255,138,122,.15);color:#ff8a7a}
 .cat-tec{background:rgba(138,138,255,.15);color:#8a8aff}
+.cat-edu{background:rgba(255,215,0,.15);color:#ffd700}
 .city-tag{color:#999;font-size:13px}
 .company-desc{color:#999;font-size:13px;line-height:1.5;margin:8px 0}
 .company-phone{color:#aaa;font-size:13px;margin-bottom:4px}
@@ -102,6 +103,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f9fafb;color:#091d1
         <option value="Photography">Photography</option>
         <option value="Anchor & Entertainment">Anchor & Entertainment</option>
         <option value="Event Tech">Event Tech</option>
+        <option value="Education & Training">Education & Training</option>
       </select>
       <select id="fCity" onchange="filter()">
         <option value="">All Cities</option>
@@ -140,7 +142,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f9fafb;color:#091d1
     <h2>List Your Company</h2>
     <div class="fg"><label>Company Name</label><input type="text" id="lName"></div>
     <div class="fg"><label>Category</label>
-      <select id="lCat"><option>Event Management</option><option>Exhibition Fabrication</option><option>Wedding Planning</option><option>Venue</option><option>AV & Technical</option><option>Catering</option><option>Decoration</option><option>Photography</option><option>Anchor & Entertainment</option><option>Event Tech</option></select>
+      <select id="lCat"><option>Event Management</option><option>Exhibition Fabrication</option><option>Wedding Planning</option><option>Venue</option><option>AV & Technical</option><option>Catering</option><option>Decoration</option><option>Photography</option><option>Anchor & Entertainment</option><option>Event Tech</option><option>Education & Training</option></select>
     </div>
     <div class="fg"><label>City</label><input type="text" id="lCity" placeholder="e.g. Mumbai"></div>
     <div class="fg"><label>Phone</label><input type="tel" id="lPhone" placeholder="+91 98XXX XXXXX"></div>
@@ -159,7 +161,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f9fafb;color:#091d1
 const catBadge={
   'Event Management':'cat-em','Exhibition Fabrication':'cat-fab','Wedding Planning':'cat-wed',
   'Venue':'cat-ven','AV & Technical':'cat-av','Catering':'cat-cat','Decoration':'cat-dec',
-  'Photography':'cat-pho','Anchor & Entertainment':'cat-anc','Event Tech':'cat-tec'
+  'Photography':'cat-pho','Anchor & Entertainment':'cat-anc','Event Tech':'cat-tec','Education & Training':'cat-edu'
 };
 
 const companies = [
@@ -210,7 +212,13 @@ const companies = [
   {name:"Vibgyor Brand Services",cat:"Event Management",city:"Mumbai",phone:"+91 22 4056 XXXX",desc:"Retail branding, events, in-shop activations. Pan-India network.",rating:4.2,featured:false,web:"www.vibgyorbrand.com"},
   {name:"Brandwidth Events",cat:"Event Management",city:"Delhi",phone:"+91 11 4615 XXXX",desc:"Corporate events, exhibitions, and conferences. TCS, Infosys, HCL clients.",rating:4.3,featured:false,web:"www.brandwidth.com"},
   {name:"Think Events",cat:"Event Management",city:"Chennai",phone:"+91 44 4567 XXXX",desc:"South India corporate events. IT company launches, dealer meets, conferences.",rating:4.2,featured:false,web:"www.thinkevents.co.in"},
-  {name:"Chennai Trade Centre",cat:"Venue",city:"Chennai",phone:"+91 44 2231 XXXX",desc:"Chennai's premier trade fair venue. CTC complex with multiple halls.",rating:4.3,featured:false,web:"www.chennaitradecentre.org"}
+  {name:"Chennai Trade Centre",cat:"Venue",city:"Chennai",phone:"+91 44 2231 XXXX",desc:"Chennai's premier trade fair venue. CTC complex with multiple halls.",rating:4.3,featured:false,web:"www.chennaitradecentre.org"},
+  {name:"Bhavan's College MSEED",cat:"Education & Training",city:"Mumbai",phone:"+91 99301 61111",desc:"Management School of Events and Experience Design. India's pioneering institute for event management and experience design education under Bhavan's College.",rating:4.7,featured:true,web:"www.mseededucation.com"},
+  {name:"NIEM - The Institute of Event Management",cat:"Education & Training",city:"Mumbai",phone:"+91 22 2620 XXXX",desc:"Asia's first event management institute (est. 2000). Diploma, PG Diploma courses. 25+ years of industry-focused education with live projects and internships.",rating:4.6,featured:true,web:"www.niemindia.com"},
+  {name:"EMDI Institute of Media & Communication",cat:"Education & Training",city:"Mumbai",phone:"+91 22 2625 XXXX",desc:"Specialized event management and media education. Campuses in Mumbai, Delhi, Dubai. Industry-integrated curriculum with live event projects.",rating:4.5,featured:false,web:"www.emdiworld.com"},
+  {name:"DIHM - Delhi Institute of Hotel Management",cat:"Education & Training",city:"Delhi",phone:"+91 11 2611 XXXX",desc:"Government institute jointly sponsored by Ministry of Tourism & Govt of Delhi. BSc Hospitality & Hotel Administration with event management specialization.",rating:4.5,featured:false,web:"www.dihmct.in"},
+  {name:"NAEMD - National Academy of Event Management and Development",cat:"Education & Training",city:"Mumbai",phone:"+91 22 2412 XXXX",desc:"Diploma and PG programs in event management. Campuses in Mumbai, Ahmedabad, Jaipur, Udaipur. Strong placement record.",rating:4.4,featured:false,web:"www.naemd.com"},
+  {name:"Amity School of Communication",cat:"Education & Training",city:"Delhi",phone:"+91 120 4392 XXXX",desc:"MA in PR & Event Management under Amity University. Research-driven curriculum, international collaborations, campus placements.",rating:4.3,featured:false,web:"www.amity.edu/asco/"}
 ];
 
 function stars(r){return '★'.repeat(Math.floor(r))+(r%1>=0.5?'½':'');}

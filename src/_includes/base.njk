@@ -17,7 +17,14 @@
 {% if featured_image %}<meta property="og:image" content="{{ featured_image }}">{% endif %}
 <link rel="canonical" href="https://eventspherex.com{{ page.url }}">
 <link rel="stylesheet" href="/css/style.css">
-<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#b3d237">
+<meta name="google-site-verification" content="yemXUJjCt4-Suj_S7TUWmxSSytlVvF40KsJBzTzIk_o">
+{% if not featured_image %}<meta property="og:image" content="https://eventspherex.com/images/og-banner.png">{% endif %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"EventSphereX","url":"https://eventspherex.com","logo":"https://eventspherex.com/images/logo.svg","description":"India's Event Industry Portal","sameAs":["https://www.linkedin.com/company/eventspherex/","https://www.instagram.com/event_spherex/","https://www.youtube.com/@EventspareX"]}
+</script>
 </head>
 <body>
 

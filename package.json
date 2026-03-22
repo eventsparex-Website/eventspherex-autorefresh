@@ -8,13 +8,19 @@
     "serve": "npx @11ty/eleventy --serve",
     "import": "node scripts/import-wp.js"
   },
-  "keywords": ["events", "india", "eleventy", "static-site"],
+  "keywords": [
+    "events",
+    "india",
+    "eleventy",
+    "static-site"
+  ],
   "author": "EventSphereX",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "xml2js": "^0.6.2",
-    "turndown": "^7.2.0"
+    "puppeteer": "^24.39.1",
+    "turndown": "^7.2.0",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "pagefind": "^1.0.0"

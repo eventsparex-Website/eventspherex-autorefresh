@@ -7,7 +7,7 @@ category: "MICE &amp; Conferences"
 categorySlug: "mice-conferences"
 badgeClass: "badge-mice"
 excerpt: "India's MICE tourism sector is booming with new convention centres, government incentives, and competitive pricing. Here's why global conferences are choosing India."
-featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.jpg"
+featured_image: "/images/posts/article-27.jpg"
 status: publish
 tags:
   - posts

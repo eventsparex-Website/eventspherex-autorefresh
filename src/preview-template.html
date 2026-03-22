@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Draft Preview - EMDI Institute Feature | EventSphereX</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-dark: #091d1b;
+  --bg-card: #0d3d39;
+  --accent: #b3d237;
+  --text: #e8e8e8;
+  --text-muted: rgba(255,255,255,0.6);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #f5f5f5; color: #333; }
+
+/* Draft banner */
+.draft-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7c948 100%);
+  color: #000;
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.draft-banner .label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.draft-banner .pulse {
+  width: 10px;
+  height: 10px;
+  background: #ff3333;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.draft-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-approve {
+  background: #091d1b;
+  color: #b3d237;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-changes {
+  background: rgba(0,0,0,0.1);
+  color: #000;
+  border: 2px solid rgba(0,0,0,0.2);
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Article container */
+.article-wrap {
+  max-width: 900px;
+  margin: 80px auto 60px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+}
+
+/* Hero image */
+.hero-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* Article header */
+.article-header {
+  padding: 50px 60px 30px;
+}
+
+.article-category {
+  display: inline-block;
+  background: rgba(179, 210, 55, 0.15);
+  color: #0d3d39;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #091d1b;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.article-meta {
+  font-size: 14px;
+  color: #999;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Article content */
+.article-content {
+  padding: 40px 60px 60px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.article-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #091d1b;
+  margin: 40px 0 16px;
+  letter-spacing: -0.5px;
+}
+
+.article-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d3d39;
+  margin: 30px 0 12px;
+}
+
+.article-content p {
+  margin-bottom: 18px;
+}
+
+.article-content ul, .article-content ol {
+  margin: 12px 0 20px 24px;
+}
+
+.article-content li {
+  margin-bottom: 8px;
+}
+
+.article-content strong {
+  color: #091d1b;
+}
+
+/* Photo gallery */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.photo-gallery .full-width {
+  grid-column: 1 / -1;
+  height: 350px;
+}
+
+.photo-caption {
+  font-size: 13px;
+  color: #999;
+  text-align: center;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* Highlight box */
+.highlight-box {
+  background: linear-gradient(135deg, #091d1b 0%, #0d3d39 100%);
+  border-radius: 12px;
+  padding: 35px 40px;
+  margin: 30px 0;
+  color: #fff;
+}
+
+.highlight-box h3 {
+  color: #b3d237 !important;
+  margin-top: 0 !important;
+}
+
+.highlight-box ul {
+  color: rgba(255,255,255,0.8);
+}
+
+.highlight-box li {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.stat-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.stat-card .value {
+  font-size: 32px;
+  font-weight: 800;
+  color: #091d1b;
+}
+
+.stat-card .label {
+  font-size: 13px;
+  color: #999;
+  margin-top: 4px;
+}
+
+/* Alumni logos section */
+.alumni-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.alumni-tag {
+  background: #f0f0f0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* CTA box */
+.cta-box {
+  background: linear-gradient(135deg, #091d1b 0%, #0d3d39 100%);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  margin: 40px 0 0;
+}
+
+.cta-box h3 {
+  color: #fff !important;
+  font-size: 24px;
+  margin: 0 0 10px !important;
+}
+
+.cta-box p {
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+}
+
+.cta-box a {
+  display: inline-block;
+  background: #b3d237;
+  color: #091d1b;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Watermark */
+.watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 120px;
+  font-weight: 900;
+  color: rgba(0,0,0,0.03);
+  pointer-events: none;
+  z-index: 999;
+  letter-spacing: 10px;
+  white-space: nowrap;
+}
+
+/* Bottom approval section */
+.approval-section {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 60px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.approval-section h3 {
+  font-size: 22px;
+  color: #091d1b;
+  margin-bottom: 10px;
+}
+
+.approval-section p {
+  color: #999;
+  margin-bottom: 24px;
+}
+
+.approval-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.approval-btns a {
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn-green {
+  background: #b3d237;
+  color: #091d1b;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #091d1b;
+  border: 2px solid #ddd;
+}
+</style>
+</head>
+<body>
+
+<div class="watermark">DRAFT</div>
+
+<!-- Fixed draft banner -->
+<div class="draft-banner">
+  <div class="label"><span class="pulse"></span> DRAFT PREVIEW - For Review Only</div>
+  <div class="draft-actions">
+    <a href="mailto:contact@eventspherex.com?subject=APPROVED%20-%20EMDI%20Feature%20Article&body=Hi%20Manoj%2C%0A%0AWe%20approve%20the%20EMDI%20feature%20article.%20Please%20publish%20it.%0A%0AThank%20you" class="btn-approve">Approve & Publish</a>
+    <a href="mailto:contact@eventspherex.com?subject=Changes%20Requested%20-%20EMDI%20Feature%20Article&body=Hi%20Manoj%2C%0A%0APlease%20make%20the%20following%20changes%20to%20the%20EMDI%20feature%20article%3A%0A%0A1.%20%0A2.%20%0A3.%20" class="btn-changes">Request Changes</a>
+  </div>
+</div>
+
+<!-- Article -->
+<div class="article-wrap">
+  <img class="hero-image" id="hero" src="" alt="EMDI Institute Event Management">
+
+  <div class="article-header">
+    <div class="article-category">Education</div>
+    <h1 class="article-title">EMDI Institute - India's Pioneer in Event Management Education</h1>
+    <div class="article-meta">
+      <span>By EventSphereX</span>
+      <span>12 min read</span>
+      <span>March 2026</span>
+    </div>
+  </div>
+
+  <div class="article-content" id="article-body">
+    <!-- Content will be injected here -->
+    <p><em>Loading article content...</em></p>
+  </div>
+</div>
+
+<!-- Bottom approval -->
+<div class="approval-section">
+  <h3>Ready to Publish?</h3>
+  <p>Review the article above. Click approve to go live, or request changes.</p>
+  <div class="approval-btns">
+    <a href="mailto:contact@eventspherex.com?subject=APPROVED%20-%20EMDI%20Feature%20Article&body=Hi%20Manoj%2C%0A%0AWe%20approve%20the%20EMDI%20feature%20article.%20Please%20publish%20it.%0A%0AThank%20you" class="btn-green">Approve & Publish</a>
+    <a href="mailto:contact@eventspherex.com?subject=Changes%20Requested%20-%20EMDI%20Feature%20Article&body=Hi%20Manoj%2C%0A%0APlease%20make%20the%20following%20changes%3A%0A%0A1.%20%0A2.%20%0A3.%20" class="btn-outline">Request Changes</a>
+  </div>
+</div>
+
+</body>
+</html>

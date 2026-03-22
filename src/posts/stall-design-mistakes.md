@@ -7,7 +7,7 @@ category: "Exhibitions &amp; Trade Shows"
 categorySlug: "exhibitions-trade-shows"
 badgeClass: "badge-exhibitions"
 excerpt: "Avoid these 10 common exhibition stall design mistakes that waste your budget and lose leads. Expert tips from India's top exhibition designers."
-featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.jpg"
+featured_image: "/images/posts/trade-show-booth.jpg"
 status: publish
 tags:
   - posts

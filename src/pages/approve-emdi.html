@@ -1,0 +1,89 @@
+---
+layout: false
+permalink: /approve/emdi/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Approval - EventSphereX</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f7fa; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .card { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); max-width: 600px; width: 100%; overflow: hidden; }
+    .card-header { background: linear-gradient(135deg, #091d1b, #0d3d39); padding: 24px 32px; color: #fff; }
+    .card-header h1 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+    .card-header p { font-size: 13px; color: #b3d237; }
+    .card-body { padding: 32px; }
+    .article-preview { border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; margin-bottom: 24px; }
+    .article-preview h2 { font-size: 18px; color: #1a1a1a; margin-bottom: 8px; }
+    .article-preview .meta { font-size: 13px; color: #666; margin-bottom: 12px; }
+    .article-preview p { font-size: 14px; color: #444; line-height: 1.6; }
+    .article-preview .tag { display: inline-block; background: #e8f5e9; color: #2e7d32; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; }
+    .feedback-label { display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 8px; }
+    textarea { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 12px; font-size: 14px; font-family: inherit; resize: vertical; min-height: 80px; margin-bottom: 20px; }
+    textarea:focus { outline: none; border-color: #b3d237; box-shadow: 0 0 0 3px rgba(179,210,55,0.15); }
+    .btn-group { display: flex; gap: 12px; }
+    .btn { flex: 1; padding: 14px 20px; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .btn-approve { background: #b3d237; color: #091d1b; }
+    .btn-approve:hover { background: #a1c030; transform: translateY(-1px); }
+    .btn-reject { background: #fee2e2; color: #dc2626; }
+    .btn-reject:hover { background: #fecaca; transform: translateY(-1px); }
+    .btn-changes { background: #e0e7ff; color: #4338ca; }
+    .btn-changes:hover { background: #c7d2fe; transform: translateY(-1px); }
+    .footer-note { text-align: center; font-size: 12px; color: #999; margin-top: 20px; padding-top: 16px; border-top: 1px solid #f0f0f0; }
+    #success-msg { display: none; text-align: center; padding: 40px 32px; }
+    #success-msg .icon { font-size: 48px; margin-bottom: 16px; }
+    #success-msg h2 { font-size: 20px; color: #1a1a1a; margin-bottom: 8px; }
+    #success-msg p { font-size: 14px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <h1>EventSphereX - Article Approval</h1>
+      <p>Review and approve before publishing</p>
+    </div>
+
+    <div id="form-section" class="card-body">
+      <div class="article-preview">
+        <span class="tag">EDUCATION</span>
+        <h2>EMDI Institute - India's Pioneer in Event Management Education</h2>
+        <div class="meta">By EventSphereX | 12 min read | March 19, 2026</div>
+        <p>A comprehensive look at EMDI Institute of Media & Communication - courses, placements, alumni network, live event exposure, and why it's one of India's top event management colleges.</p>
+      </div>
+
+      <form id="approval-form" action="https://formsubmit.co/contact@eventspherex.com" method="POST">
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="EMDI Article - Client Response">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://eventspherex.com/approve/emdi/thanks/">
+        <input type="hidden" name="Article" value="EMDI Institute - India's Pioneer in Event Management Education">
+        <input type="hidden" name="Decision" id="decision-field" value="">
+
+        <label class="feedback-label">Feedback / Comments (optional)</label>
+        <textarea name="Feedback" placeholder="Any changes, suggestions, or comments..."></textarea>
+
+        <div class="btn-group">
+          <button type="submit" class="btn btn-approve" onclick="document.getElementById('decision-field').value='APPROVED - Ready to Publish'">
+            Approve & Publish
+          </button>
+          <button type="submit" class="btn btn-changes" onclick="document.getElementById('decision-field').value='CHANGES REQUESTED'">
+            Request Changes
+          </button>
+          <button type="submit" class="btn btn-reject" onclick="document.getElementById('decision-field').value='REJECTED'">
+            Reject
+          </button>
+        </div>
+      </form>
+
+      <div class="footer-note">
+        This page is private. Only people with this link can access it.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

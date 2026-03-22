@@ -7,7 +7,7 @@ category: "Corporate Events"
 categorySlug: "corporate-events"
 badgeClass: "badge-corporate"
 excerpt: "Step-by-step guide to planning a successful corporate event in India — from venue selection and budgeting to execution and ROI measurement."
-featured_image: "https://eventspherex.com/wp-content/uploads/2024/10/Article-cover-page.jpg"
+featured_image: "/images/posts/article-22.jpg"
 status: publish
 tags:
   - posts

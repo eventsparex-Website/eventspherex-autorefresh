@@ -23,7 +23,7 @@
         <a href="https://wa.me/918484981833" target="_blank" title="WhatsApp">&#9742;</a>
         <a href="https://www.linkedin.com/company/eventspherex/" target="_blank" title="LinkedIn">in</a>
         <a href="https://www.instagram.com/event_spherex/" target="_blank" title="Instagram">&#9673;</a>
-        <a href="https://www.youtube.com/@EventSphereX" target="_blank" title="YouTube">&#9654;</a>
+        <a href="https://www.youtube.com/@EventspareX" target="_blank" title="YouTube">&#9654;</a>
       </div>
       <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">&#9680;</button>
     </div>
@@ -51,7 +51,15 @@
       </script>
     </div>
     <div class="header-actions">
-      <span class="btn btn-accent btn-coming-soon" style="opacity:.6;cursor:default;pointer-events:none">Pro &mdash; Coming Soon</span>
+      <a href="/tools/pro/" class="btn btn-accent" style="display:inline-flex;align-items:center;gap:8px;animation:pulse-glow 2s infinite;font-weight:700;padding:10px 22px;border-radius:8px;text-decoration:none;">
+        <span style="font-size:16px;">&#9889;</span> Explore Pro Tools
+      </a>
+      <style>
+        @keyframes pulse-glow {
+          0%, 100% { box-shadow: 0 0 8px rgba(179,210,55,0.3); }
+          50% { box-shadow: 0 0 20px rgba(179,210,55,0.6), 0 0 40px rgba(179,210,55,0.2); }
+        }
+      </style>
     </div>
   </div>
 </header>
@@ -61,6 +69,7 @@
   <div class="container">
     <ul class="nav-links" id="nav-links">
       <li class="active"><a href="/">Home</a></li>
+      <li><a href="/get-featured/" style="color:var(--accent)">Get Featured</a></li>
       <li>
         <a href="#" class="nav-dropdown-toggle">News <span class="arrow">&#9662;</span></a>
         <div class="nav-dropdown">
@@ -74,17 +83,7 @@
           <a href="/category/industry-insights/">Industry Insights</a>
         </div>
       </li>
-      <li>
-        <a href="#" class="nav-dropdown-toggle">Tools <span class="arrow">&#9662;</span></a>
-        <div class="nav-dropdown">
-          <a href="/tools/event-budget-calculator.html">Budget Calculator</a>
-          <a href="/tools/event-checklist-generator.html">Checklist Generator</a>
-          <a href="/tools/event-calendar.html">Events Calendar</a>
-          <a href="/tools/industry-directory.html">Industry Directory</a>
-          <a href="/tools/led-calculator-basic.html">LED Pixel Calculator</a>
-        </div>
-      </li>
-      <li><a href="/advertise/" style="color:var(--accent)">Advertise</a></li>
+      <li><a href="/tools/pro/" style="color:#b3d237;font-weight:700;display:flex;align-items:center;gap:6px;">&#9889; Pro Tools <span style="font-size:9px;background:#b3d237;color:#091d1b;padding:2px 6px;border-radius:4px;font-weight:700;">NEW</span></a></li>
     </ul>
     <button class="nav-mobile-toggle" id="mobile-menu-btn">&#9776;</button>
   </div>
@@ -132,7 +131,7 @@
   <a href="/tools/event-calendar.html">Events Calendar</a>
   <a href="/tools/industry-directory.html">Industry Directory</a>
   <a href="/tools/led-calculator-basic.html">LED Pixel Calculator</a>
-  <a href="/advertise/">Advertise</a>
+  <a href="/get-featured/">Get Featured</a>
 </div>
 
 <!-- ===== BREAKING NEWS ===== -->

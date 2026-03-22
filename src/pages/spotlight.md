@@ -10,7 +10,7 @@ status: publish
 <div style="text-align:center;max-width:720px;margin:0 auto 56px;padding:20px 0">
 <div style="display:inline-block;background:linear-gradient(135deg,#b3d237,#8cb82b);color:#091d1b;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:20px">✨ SPOTLIGHT PROGRAM</div>
 <h2 style="font-size:36px;font-weight:800;color:#091d1b;margin-bottom:16px;line-height:1.2">Get Your Event Featured on<br><span style="color:#b3d237">EventSphereX</span></h2>
-<p style="font-size:17px;color:#555;line-height:1.8">Give your event, exhibition, or conference the visibility it deserves. EventSphereX Spotlight connects you with India's largest event industry audience — 10,000+ professionals across 50+ cities.</p>
+<p style="font-size:17px;color:#555;line-height:1.8">Give your event, exhibition, or conference the visibility it deserves. EventSphereX Spotlight connects you with India's largest event industry audience — India's growing event industry community.</p>
 </div>
 
 <!-- What We Offer -->
@@ -26,7 +26,7 @@ status: publish
   <div class="page-card" style="border-top:4px solid #0d3d39;background:linear-gradient(180deg,#f0f7f6,#fff)">
     <span class="page-card-icon">🎯</span>
     <h3>Event Listing</h3>
-    <p>List your upcoming event on our platform. Reach 10,000+ professionals actively looking for industry gatherings to attend.</p>
+    <p>List your upcoming event on our platform. Reach professionals actively looking for industry gatherings to attend.</p>
     <span style="display:inline-block;margin-top:12px;color:#0d3d39;font-weight:600;font-size:13px">Free to List →</span>
   </div>
   <div class="page-card" style="border-top:4px solid #e67e22;background:linear-gradient(180deg,#fef9f3,#fff)">
@@ -48,8 +48,8 @@ status: publish
   <h3 style="color:#fff;font-size:22px;margin-bottom:32px">Why Agencies Choose EventSphereX</h3>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
     <div>
-      <div style="font-size:36px;font-weight:800;color:#b3d237">10K+</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Monthly Readers</div>
+      <div style="font-size:36px;font-weight:800;color:#b3d237">200+</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Articles Published</div>
     </div>
     <div>
       <div style="font-size:36px;font-weight:800;color:#b3d237">50+</div>
@@ -60,8 +60,8 @@ status: publish
       <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Articles Published</div>
     </div>
     <div>
-      <div style="font-size:36px;font-weight:800;color:#b3d237">15K+</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">Newsletter Subscribers</div>
+      <div style="font-size:36px;font-weight:800;color:#b3d237">18</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:4px">News Categories</div>
     </div>
   </div>
 </div>

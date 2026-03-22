@@ -10,7 +10,7 @@ status: publish
 <div style="text-align:center;max-width:720px;margin:0 auto 56px;padding:20px 0">
 <div style="display:inline-block;background:linear-gradient(135deg,#b3d237,#8cb82b);color:#091d1b;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:20px">NEWSLETTER</div>
 <h2 style="font-size:36px;font-weight:800;color:#091d1b;margin-bottom:16px;line-height:1.2">Stay Ahead in<br><span style="color:#b3d237">India's Event Industry</span></h2>
-<p style="font-size:17px;color:#555;line-height:1.8">Join 15,000+ event professionals who get the latest industry news, insights, and opportunities delivered straight to their inbox every week. Free, always.</p>
+<p style="font-size:17px;color:#555;line-height:1.8">Be among the first event professionals to get the latest industry news, insights, and opportunities delivered straight to their inbox every week. Free, always.</p>
 </div>
 
 <!-- Signup Form -->

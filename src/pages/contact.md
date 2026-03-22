@@ -72,7 +72,7 @@ status: publish
   <div style="text-align:center;padding:32px 20px;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid #e67e22">
     <span style="font-size:36px;display:block;margin-bottom:12px">🤝</span>
     <h3 style="font-size:17px;font-weight:700;color:#091d1b;margin-bottom:8px">Advertising & Partnerships</h3>
-    <p style="font-size:14px;color:#666;line-height:1.6">Interested in reaching 10,000+ event professionals? See our <a href="/advertise/" style="color:#b3d237;font-weight:600">Advertise</a> page or write to us.</p>
+    <p style="font-size:14px;color:#666;line-height:1.6">Interested in reaching event industry professionals? See our <a href="/advertise/" style="color:#b3d237;font-weight:600">Advertise</a> page or write to us.</p>
   </div>
   <div style="text-align:center;padding:32px 20px;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid #8e44ad">
     <span style="font-size:36px;display:block;margin-bottom:12px">🎪</span>

@@ -1,0 +1,174 @@
+[
+  {
+    "issue": 1,
+    "date": "March 25, 2026",
+    "sent": false,
+    "broadcast_id": null,
+    "article": {
+      "title": "India's Event Industry is Hiring - Are You Ready?",
+      "subject_line": "India's Event Industry is Hiring - Are You Ready? | EventSphereX Weekly #1",
+      "excerpt": "The event industry is projected to hit USD 32 billion by 2035. We break down the top courses, certifications, and salary expectations for 2026.",
+      "url": "https://eventspherex.com/posts/event-management-courses-india-2026/",
+      "image": "https://eventspherex.com/images/posts/article-31.jpg"
+    },
+    "stat": {
+      "number": "₹10,000+ Cr",
+      "label": "India's Event Industry Market Size in 2026"
+    },
+    "extra_articles": [
+      {
+        "category": "Exhibitions",
+        "title": "India International Trade Fair 2026 - Complete Guide",
+        "url": "https://eventspherex.com/posts/india-international-trade-fair-2026-complete-guide/",
+        "excerpt": "Everything you need to know - dates, halls, registration, and exhibitor tips."
+      },
+      {
+        "category": "Tools",
+        "title": "Free Event Budget Calculator for India's Event Industry",
+        "url": "https://eventspherex.com/posts/free-event-budget-calculator-india/",
+        "excerpt": "Plan your event budget with our free calculator built for Indian events."
+      }
+    ],
+    "tool": {
+      "name": "Event Budget Calculator",
+      "description": "Estimate costs for venue, catering, AV, decor and more - designed for Indian events with INR pricing.",
+      "url": "https://eventspherex.com/tools/event-budget-calculator.html"
+    },
+    "tip": "<strong>Always get 3 vendor quotes.</strong> Comparing quotes helps you negotiate better rates. Most Indian event vendors expect negotiation - a 15-20% discount is standard if you ask.",
+    "job": {
+      "title": "Senior Event Manager",
+      "company": "Wizcraft International",
+      "location": "Mumbai",
+      "salary": "₹8-12 LPA"
+    }
+  },
+  {
+    "issue": 2,
+    "date": "April 1, 2026",
+    "sent": false,
+    "broadcast_id": null,
+    "article": {
+      "title": "How to Win Government Event Contracts in India",
+      "subject_line": "How to Win Government Event Contracts | EventSphereX Weekly #2",
+      "excerpt": "Government events are a massive, stable revenue source. Learn how to find tenders, qualify, bid, and win contracts for event management.",
+      "url": "https://eventspherex.com/posts/government-contracts-event-management/",
+      "image": "https://eventspherex.com/images/posts/article-27.jpg"
+    },
+    "stat": {
+      "number": "2,00,000+",
+      "label": "Event Professionals Working Across India"
+    },
+    "extra_articles": [
+      {
+        "category": "Education",
+        "title": "Top Event Management Courses in India 2026",
+        "url": "https://eventspherex.com/posts/event-management-courses-india-2026/",
+        "excerpt": "Updated fees, colleges, and certifications for aspiring event managers."
+      },
+      {
+        "category": "Corporate Events",
+        "title": "Event Budget Tips Every Organiser Should Know",
+        "url": "https://eventspherex.com/posts/event-budget-tips/",
+        "excerpt": "Smart budgeting strategies to maximize ROI on your next event."
+      }
+    ],
+    "tool": {
+      "name": "Event Checklist Generator",
+      "description": "Generate a complete, customised checklist for any event type - corporate, wedding, exhibition, or conference.",
+      "url": "https://eventspherex.com/tools/event-checklist-generator.html"
+    },
+    "tip": "<strong>Start your government tender search on GeM (gem.gov.in).</strong> Most state and central government event requirements are listed here. Register as a vendor - it's free and opens doors to lakhs of tenders annually.",
+    "job": {
+      "title": "Event Coordinator",
+      "company": "Percept Limited",
+      "location": "Delhi",
+      "salary": "₹4-6 LPA"
+    }
+  },
+  {
+    "issue": 3,
+    "date": "April 8, 2026",
+    "sent": false,
+    "broadcast_id": null,
+    "article": {
+      "title": "Top 10 Event Venues in Mumbai, Delhi & Bangalore",
+      "subject_line": "Top 10 Event Venues in India's Big 3 Cities | EventSphereX Weekly #3",
+      "excerpt": "A curated guide to the best venues for corporate events, exhibitions, and weddings across Mumbai, Delhi, and Bangalore.",
+      "url": "https://eventspherex.com/posts/top-event-venues-india/",
+      "image": "https://eventspherex.com/images/posts/article-28.jpg"
+    },
+    "stat": {
+      "number": "500+",
+      "label": "Major Events Happen in India Every Month"
+    },
+    "extra_articles": [
+      {
+        "category": "Business",
+        "title": "How to Scale Your Event Company from ₹10L to ₹1Cr",
+        "url": "https://eventspherex.com/posts/scale-event-company-revenue/",
+        "excerpt": "Practical strategies for growing your event business revenue."
+      },
+      {
+        "category": "Careers",
+        "title": "Freelancing in Events - Build a Career Without Full-Time",
+        "url": "https://eventspherex.com/posts/freelancing-in-events-india/",
+        "excerpt": "How to earn well as a freelance event professional in India."
+      }
+    ],
+    "tool": {
+      "name": "Events Calendar",
+      "description": "Browse upcoming exhibitions, trade shows, and conferences across India - filter by city, category, and date.",
+      "url": "https://eventspherex.com/tools/event-calendar.html"
+    },
+    "tip": "<strong>Always visit a venue before booking.</strong> Photos can be misleading. Check ceiling height, power supply capacity, parking, and loading dock access. These small details can make or break your event logistics.",
+    "job": {
+      "title": "Wedding Planner",
+      "company": "FNP Weddings",
+      "location": "Bangalore",
+      "salary": "₹5-8 LPA"
+    }
+  },
+  {
+    "issue": 4,
+    "date": "April 15, 2026",
+    "sent": false,
+    "broadcast_id": null,
+    "article": {
+      "title": "Freelancing in Events - How to Build a Career Without a Full-Time Job",
+      "subject_line": "The Freelancer's Guide to India's Event Industry | EventSphereX Weekly #4",
+      "excerpt": "More event professionals are going freelance. Here's how to find clients, set rates, and build a sustainable freelance career in events.",
+      "url": "https://eventspherex.com/posts/freelancing-in-events-india/",
+      "image": "https://eventspherex.com/images/posts/article-41.jpg"
+    },
+    "stat": {
+      "number": "₹5L Cr",
+      "label": "India's Wedding Industry - The Biggest Event Segment"
+    },
+    "extra_articles": [
+      {
+        "category": "Vendor Guide",
+        "title": "How Vendors Can Get Listed & Win More Contracts",
+        "url": "https://eventspherex.com/posts/vendors-get-listed-win-contracts/",
+        "excerpt": "Get discovered by event planners and win more business."
+      },
+      {
+        "category": "Education",
+        "title": "10 Skills Every Event Manager Needs to Succeed",
+        "url": "https://eventspherex.com/posts/skills-every-event-manager-needs/",
+        "excerpt": "The essential skills that separate good event managers from great ones."
+      }
+    ],
+    "tool": {
+      "name": "Job Board",
+      "description": "Browse event industry jobs across India - from entry-level to senior positions. Post your openings for free.",
+      "url": "https://eventspherex.com/tools/job-board.html"
+    },
+    "tip": "<strong>Build a portfolio website before pitching clients.</strong> Even 3-4 well-documented events with photos and results will set you apart from 90% of freelancers who have no online presence.",
+    "job": {
+      "title": "Exhibition Designer",
+      "company": "Expo Display Service",
+      "location": "Mumbai",
+      "salary": "₹6-9 LPA"
+    }
+  }
+]
