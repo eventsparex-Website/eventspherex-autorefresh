@@ -28,6 +28,7 @@ jobs:
 
       - name: Fetch live data
         timeout-minutes: 3
+        continue-on-error: true
         run: |
           node scripts/fetch-news.js || true
           node scripts/fetch-jobs.js || true
