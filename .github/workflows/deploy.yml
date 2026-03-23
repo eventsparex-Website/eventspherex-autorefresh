@@ -22,6 +22,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Fetch live data
+        run: |
+          node scripts/fetch-news.js || true
+          node scripts/fetch-jobs.js || true
+          node scripts/fetch-tenders.js || true
+
       - name: Build site with Eleventy
         run: npx @11ty/eleventy
 
@@ -43,4 +49,10 @@ jobs:
             --exclude='wp-admin' \
             --exclude='wp-includes' \
             --exclude='*.php.wp-backup' \
-            --exclude='.htaccess.wp-backup'
+            --exclude='.htaccess.wp-backup' \
+            --exclude='staged-posts' \
+            --exclude='staged-pages' \
+            --exclude='backups' \
+            --exclude='scripts' \
+            --exclude='publish-scheduled.sh' \
+            --exclude='publish-log.txt'
