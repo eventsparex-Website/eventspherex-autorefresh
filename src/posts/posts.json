@@ -1,5 +1,7 @@
 {
-  "layout": "post.njk",
   "permalink": "/posts/{{ slug }}/",
-  "tags": "posts"
+  "tags": "posts",
+  "eleventyComputed": {
+    "layout": "{% if layout %}{{ layout }}{% else %}post.njk{% endif %}"
+  }
 }

@@ -3043,6 +3043,107 @@ html.light .proposal-preview-area {
 }
 .faq-item.active .faq-answer { display: block; }
 
+/* Guide tabs */
+.guide-tabs { display: flex; gap: 0; margin-bottom: 24px; border-bottom: 2px solid var(--border-color); }
+.guide-tab {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.guide-tab:hover { color: var(--text-primary); }
+.guide-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.guide-content { display: none; }
+.guide-content.active { display: block; }
+
+/* Step cards */
+.step-cards { display: flex; flex-direction: column; gap: 16px; }
+.step-card {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  transition: border-color var(--transition-fast);
+}
+.step-card:hover { border-color: var(--accent); }
+.step-number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 16px;
+}
+.step-body { flex: 1; }
+.step-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+.step-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+.step-tip {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(179, 210, 55, 0.08);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 12px;
+  color: var(--accent);
+  line-height: 1.5;
+}
+
+/* Feature comparison */
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+@media(max-width:600px){ .feature-grid { grid-template-columns: 1fr; } }
+.feature-card {
+  padding: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+.feature-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.feature-card-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+.feature-badge-free {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(179, 210, 55, 0.15);
+  color: var(--accent);
+  font-weight: 600;
+}
+.feature-badge-pro {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  font-weight: 600;
+}
+
 /* Support form */
 .support-form {
   background: var(--bg-card);
@@ -6922,7 +7023,7 @@ html.light .proposal-preview-area {
       },
       {
         q: 'What happens if my plan expires?',
-        a: 'Your card data is never deleted. Pro features (social links, custom colors, analytics) will be locked until you renew. Your card will still be visible with basic details.'
+        a: 'Your card link will stop working and visitors will see a "Card Not Found" page. However, your card data (name, photo, contacts, design) is saved in your account for 90 days. Simply renew your plan anytime within 90 days to reactivate your card with all your previous data intact. After 90 days without renewal, your data and URL may be permanently removed.'
       },
       {
         q: 'How does the Proposal Generator work?',
@@ -6933,8 +7034,8 @@ html.light .proposal-preview-area {
         a: 'We accept UPI (GPay, PhonePe, Paytm), credit/debit cards, and net banking via Razorpay. International payments are also supported.'
       },
       {
-        q: 'How do I cancel or get a refund?',
-        a: 'Contact us via WhatsApp or email. We process refund requests within 48 hours for unused subscription periods.'
+        q: 'How do I cancel my subscription?',
+        a: 'Contact us via WhatsApp or email to cancel. Your Pro features stay active until the end of your billing cycle. All payments are non-refundable as digital services are delivered instantly upon purchase.'
       },
       {
         q: 'Can I use this for my team?',
@@ -6958,7 +7059,252 @@ html.light .proposal-preview-area {
     }
     h += '</div></div>';
 
-    // Section B: Contact Support form
+    // Section B: Tool Guides
+    h += '<div class="help-section">';
+    h += '<div class="help-section-title">&#x1F4D6; Tool Guides</div>';
+
+    // Guide tabs
+    h += '<div class="guide-tabs">';
+    h += '<button class="guide-tab active" data-guide="card">Digital Business Card</button>';
+    h += '<button class="guide-tab" data-guide="proposal">Proposal Generator</button>';
+    h += '</div>';
+
+    // ---- DIGITAL BUSINESS CARD GUIDE ----
+    h += '<div class="guide-content active" id="guide-card">';
+
+    // Video Tutorials - Collapsible
+    h += '<div style="margin-bottom:20px;">';
+    h += '<h3 style="font-size:15px;font-weight:700;margin-bottom:12px;color:var(--text-primary);">\uD83C\uDFAC Video Tutorials</h3>';
+    h += '<div class="video-tutorials-grid" style="display:flex;flex-direction:column;gap:8px;">';
+
+    // Tutorial 1: Digital Business Card
+    h += '<div class="tutorial-item" style="border:1px solid var(--border-color);border-radius:10px;overflow:hidden;">';
+    h += '<div onclick="this.parentElement.classList.toggle(\'open\')" style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;background:rgba(179,210,55,0.04);transition:background 0.2s;" onmouseover="this.style.background=\'rgba(179,210,55,0.08)\'" onmouseout="this.style.background=\'rgba(179,210,55,0.04)\'">';
+    h += '<span style="width:36px;height:36px;border-radius:8px;background:rgba(179,210,55,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;">\u25B6\uFE0F</span>';
+    h += '<div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:600;color:var(--text-primary);">How to Create Your Digital Business Card</div>';
+    h += '<div style="font-size:11px;color:var(--text-secondary);">Step-by-step walkthrough \u00B7 10 min</div></div>';
+    h += '<svg class="tutorial-chevron" style="width:16px;height:16px;flex-shrink:0;color:var(--text-secondary);transition:transform 0.2s;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>';
+    h += '</div>';
+    h += '<div class="tutorial-video" style="display:none;background:#000;">';
+    h += '<div style="position:relative;padding-bottom:56.25%;height:0;"><iframe data-src="https://www.youtube.com/embed/_7X0oL4Fcw0" title="Digital Business Card Tutorial" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>';
+    h += '</div></div>';
+
+    // Add more tutorials here in the same pattern
+    // Tutorial 2 placeholder (hidden until video is ready)
+    // h += '<div class="tutorial-item" style="border:1px solid var(--border-color);border-radius:10px;overflow:hidden;">...
+
+    h += '</div></div>';
+
+    // Getting Started
+    h += '<h3 style="font-size:16px;font-weight:700;margin-bottom:16px;color:var(--text-primary);">Getting Started</h3>';
+    h += '<div class="step-cards">';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">1</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Sign Up & Log In</div>';
+    h += '<div class="step-desc">Create your free account using email or Google sign-in. Free accounts get 1 basic card with essential fields.</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">2</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Fill Your Profile</div>';
+    h += '<div class="step-desc">Click <strong>Digital Business Card</strong> in the sidebar. Enter your name, job title, company, email, phone, and website. Upload your profile photo by clicking the circle.</div>';
+    h += '<div class="step-tip">Tip: Use a professional headshot (square, at least 400x400px) for the best look.</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">3</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Add Social Links</div>';
+    h += '<div class="step-desc">Add your LinkedIn, Instagram, Twitter/X, and WhatsApp number. These appear as clickable icons on your card, making it easy for contacts to find you.</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">4</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Choose Your Design</div>';
+    h += '<div class="step-desc">Pick a <strong>Color Theme</strong> and <strong>Card Style</strong> (Classic, Modern, or Minimal). The live preview on the right updates instantly as you make changes.</div>';
+    h += '<div class="step-tip">Tip: Classic uses a dark gradient background, Modern blends your theme color into the background, and Minimal gives a clean white look.</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">5</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Save & Share</div>';
+    h += '<div class="step-desc">Click <strong>Save Card</strong> and your card goes live instantly! Share it via:</div>';
+    h += '<div class="step-desc" style="margin-top:6px;">';
+    h += '&#8226; <strong>Copy Link</strong> - paste anywhere<br>';
+    h += '&#8226; <strong>WhatsApp</strong> - send directly to contacts<br>';
+    h += '&#8226; <strong>LinkedIn</strong> - share as a post<br>';
+    h += '&#8226; <strong>Email</strong> - send via email<br>';
+    h += '&#8226; <strong>QR Code</strong> - let people scan in person</div>';
+    h += '</div></div>';
+
+    h += '</div>'; // end step-cards
+
+    // Features comparison
+    h += '<h3 style="font-size:16px;font-weight:700;margin:28px 0 12px;color:var(--text-primary);">Features</h3>';
+    h += '<div class="feature-grid">';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-free">Free</span> Basic Card</div>';
+    h += '<div class="feature-card-desc">1 card with name, title, company, email, phone. Includes QR code and Save Contact button. EventSphereX watermark shown.</div></div>';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> Custom Colors</div>';
+    h += '<div class="feature-card-desc">Choose from preset colors or enter a custom hex code. Your theme color applies to photo border, icons, buttons, dividers, and background gradient.</div></div>';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> Social Links</div>';
+    h += '<div class="feature-card-desc">Add LinkedIn, Instagram, Twitter/X with clickable icons and @handle display. WhatsApp button for instant messaging.</div></div>';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> Card Styles</div>';
+    h += '<div class="feature-card-desc">3 professional styles: Classic (dark gradient), Modern (theme-tinted gradient), Minimal (clean white). Each style adapts icon and text colors automatically.</div></div>';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> QR Code & vCard</div>';
+    h += '<div class="feature-card-desc">Your QR code contains full contact info in vCard format. When scanned, it saves your name, phone, email, company, and website directly to phone contacts.</div></div>';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> No Watermark</div>';
+    h += '<div class="feature-card-desc">Pro cards have no EventSphereX branding. Your card looks completely professional and personalized.</div></div>';
+
+    h += '</div>'; // end feature-grid
+
+    // Tips & Best Practices
+    h += '<h3 style="font-size:16px;font-weight:700;margin:28px 0 12px;color:var(--text-primary);">Tips & Best Practices</h3>';
+    h += '<div class="step-cards">';
+    h += '<div class="step-card"><div class="step-body">';
+    h += '<div class="step-desc">';
+    h += '&#8226; <strong>Keep it concise</strong> - Include only essential contact info. Too many fields make the card cluttered.<br>';
+    h += '&#8226; <strong>Use a bio</strong> - A short 1-2 line bio helps people understand what you do.<br>';
+    h += '&#8226; <strong>Match your brand</strong> - Choose a color theme that matches your company branding for a consistent look.<br>';
+    h += '&#8226; <strong>Update regularly</strong> - Changed your role or number? Edit your card and everyone with the link sees the updated version instantly.<br>';
+    h += '&#8226; <strong>Add to your email signature</strong> - Include your card link in your email signature so every email becomes a networking opportunity.<br>';
+    h += '&#8226; <strong>Print the QR code</strong> - Add your QR code to physical materials like visiting cards, standees, or booth displays.';
+    h += '</div></div></div>';
+    h += '</div>';
+
+    h += '</div>'; // end guide-card
+
+    // ---- PROPOSAL GENERATOR GUIDE ----
+    h += '<div class="guide-content" id="guide-proposal">';
+
+    h += '<h3 style="font-size:16px;font-weight:700;margin-bottom:16px;color:var(--text-primary);">Getting Started</h3>';
+    h += '<div class="step-cards">';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">1</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Open Proposal Generator</div>';
+    h += '<div class="step-desc">Click <strong>Proposal Generator</strong> in the sidebar (requires Pro plan or above). You will see a split view - editor on the left, live preview on the right.</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">2</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Choose a Template</div>';
+    h += '<div class="step-desc">Select from 3 professional templates: <strong>Modern</strong> (clean with accent headers), <strong>Classic</strong> (traditional formal layout), or <strong>Bold</strong> (standout design with strong colors). The preview updates in real-time.</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">3</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Enter Company Details</div>';
+    h += '<div class="step-desc">Fill in your company name, tagline, address, phone, email, and website. Upload your company logo (Pro feature, max 2MB). These details appear in the header and footer of every proposal.</div>';
+    h += '<div class="step-tip">Tip: Your email is auto-filled from your profile. Company details are saved so you do not need to re-enter them for future proposals.</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">4</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Add Client Information</div>';
+    h += '<div class="step-desc">Enter the client\'s name, company, email, and phone. Set the proposal title, proposal number (auto-generated), event date, and venue.</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">5</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Add Line Items</div>';
+    h += '<div class="step-desc">Click <strong>+ Add Item</strong> to add services/products. For each line item, enter:</div>';
+    h += '<div class="step-desc" style="margin-top:6px;">';
+    h += '&#8226; <strong>Description</strong> - what the service/product is<br>';
+    h += '&#8226; <strong>Quantity</strong> - number of units<br>';
+    h += '&#8226; <strong>Rate</strong> - price per unit (in INR)<br>';
+    h += '&#8226; The total is calculated automatically</div>';
+    h += '<div class="step-tip">Tip: Click the red X button to remove a line item. Drag items to reorder them.</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">6</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Set Pricing & Taxes</div>';
+    h += '<div class="step-desc">Configure discount percentage, GST percentage, and advance payment percentage. The summary section shows subtotal, discount, GST, grand total, advance amount, and balance automatically.</div>';
+    h += '<div class="step-tip">Tip: Common GST rates for events in India are 18% (event management services) and 28% (entertainment/amusement).</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">7</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Add Terms & Notes</div>';
+    h += '<div class="step-desc">Write your payment terms, cancellation policy, and any additional notes. A separate payment schedule field lets you specify milestone payments.</div>';
+    h += '</div></div>';
+
+    h += '<div class="step-card">';
+    h += '<div class="step-number">8</div>';
+    h += '<div class="step-body">';
+    h += '<div class="step-title">Save, Share & Download</div>';
+    h += '<div class="step-desc">Use the action buttons to:</div>';
+    h += '<div class="step-desc" style="margin-top:6px;">';
+    h += '&#8226; <strong>Save</strong> - saves locally for future access<br>';
+    h += '&#8226; <strong>Preview</strong> - opens a full-page preview in a new tab<br>';
+    h += '&#8226; <strong>Download PDF</strong> - generates a professional PDF<br>';
+    h += '&#8226; <strong>Email</strong> - opens email with proposal summary pre-filled<br>';
+    h += '&#8226; <strong>WhatsApp</strong> - sends proposal summary via WhatsApp</div>';
+    h += '</div></div>';
+
+    h += '</div>'; // end step-cards
+
+    // Features
+    h += '<h3 style="font-size:16px;font-weight:700;margin:28px 0 12px;color:var(--text-primary);">Features</h3>';
+    h += '<div class="feature-grid">';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> 3 Templates</div>';
+    h += '<div class="feature-card-desc">Modern, Classic, and Bold templates with different layouts, fonts, and color schemes. Switch between them with one click.</div></div>';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> Company Logo</div>';
+    h += '<div class="feature-card-desc">Upload your logo (PNG, JPG, SVG, max 2MB) to appear in the proposal header. Makes every proposal branded and professional.</div></div>';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> Auto Calculations</div>';
+    h += '<div class="feature-card-desc">Subtotal, discount, GST, grand total, advance, and balance are calculated automatically. No manual math needed.</div></div>';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> Saved Proposals</div>';
+    h += '<div class="feature-card-desc">All proposals are saved locally. Load any previous proposal, duplicate it for a new client, or delete old ones. Your proposal history is always available.</div></div>';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> PDF Export</div>';
+    h += '<div class="feature-card-desc">Generate a print-ready PDF with your branding, itemized table, pricing summary, and terms. Professional enough to send to any client.</div></div>';
+
+    h += '<div class="feature-card"><div class="feature-card-title"><span class="feature-badge-pro">Pro</span> Quick Share</div>';
+    h += '<div class="feature-card-desc">Share proposals via Email or WhatsApp with a pre-filled summary including proposal number, event date, venue, and grand total.</div></div>';
+
+    h += '</div>'; // end feature-grid
+
+    // Tips
+    h += '<h3 style="font-size:16px;font-weight:700;margin:28px 0 12px;color:var(--text-primary);">Tips & Best Practices</h3>';
+    h += '<div class="step-cards">';
+    h += '<div class="step-card"><div class="step-body">';
+    h += '<div class="step-desc">';
+    h += '&#8226; <strong>Save before sharing</strong> - Always click Save before downloading PDF or sharing, to keep your local history updated.<br>';
+    h += '&#8226; <strong>Be specific with line items</strong> - Instead of "Event Management", break it into "Venue Booking", "Decoration", "Catering", etc. Clients prefer transparent breakdowns.<br>';
+    h += '&#8226; <strong>Include payment schedule</strong> - Specify milestones like "50% advance, 25% before event, 25% after event" to set clear expectations.<br>';
+    h += '&#8226; <strong>Add terms</strong> - Include cancellation policy, scope of work boundaries, and revision limits to avoid disputes.<br>';
+    h += '&#8226; <strong>Use proposal numbers</strong> - Keep consistent numbering (ESX-001, ESX-002) for easy tracking and reference.<br>';
+    h += '&#8226; <strong>Duplicate for similar events</strong> - Load a previous proposal and modify it for a new client instead of starting from scratch.';
+    h += '</div></div></div>';
+    h += '</div>';
+
+    h += '</div>'; // end guide-proposal
+
+    h += '</div>'; // end help-section
+
+    // Section C: Contact Support form
     h += '<div class="help-section">';
     h += '<div class="help-section-title">&#x1F4E9; Contact Support</div>';
     h += '<div class="support-form" id="helpSupportForm">';
@@ -7029,6 +7375,49 @@ html.light .proposal-preview-area {
           item.querySelector('.faq-toggle').textContent = '-';
         }
       });
+    }
+
+    // Guide tab switching
+    var guideTabs = document.querySelectorAll('.guide-tab');
+    for(var gti = 0; gti < guideTabs.length; gti++){
+      guideTabs[gti].addEventListener('click', function(){
+        var target = this.getAttribute('data-guide');
+        // Deactivate all tabs
+        var allTabs = document.querySelectorAll('.guide-tab');
+        for(var at = 0; at < allTabs.length; at++) allTabs[at].classList.remove('active');
+        // Deactivate all content
+        var allContent = document.querySelectorAll('.guide-content');
+        for(var ac = 0; ac < allContent.length; ac++) allContent[ac].classList.remove('active');
+        // Activate clicked tab and its content
+        this.classList.add('active');
+        var el = document.getElementById('guide-' + target);
+        if(el) el.classList.add('active');
+      });
+    }
+
+    // Tutorial accordion toggle
+    var tutItems = document.querySelectorAll('.tutorial-item');
+    for(var ti = 0; ti < tutItems.length; ti++){
+      (function(item){
+        var videoDiv = item.querySelector('.tutorial-video');
+        var chevron = item.querySelector('.tutorial-chevron');
+        if(!videoDiv) return;
+        // Watch for open class toggle
+        var observer = new MutationObserver(function(){
+          var isOpen = item.classList.contains('open');
+          videoDiv.style.display = isOpen ? 'block' : 'none';
+          if(chevron) chevron.style.transform = isOpen ? 'rotate(180deg)' : '';
+          // Lazy load iframe on first open
+          if(isOpen){
+            var iframe = videoDiv.querySelector('iframe[data-src]');
+            if(iframe){
+              iframe.src = iframe.getAttribute('data-src');
+              iframe.removeAttribute('data-src');
+            }
+          }
+        });
+        observer.observe(item, {attributes: true, attributeFilter: ['class']});
+      })(tutItems[ti]);
     }
 
     // Support form submit
@@ -7155,7 +7544,10 @@ html.light .proposal-preview-area {
     _html += '<div class="whats-new-icon">\uD83C\uDF89</div>';
     _html += '<div class="whats-new-text"><h3>New: Digital Business Card Builder</h3>';
     _html += '<p>Create stunning digital business cards for event professionals. Share your contact details, portfolio, and social links with a single tap or QR scan.</p></div>';
-    _html += '<div class="whats-new-action"><button class="btn btn-primary" data-page="card-builder">Try It Now</button></div>';
+    _html += '<div class="whats-new-action" style="display:flex;gap:8px;flex-wrap:wrap;">';
+    _html += '<button class="btn btn-primary" data-page="card-builder">Try It Now</button>';
+    _html += '<button class="btn btn-secondary" onclick="window.open(\'https://youtu.be/_7X0oL4Fcw0\',\'_blank\')" style="display:flex;align-items:center;gap:6px;font-size:13px;padding:8px 16px;border-radius:8px;cursor:pointer;background:rgba(179,210,55,0.1);border:1px solid rgba(179,210,55,0.3);color:#b3d237;">\u25B6 Watch Tutorial</button>';
+    _html += '</div>';
     _html += '</div>';
 
     // Quick Access
@@ -7300,6 +7692,17 @@ html.light .proposal-preview-area {
     }
     _html += '<button class="btn btn-primary" id="btnSaveCard" style="font-size:12px;padding:8px 14px;">' + (_editingCardId ? '\uD83D\uDCBE Update Card' : '\uD83D\uDCBE Save Card') + '</button>';
     _html += '</div>';
+    _html += '</div>';
+
+    // Video Tutorial Banner
+    _html += '<div id="tutorialBanner" style="margin-bottom:16px;padding:12px 16px;background:linear-gradient(135deg,rgba(179,210,55,0.08),rgba(179,210,55,0.03));border:1px solid rgba(179,210,55,0.2);border-radius:12px;display:flex;align-items:center;gap:12px;">';
+    _html += '<div style="width:40px;height:40px;border-radius:10px;background:rgba(179,210,55,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">\u25B6\uFE0F</div>';
+    _html += '<div style="flex:1;min-width:0;">';
+    _html += '<div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:2px;">New here? Watch the tutorial</div>';
+    _html += '<div style="font-size:11px;color:var(--text-secondary);">Step-by-step video guide on creating your digital business card</div>';
+    _html += '</div>';
+    _html += '<a href="https://youtu.be/_7X0oL4Fcw0" target="_blank" style="flex-shrink:0;padding:7px 14px;border-radius:8px;background:#b3d237;color:#111;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap;">Watch Now</a>';
+    _html += '<button onclick="document.getElementById(\'tutorialBanner\').style.display=\'none\'" style="flex-shrink:0;background:none;border:none;color:var(--text-secondary);cursor:pointer;font-size:16px;padding:4px;line-height:1;opacity:0.5;">&times;</button>';
     _html += '</div>';
 
     // Public URL box (hidden by default)

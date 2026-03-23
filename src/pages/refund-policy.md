@@ -12,43 +12,55 @@ status: publish
 
 This Refund Policy applies to any paid services or subscriptions purchased on [eventspherex.com](https://eventspherex.com).
 
-## 7-Day Refund Window
+## No Refund Policy
 
-If you are not satisfied with your purchase, you may request a full refund within **7 days** of your purchase date. No questions asked.
+All payments made for Pro Tools subscriptions (Single Card, Pro, Business, Enterprise) are **non-refundable**. Once a subscription is purchased and activated, the payment is final.
 
-After 7 days, subscription payments are non-refundable for the current billing period. You will continue to have access to your purchased services until the end of your billing cycle.
+By completing a purchase, you acknowledge and agree that:
 
-## How to Request a Refund
+- You have reviewed the features and pricing before purchasing
+- Digital services are delivered instantly upon payment
+- No refunds, partial or full, will be issued after purchase
 
-To request a refund, contact us with the following details:
+This is standard practice for digital subscription services in India, as the service is delivered immediately and cannot be "returned."
 
-- Your registered email address
-- Date of purchase
-- Reason for the refund (optional, but helps us improve)
+## Card Validity & Expiry
 
-**Email:** [contact@eventspherex.com](mailto:contact@eventspherex.com)
-**WhatsApp:** [+91 84849 81833](https://wa.me/918484981833)
+Your digital business card link stays live only for the duration of your active plan:
 
-## Processing Time
+- **Single Card / Yearly Plans:** Card is live for 1 year from purchase date
+- **Monthly Plans:** Card is live as long as your monthly subscription is active
 
-- Refund requests are reviewed within **2 business days**.
-- Approved refunds are processed to the original payment method within **5-7 business days**, depending on your bank or payment provider.
+After your plan expires, your card link will stop working. Your data is saved for 90 days so you can renew and reactivate anytime. After 90 days without renewal, your card data and URL may be permanently removed.
 
 ## Cancellation
 
-You can cancel any active subscription at any time by contacting us. Cancellation stops future billing but does not trigger an automatic refund. If you are within the 7-day window, please contact us separately to request a refund.
+You can cancel your subscription at any time by contacting us. When you cancel:
+
+- Your Pro features and card link remain active until the end of your current billing cycle
+- No further charges will be made after cancellation
+- Your card data is retained for 90 days after expiry for easy reactivation
+- Cancellation does not entitle you to a refund for the current or any previous billing period
+
+## Subscription Renewal
+
+- Monthly plans auto-renew each month unless cancelled
+- Yearly plans auto-renew annually unless cancelled
+- You will receive a reminder before renewal
+- Cancel at least 24 hours before renewal to avoid the next charge
 
 ## Exceptions
 
-Refunds are not available for:
+In rare cases, we may consider a goodwill credit (not refund) at our sole discretion for:
 
-- Requests made after the 7-day refund window
-- Accounts that have violated our [Terms of Service](/terms/)
-- Promotional or discounted subscriptions, unless otherwise stated at the time of purchase
+- Technical issues on our end that prevented you from using the service for an extended period
+- Duplicate or accidental payments (must be reported within 48 hours)
+
+To report such issues, contact us immediately with your payment receipt.
 
 ## Contact Us
 
-For any questions about this Refund Policy, reach out to us at:
+For any questions about this policy, reach out to us at:
 
 - **Email:** [contact@eventspherex.com](mailto:contact@eventspherex.com)
-- **Phone:** [+91 84849 81833](tel:+918484981833)
+- **WhatsApp:** [+91 84849 81833](https://wa.me/918484981833)

@@ -35,9 +35,30 @@ If you submit comments, feedback, or other content to EventSphereX, you grant us
 
 We reserve the right to remove any user-generated content that violates these terms or is otherwise objectionable.
 
-## Pro Membership
+## Pro Membership & Digital Business Card
 
-Certain features may be available through a paid Pro membership. Pro membership terms, including pricing and refund conditions, are outlined on the relevant subscription page and our [Refund Policy](/refund-policy/).
+Certain features may be available through a paid Pro membership. Pro membership terms, including pricing and cancellation conditions, are outlined on the relevant subscription page and our [Refund Policy](/refund-policy/). All payments for digital subscriptions are non-refundable once the service is activated.
+
+### Digital Business Card Validity
+
+- Your digital business card link remains **live and accessible** only for the duration of your active subscription plan.
+- **Single Card Plan:** Valid for 1 year from the date of purchase.
+- **Pro Plan (Monthly):** Valid for 1 month, auto-renews monthly.
+- **Pro Plan (Yearly):** Valid for 1 year, auto-renews annually.
+- **Business/Enterprise Plans:** Valid for the purchased billing cycle (monthly or yearly).
+
+### What Happens After Expiry
+
+- If your plan expires and is not renewed, your card link will **stop working** and visitors will see a "Card Not Found" page.
+- Your card data (name, photo, contacts, design) is **not deleted** and remains saved in your account for **90 days** after expiry.
+- You can **renew anytime** within 90 days to reactivate your card with all your previous data intact.
+- After 90 days of inactivity, your card data and slug (URL) may be permanently removed.
+
+### Renewal
+
+- You will receive a reminder via email before your plan expires.
+- To renew, log in to your Pro Dashboard and select a plan from the "My Plan" section.
+- Renewal pricing is based on the current rates at the time of renewal.
 
 ## Third-Party Links
 
@@ -76,4 +97,4 @@ These terms are governed by the laws of India. Any disputes shall be subject to 
 If you have questions about these Terms of Service, contact us at:
 
 - **Email:** [contact@eventspherex.com](mailto:contact@eventspherex.com)
-- **Phone:** [+91 84849 81833](tel:+918484981833)
+- **WhatsApp:** [+91 84849 81833](https://wa.me/918484981833)
