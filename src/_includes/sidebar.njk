@@ -30,6 +30,31 @@
     </form>
   </div>
 
+  <!-- Government Tenders Widget -->
+  {% if tenders.tenders and tenders.tenders.length > 0 %}
+  <div class="sidebar-card" style="background:linear-gradient(135deg,#0a1628,#0f2035);border:none;padding:20px;border-radius:16px">
+    <div class="sidebar-card-title" style="color:#60a5fa">&#127963; Latest Tenders</div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      {% for tender in tenders.tenders | limit(3) %}
+      <a href="{{ tender.link }}" target="_blank" rel="noopener" style="text-decoration:none;padding:10px;background:rgba(255,255,255,0.05);border-radius:8px;transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+        <div style="font-size:9px;color:#60a5fa;font-weight:600;margin-bottom:4px">{{ tender.category }} &bull; {{ tender.state }}</div>
+        <div style="font-size:13px;color:#fff;line-height:1.4">{{ tender.title | excerpt(12) }}</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px">{{ tender.pubDate | timeAgo }}</div>
+      </a>
+      {% endfor %}
+    </div>
+    <a href="/tenders/" style="display:block;text-align:center;color:#60a5fa;font-size:12px;font-weight:600;margin-top:12px;text-decoration:none">View All Tenders &rarr;</a>
+  </div>
+  {% endif %}
+
+  <!-- WhatsApp Group CTA -->
+  <div class="sidebar-card" style="background:linear-gradient(135deg,#075e54,#128C7E);border:none;padding:24px;border-radius:16px;text-align:center">
+    <div style="font-size:36px;margin-bottom:8px">&#9742;</div>
+    <h4 style="color:#fff;margin:0 0 8px;font-size:16px">Join Event Professionals</h4>
+    <p style="color:rgba(255,255,255,0.8);font-size:13px;margin:0 0 16px;line-height:1.5">Get daily industry updates, tender alerts &amp; job postings on WhatsApp</p>
+    <a href="https://wa.me/918484981833?text=Hi%2C%20I%20want%20to%20join%20the%20EventSphereX%20industry%20updates%20group" target="_blank" rel="noopener" style="display:inline-block;background:#25D366;color:#fff;padding:10px 24px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none">Join on WhatsApp &rarr;</a>
+  </div>
+
   <!-- Advertise CTA -->
   <div class="sidebar-card sidebar-advertise">
     <div class="sidebar-advertise-icon">&#128226;</div>

@@ -1,0 +1,59 @@
+name: Auto-Refresh News, Jobs & Tenders
+
+on:
+  schedule:
+    # Run every 4 hours at minute 15
+    - cron: '15 */4 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  fetch-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch live news
+        run: node scripts/fetch-news.js
+
+      - name: Fetch live jobs
+        run: node scripts/fetch-jobs.js
+
+      - name: Fetch live tenders
+        run: node scripts/fetch-tenders.js
+
+      - name: Build site with Eleventy
+        run: npx @11ty/eleventy
+
+      - name: Build search index
+        run: npx pagefind --site _site
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p 65002 157.173.216.223 >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Deploy to Hostinger
+        run: |
+          rsync -avz --delete -e "ssh -p 65002 -o StrictHostKeyChecking=no" \
+            _site/ u410945448@157.173.216.223:~/domains/eventspherex.com/public_html/ \
+            --exclude='wp-content' \
+            --exclude='wp-admin' \
+            --exclude='wp-includes' \
+            --exclude='*.php.wp-backup' \
+            --exclude='.htaccess.wp-backup' \
+            --exclude='staged-posts' \
+            --exclude='staged-pages' \
+            --exclude='backups'

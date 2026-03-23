@@ -1,0 +1,112 @@
+---
+layout: base.njk
+title: "Government Event Tenders - GeM, CPPP & State Portals"
+description: "Live government tender listings for event management, exhibitions, catering, AV equipment and more. Updated daily from GeM, CPPP and state portals."
+permalink: /tenders/
+---
+
+<section class="page-section" style="padding-top:32px">
+  <div class="container">
+    <div class="page-header" style="margin-bottom:32px">
+      <nav class="breadcrumb"><a href="/">Home</a> &rsaquo; <span>Government Tenders</span></nav>
+      <h1 style="font-size:2rem;margin:12px 0 8px">Government Event Tenders</h1>
+      <p style="color:var(--text-muted);font-size:15px">Live tender listings for event management, exhibitions, catering, AV equipment &amp; more from government portals.</p>
+      {% if tenders.lastUpdated %}
+      <div style="margin-top:8px;font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:6px">
+        <span style="width:8px;height:8px;background:#4ade80;border-radius:50%;display:inline-block;animation:pulse-dot 2s infinite"></span>
+        Last updated: {{ tenders.lastUpdated | dateFormat('long') }}
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Quick Access Portals -->
+    <div style="margin-bottom:32px">
+      <h3 style="font-size:14px;color:var(--text-muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px">Direct Portal Links</h3>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        {% if tenders.portals %}
+        {% for portal in tenders.portals %}
+        <a href="{{ portal.url }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:linear-gradient(135deg,#091d1b,#0d3d39);border:1px solid rgba(179,210,55,0.2);border-radius:8px;color:#fff;text-decoration:none;font-size:12px;font-weight:600;transition:transform .2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
+          &#127963; {{ portal.name }}
+        </a>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- State Filter -->
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px" id="tender-filters">
+      <button class="news-filter-btn active" data-filter="all" onclick="filterTenders('all',this)">All States</button>
+      <button class="news-filter-btn" data-filter="Central" onclick="filterTenders('Central',this)">Central Govt</button>
+      <button class="news-filter-btn" data-filter="Maharashtra" onclick="filterTenders('Maharashtra',this)">Maharashtra</button>
+      <button class="news-filter-btn" data-filter="Delhi" onclick="filterTenders('Delhi',this)">Delhi</button>
+      <button class="news-filter-btn" data-filter="Karnataka" onclick="filterTenders('Karnataka',this)">Karnataka</button>
+      <button class="news-filter-btn" data-filter="Tamil Nadu" onclick="filterTenders('Tamil Nadu',this)">Tamil Nadu</button>
+      <button class="news-filter-btn" data-filter="Gujarat" onclick="filterTenders('Gujarat',this)">Gujarat</button>
+      <button class="news-filter-btn" data-filter="Rajasthan" onclick="filterTenders('Rajasthan',this)">Rajasthan</button>
+    </div>
+
+    <div class="main-grid">
+      <div class="main-content">
+        {% if tenders.tenders and tenders.tenders.length > 0 %}
+        <div id="tender-list">
+          {% for tender in tenders.tenders %}
+          <article class="tender-item fade-in" data-state="{{ tender.state }}">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+              <span style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(179,210,55,0.15);color:#b3d237;font-weight:600;text-transform:uppercase;letter-spacing:0.5px">{{ tender.category }}</span>
+              <span style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(59,130,246,0.15);color:#60a5fa;font-weight:600">{{ tender.state }}</span>
+              <span style="font-size:11px;color:var(--text-muted)">{{ tender.pubDate | timeAgo }}</span>
+            </div>
+            <h3 style="font-size:15px;margin:0 0 6px;line-height:1.4"><a href="{{ tender.link }}" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='#b3d237'" onmouseout="this.style.color='var(--text)'">{{ tender.title }}</a></h3>
+            {% if tender.snippet %}
+            <p style="font-size:13px;color:var(--text-muted);margin:0 0 8px;line-height:1.5">{{ tender.snippet | excerpt(35) }}</p>
+            {% endif %}
+            <div style="display:flex;align-items:center;gap:12px;font-size:11px;color:var(--text-muted)">
+              <span>Source: {{ tender.source }}</span>
+              <a href="{{ tender.link }}" target="_blank" rel="noopener" style="color:#b3d237;text-decoration:none;font-weight:600">View Details &rarr;</a>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+        {% else %}
+        <div style="text-align:center;padding:60px 20px;color:var(--text-muted)">
+          <div style="font-size:48px;margin-bottom:16px">&#127963;</div>
+          <h3>Tender feed is loading...</h3>
+          <p>Our tender tracker updates daily. Use the direct portal links above to search for live tenders now.</p>
+        </div>
+        {% endif %}
+
+        <!-- How To Guide CTA -->
+        <div style="margin-top:32px;padding:24px;background:linear-gradient(135deg,#091d1b,#0d3d39);border-radius:16px;border:1px solid rgba(179,210,55,0.2)">
+          <h3 style="color:#fff;margin:0 0 8px;font-size:18px">New to Government Tenders?</h3>
+          <p style="color:rgba(255,255,255,0.7);margin:0 0 16px;font-size:14px">Read our complete guide on how to register on GeM, find tenders, and win government event contracts.</p>
+          <a href="/posts/government-contracts-event-management/" style="display:inline-block;background:#b3d237;color:#091d1b;padding:10px 24px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none">Read the Guide &rarr;</a>
+        </div>
+      </div>
+
+      {% include "sidebar.njk" %}
+    </div>
+  </div>
+</section>
+
+<style>
+.tender-item{padding:20px 0;border-bottom:1px solid var(--border)}
+.tender-item:last-child{border-bottom:none}
+.tender-item.hidden{display:none}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+</style>
+
+<script>
+function filterTenders(state,btn){
+  var items=document.querySelectorAll('.tender-item');
+  var btns=document.querySelectorAll('#tender-filters .news-filter-btn');
+  for(var i=0;i<btns.length;i++) btns[i].classList.remove('active');
+  btn.classList.add('active');
+  for(var j=0;j<items.length;j++){
+    if(state==='all'||items[j].getAttribute('data-state')===state){
+      items[j].classList.remove('hidden');
+    }else{
+      items[j].classList.add('hidden');
+    }
+  }
+}
+</script>

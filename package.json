@@ -4,7 +4,9 @@
   "description": "EventSphereX Media - India's Event Industry Portal (Static Site)",
   "main": "index.js",
   "scripts": {
+    "fetch": "node scripts/fetch-news.js && node scripts/fetch-jobs.js && node scripts/fetch-tenders.js",
     "build": "npx @11ty/eleventy && npx pagefind --site _site",
+    "build:full": "npm run fetch && npm run build",
     "serve": "npx @11ty/eleventy --serve",
     "import": "node scripts/import-wp.js"
   },
@@ -19,6 +21,7 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "puppeteer": "^24.39.1",
+    "rss-parser": "^3.13.0",
     "turndown": "^7.2.0",
     "xml2js": "^0.6.2"
   },

@@ -1,0 +1,95 @@
+---
+layout: base.njk
+title: "Industry News - Live Event Industry Updates"
+description: "Auto-updated news from India's event, exhibition, MICE, and wedding industry. Updated every 4 hours from trusted sources."
+permalink: /industry-news/
+---
+
+<section class="page-section" style="padding-top:32px">
+  <div class="container">
+    <div class="page-header" style="margin-bottom:32px">
+      <nav class="breadcrumb"><a href="/">Home</a> &rsaquo; <span>Industry News</span></nav>
+      <h1 style="font-size:2rem;margin:12px 0 8px">Industry News</h1>
+      <p style="color:var(--text-muted);font-size:15px">Live updates from India's event, exhibition &amp; MICE industry. Auto-updated every 4 hours.</p>
+      {% if news.lastUpdated %}
+      <div style="margin-top:8px;font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:6px">
+        <span style="width:8px;height:8px;background:#4ade80;border-radius:50%;display:inline-block;animation:pulse-dot 2s infinite"></span>
+        Last updated: {{ news.lastUpdated | dateFormat('long') }}
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px" id="news-filters">
+      <button class="news-filter-btn active" data-filter="all" onclick="filterNews('all',this)">All News</button>
+      <button class="news-filter-btn" data-filter="Industry" onclick="filterNews('Industry',this)">Industry</button>
+      <button class="news-filter-btn" data-filter="Exhibitions" onclick="filterNews('Exhibitions',this)">Exhibitions</button>
+      <button class="news-filter-btn" data-filter="MICE" onclick="filterNews('MICE',this)">MICE</button>
+      <button class="news-filter-btn" data-filter="Corporate" onclick="filterNews('Corporate',this)">Corporate</button>
+      <button class="news-filter-btn" data-filter="Technology" onclick="filterNews('Technology',this)">Technology</button>
+      <button class="news-filter-btn" data-filter="Weddings" onclick="filterNews('Weddings',this)">Weddings</button>
+      <button class="news-filter-btn" data-filter="Brand Activations" onclick="filterNews('Brand Activations',this)">Brand Activations</button>
+      <button class="news-filter-btn" data-filter="Venues" onclick="filterNews('Venues',this)">Venues</button>
+    </div>
+
+    <div class="main-grid">
+      <div class="main-content">
+        {% if news.articles and news.articles.length > 0 %}
+        <div class="news-list" id="news-list">
+          {% for article in news.articles %}
+          <article class="news-item fade-in" data-category="{{ article.category }}">
+            <div class="news-item-content">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                <span class="news-category-tag" style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(179,210,55,0.15);color:#b3d237;font-weight:600;text-transform:uppercase;letter-spacing:0.5px">{{ article.category }}</span>
+                <span style="font-size:11px;color:var(--text-muted)">{{ article.pubDate | timeAgo }}</span>
+              </div>
+              <h3 style="font-size:16px;margin:0 0 6px;line-height:1.4"><a href="{{ article.link }}" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='#b3d237'" onmouseout="this.style.color='var(--text)'">{{ article.title }}</a></h3>
+              {% if article.snippet %}
+              <p style="font-size:13px;color:var(--text-muted);margin:0 0 8px;line-height:1.5">{{ article.snippet | excerpt(30) }}</p>
+              {% endif %}
+              <div style="display:flex;align-items:center;gap:12px;font-size:11px;color:var(--text-muted)">
+                <span>Source: {{ article.source }}</span>
+                <a href="https://wa.me/?text={{ article.title | urlencode }}%20{{ article.link | urlencode }}" target="_blank" rel="noopener" style="color:#25D366;text-decoration:none;font-weight:600">Share on WhatsApp</a>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+        {% else %}
+        <div style="text-align:center;padding:60px 20px;color:var(--text-muted)">
+          <div style="font-size:48px;margin-bottom:16px">&#128240;</div>
+          <h3>News feed is loading...</h3>
+          <p>Our news aggregator updates every 4 hours. Check back soon for the latest event industry news.</p>
+        </div>
+        {% endif %}
+      </div>
+
+      {% include "sidebar.njk" %}
+    </div>
+  </div>
+</section>
+
+<style>
+.news-filter-btn{background:var(--bg-alt);border:1px solid var(--border);color:var(--text);padding:6px 16px;border-radius:20px;cursor:pointer;font-size:13px;font-weight:500;transition:all .2s}
+.news-filter-btn:hover,.news-filter-btn.active{background:#b3d237;color:#091d1b;border-color:#b3d237}
+.news-item{padding:20px 0;border-bottom:1px solid var(--border);transition:opacity .3s}
+.news-item:last-child{border-bottom:none}
+.news-item.hidden{display:none}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+</style>
+
+<script>
+function filterNews(category,btn){
+  var items=document.querySelectorAll('.news-item');
+  var btns=document.querySelectorAll('.news-filter-btn');
+  for(var i=0;i<btns.length;i++) btns[i].classList.remove('active');
+  btn.classList.add('active');
+  for(var j=0;j<items.length;j++){
+    if(category==='all'||items[j].getAttribute('data-category')===category){
+      items[j].classList.remove('hidden');
+    }else{
+      items[j].classList.add('hidden');
+    }
+  }
+}
+</script>

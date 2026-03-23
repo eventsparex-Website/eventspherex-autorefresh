@@ -88,6 +88,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f9fafb;color:#091d1
   </a></div>
 
   <div class="card">
+    <div id="liveIndicator" style="display:none;font-size:12px;color:#666;margin-bottom:12px;padding:8px 14px;background:#f0fde8;border-radius:8px;border:1px solid #d4edbc"></div>
+    <style>@keyframes livePulse{0%,100%{opacity:1}50%{opacity:.4}}</style>
     <div class="filters">
       <input type="text" id="search" placeholder="Search jobs..." oninput="filter()">
       <select id="fCat" onchange="filter()">
@@ -232,35 +234,85 @@ const jobs = [
   {title:"Junior Event Planner",company:"Think Events",cat:"Event Management",city:"Chennai",type:"Full-time",exp:"1-3 years",salary:"₹2.5-4 LPA",salaryNum:3.25,desc:"Assist senior planners with corporate events. Vendor coordination, documentation, client communication.",posted:"2026-02-03"}
 ];
 
+// Fetch live jobs from API and merge
+(function loadLiveJobs(){
+  fetch('/api/jobs.json')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if(data && data.jobs && data.jobs.length){
+        var liveJobs = data.jobs.map(function(j){
+          return {
+            title: j.title,
+            company: j.company || j.source || 'via ' + j.source,
+            cat: j.role || 'Event Management',
+            city: j.location || 'India',
+            type: 'Full-time',
+            exp: '',
+            salary: j.salary || 'Not disclosed',
+            salaryNum: 0,
+            desc: j.snippet || 'Apply on the source platform for full details.',
+            posted: j.pubDate ? j.pubDate.split('T')[0] : new Date().toISOString().split('T')[0],
+            liveLink: j.link,
+            isLive: true
+          };
+        });
+        // Add live jobs at the top, avoid duplicates by title
+        var existingTitles = {};
+        jobs.forEach(function(j){ existingTitles[j.title.toLowerCase()] = true; });
+        liveJobs.forEach(function(j){
+          if(!existingTitles[j.title.toLowerCase()]){
+            jobs.unshift(j);
+          }
+        });
+        // Update the last updated indicator
+        var indicator = document.getElementById('liveIndicator');
+        if(indicator){
+          var updated = new Date(data.lastUpdated);
+          indicator.innerHTML = '<span style="display:inline-block;width:8px;height:8px;background:#4ade80;border-radius:50%;margin-right:6px;animation:livePulse 2s infinite"></span>Live feed: ' + data.count + ' jobs from Indeed &bull; Updated ' + updated.toLocaleDateString('en-IN');
+          indicator.style.display = 'block';
+        }
+        filter();
+      }
+    })
+    .catch(function(){ /* silently fail, static jobs still work */ });
+})();
+
 let currentApplyJob = '';
 
 function render(list){
   const container = document.getElementById('jobsList');
   document.getElementById('count').textContent = `Showing ${list.length} jobs`;
   if(!list.length){container.innerHTML='<div style="text-align:center;padding:40px;color:#6a7a6a">No jobs found. Try different filters.</div>';return;}
-  container.innerHTML = list.map((j,i)=>`<div class="job-card">
+  container.innerHTML = list.map((j,i)=>{
+    var liveBadge = j.isLive ? '<span style="font-size:9px;background:#4ade80;color:#091d1b;padding:2px 8px;border-radius:4px;font-weight:700;margin-left:8px;vertical-align:middle">LIVE</span>' : '';
+    var expTag = j.exp ? `<span class="tag tag-exp">${j.exp}</span>` : '';
+    var applyBtn = j.isLive && j.liveLink
+      ? `<a href="${j.liveLink}" target="_blank" rel="noopener" class="job-btn btn-apply" style="text-decoration:none;display:inline-block">Apply Now ↗</a>`
+      : `<button class="job-btn btn-apply" onclick="applyJob('${j.title.replace(/'/g,"\\'")}','${j.company.replace(/'/g,"\\'")}')">Apply Now</button>`;
+    return `<div class="job-card">
     <div class="job-top">
       <div>
-        <h3>${j.title}</h3>
+        <h3>${j.title}${liveBadge}</h3>
         <div class="job-company">${j.company}</div>
       </div>
       <div class="job-salary">${j.salary}</div>
     </div>
     <div class="job-tags">
-      <span class="tag tag-city">📍 ${j.city}</span>
+      <span class="tag tag-city">${j.city}</span>
       <span class="tag tag-type">${j.type}</span>
-      <span class="tag tag-exp">${j.exp}</span>
+      ${expTag}
       <span class="tag tag-cat">${j.cat}</span>
     </div>
     <div class="job-desc">${j.desc}</div>
     <div class="job-footer">
       <div class="job-date">Posted: ${j.posted}</div>
       <div class="job-btns">
-        <button class="job-btn btn-share" onclick="shareJob(${i})">💬 Share</button>
-        <button class="job-btn btn-apply" onclick="applyJob('${j.title}','${j.company}')">Apply Now</button>
+        <button class="job-btn btn-share" onclick="shareJob(${i})">Share</button>
+        ${applyBtn}
       </div>
     </div>
-  </div>`).join('');
+  </div>`;
+  }).join('');
 }
 
 function filter(){

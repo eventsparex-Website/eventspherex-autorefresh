@@ -13,6 +13,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy({ "src/.htaccess": ".htaccess" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ "src/_data/jobs.json": "api/jobs.json" });
+  eleventyConfig.addPassthroughCopy({ "src/_data/news.json": "api/news.json" });
+  eleventyConfig.addPassthroughCopy({ "src/_data/tenders.json": "api/tenders.json" });
 
   // Posts collection (sorted by date descending)
   eleventyConfig.addCollection("posts", function(collectionApi) {

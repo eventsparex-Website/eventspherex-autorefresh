@@ -57,47 +57,77 @@ title: "EventSphereX - India's #1 Event Industry Portal"
 <!-- ===== PRO TOOLS HIGHLIGHT BAR ===== -->
 <section style="padding:20px 0 10px;">
   <div class="container">
-    <div style="display:flex;gap:12px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;">
-      <a href="/tools/pro/" style="flex-shrink:0;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#091d1b,#0d3d39);border:1px solid rgba(179,210,55,0.2);border-radius:12px;padding:14px 20px;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <span style="font-size:22px;">&#128179;</span>
-        <div>
-          <div style="color:#fff;font-size:13px;font-weight:600;">Digital Business Card</div>
-          <div style="color:rgba(255,255,255,0.4);font-size:10px;">Create free card</div>
-        </div>
-        <span style="font-size:9px;background:#b3d237;color:#091d1b;padding:3px 8px;border-radius:4px;font-weight:700;margin-left:4px;">FREE</span>
-      </a>
-      <a href="/tools/pro/" style="flex-shrink:0;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#091d1b,#0d3d39);border:1px solid rgba(179,210,55,0.2);border-radius:12px;padding:14px 20px;text-decoration:none;transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-        <span style="font-size:22px;">&#128196;</span>
-        <div>
-          <div style="color:#fff;font-size:13px;font-weight:600;">Proposal Generator</div>
-          <div style="color:rgba(255,255,255,0.4);font-size:10px;">Professional quotes</div>
-        </div>
-        <span style="font-size:9px;background:#b3d237;color:#091d1b;padding:3px 8px;border-radius:4px;font-weight:700;margin-left:4px;">PRO</span>
-      </a>
-      <a href="/tools/pro/" style="flex-shrink:0;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#091d1b,#0d3d39);border:1px solid rgba(179,210,55,0.2);border-radius:12px;padding:14px 20px;text-decoration:none;transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-        <span style="font-size:22px;">&#128200;</span>
-        <div>
-          <div style="color:#fff;font-size:13px;font-weight:600;">Analytics Dashboard</div>
-          <div style="color:rgba(255,255,255,0.4);font-size:10px;">Track performance</div>
-        </div>
-        <span style="font-size:9px;background:#b3d237;color:#091d1b;padding:3px 8px;border-radius:4px;font-weight:700;margin-left:4px;">PRO</span>
-      </a>
-      <a href="/tools/event-budget-calculator.html" style="flex-shrink:0;display:flex;align-items:center;gap:10px;background:rgba(179,210,55,0.06);border:1px solid rgba(179,210,55,0.12);border-radius:12px;padding:14px 20px;text-decoration:none;transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-        <span style="font-size:22px;">&#128202;</span>
-        <div>
-          <div style="color:var(--text);font-size:13px;font-weight:600;">Budget Calculator</div>
-          <div style="color:var(--text-muted);font-size:10px;">Plan event costs</div>
-        </div>
-        <span style="font-size:9px;background:rgba(179,210,55,0.15);color:#b3d237;padding:3px 8px;border-radius:4px;font-weight:700;margin-left:4px;">FREE</span>
-      </a>
-      <a href="/tools/industry-directory.html" style="flex-shrink:0;display:flex;align-items:center;gap:10px;background:rgba(179,210,55,0.06);border:1px solid rgba(179,210,55,0.12);border-radius:12px;padding:14px 20px;text-decoration:none;transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-        <span style="font-size:22px;">&#127970;</span>
-        <div>
-          <div style="color:var(--text);font-size:13px;font-weight:600;">Industry Directory</div>
-          <div style="color:var(--text-muted);font-size:10px;">Find vendors</div>
-        </div>
-        <span style="font-size:9px;background:rgba(179,210,55,0.15);color:#b3d237;padding:3px 8px;border-radius:4px;font-weight:700;margin-left:4px;">FREE</span>
-      </a>
+    <div class="tools-strip" id="tools-strip">
+      <div class="tools-strip-track" id="tools-track">
+        <a href="/tools/pro/" class="tools-strip-card tools-strip-card--pro">
+          <span style="font-size:22px;">&#128179;</span>
+          <div>
+            <div class="tools-strip-name">Digital Business Card</div>
+            <div class="tools-strip-desc">Create free card</div>
+          </div>
+          <span class="tools-strip-badge tools-strip-badge--free">FREE</span>
+        </a>
+        <a href="/tools/pro/" class="tools-strip-card tools-strip-card--pro">
+          <span style="font-size:22px;">&#128196;</span>
+          <div>
+            <div class="tools-strip-name">Proposal Generator</div>
+            <div class="tools-strip-desc">Professional quotes</div>
+          </div>
+          <span class="tools-strip-badge tools-strip-badge--pro">PRO</span>
+        </a>
+        <a href="/tools/pro/" class="tools-strip-card tools-strip-card--pro">
+          <span style="font-size:22px;">&#128200;</span>
+          <div>
+            <div class="tools-strip-name">Analytics Dashboard</div>
+            <div class="tools-strip-desc">Track performance</div>
+          </div>
+          <span class="tools-strip-badge tools-strip-badge--pro">PRO</span>
+        </a>
+        <a href="/tools/event-budget-calculator.html" class="tools-strip-card tools-strip-card--lite">
+          <span style="font-size:22px;">&#128202;</span>
+          <div>
+            <div class="tools-strip-name">Budget Calculator</div>
+            <div class="tools-strip-desc">Plan event costs</div>
+          </div>
+          <span class="tools-strip-badge tools-strip-badge--free">FREE</span>
+        </a>
+        <a href="/tools/industry-directory.html" class="tools-strip-card tools-strip-card--lite">
+          <span style="font-size:22px;">&#127970;</span>
+          <div>
+            <div class="tools-strip-name">Industry Directory</div>
+            <div class="tools-strip-desc">Find vendors</div>
+          </div>
+          <span class="tools-strip-badge tools-strip-badge--free">FREE</span>
+        </a>
+        <a href="/tools/event-checklist-generator.html" class="tools-strip-card tools-strip-card--lite">
+          <span style="font-size:22px;">&#9989;</span>
+          <div>
+            <div class="tools-strip-name">Checklist Generator</div>
+            <div class="tools-strip-desc">Custom checklists</div>
+          </div>
+          <span class="tools-strip-badge tools-strip-badge--free">FREE</span>
+        </a>
+        <a href="/tools/event-calendar.html" class="tools-strip-card tools-strip-card--lite">
+          <span style="font-size:22px;">&#128197;</span>
+          <div>
+            <div class="tools-strip-name">Event Calendar</div>
+            <div class="tools-strip-desc">Upcoming events</div>
+          </div>
+          <span class="tools-strip-badge tools-strip-badge--free">FREE</span>
+        </a>
+        <a href="/tools/led-calculator-basic.html" class="tools-strip-card tools-strip-card--lite">
+          <span style="font-size:22px;">&#128250;</span>
+          <div>
+            <div class="tools-strip-name">LED Pixel Calculator</div>
+            <div class="tools-strip-desc">Screen resolution</div>
+          </div>
+          <span class="tools-strip-badge tools-strip-badge--free">FREE</span>
+        </a>
+      </div>
+    </div>
+    <div class="tools-strip-nav" id="tools-nav">
+      <button class="tools-strip-btn" id="tools-prev" aria-label="Previous">&larr;</button>
+      <button class="tools-strip-btn" id="tools-next" aria-label="Next">&rarr;</button>
     </div>
   </div>
 </section>
@@ -316,10 +346,68 @@ title: "EventSphereX - India's #1 Event Industry Portal"
   </div>
 </section>
 
+<!-- ===== INDUSTRY NEWS WIDGET ===== -->
+{% if news.articles and news.articles.length > 0 %}
+<section class="section fade-in" style="padding:32px 0">
+  <div class="container">
+    <h2 class="section-title">&#128240; Industry News <span style="font-size:11px;background:#4ade80;color:#091d1b;padding:2px 8px;border-radius:4px;font-weight:700;margin-left:8px;vertical-align:middle">LIVE</span> <a href="/industry-news/">View All &rarr;</a></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px">
+      {% for article in news.articles | limit(6) %}
+      <a href="{{ article.link }}" target="_blank" rel="noopener" class="news-widget-card" style="display:block;padding:16px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:rgba(179,210,55,0.15);color:#b3d237;font-weight:700;text-transform:uppercase">{{ article.category }}</span>
+          <span style="font-size:11px;color:var(--text-muted)">{{ article.pubDate | timeAgo }}</span>
+        </div>
+        <h4 style="font-size:14px;color:var(--text);margin:0 0 6px;line-height:1.4">{{ article.title }}</h4>
+        <div style="font-size:11px;color:var(--text-muted)">{{ article.source }}</div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ===== GOVERNMENT TENDERS WIDGET ===== -->
+{% if tenders.tenders and tenders.tenders.length > 0 %}
+<section class="section fade-in" style="padding:32px 0;background:var(--bg-alt)">
+  <div class="container">
+    <h2 class="section-title">&#127963; Government Tenders <span style="font-size:11px;background:#60a5fa;color:#fff;padding:2px 8px;border-radius:4px;font-weight:700;margin-left:8px;vertical-align:middle">{{ tenders.count }} Active</span> <a href="/tenders/">View All &rarr;</a></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+      {% for tender in tenders.tenders | limit(4) %}
+      <a href="{{ tender.link }}" target="_blank" rel="noopener" style="display:block;padding:16px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-decoration:none;transition:transform .2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:rgba(179,210,55,0.15);color:#b3d237;font-weight:700;text-transform:uppercase">{{ tender.category }}</span>
+          <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:rgba(59,130,246,0.15);color:#60a5fa;font-weight:600">{{ tender.state }}</span>
+        </div>
+        <h4 style="font-size:14px;color:var(--text);margin:0 0 6px;line-height:1.4">{{ tender.title }}</h4>
+        <div style="font-size:11px;color:var(--text-muted)">{{ tender.source }} &bull; {{ tender.pubDate | timeAgo }}</div>
+      </a>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:20px">
+      <a href="/tenders/" class="btn btn-outline">Browse All Tenders &rarr;</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <!-- ===== EVENT INDUSTRY JOBS ===== -->
 <section class="jobs-section fade-in">
   <div class="container">
-    <h2 class="section-title">Event Industry Jobs <a href="https://www.linkedin.com/jobs/search/?keywords=event%20management&location=India" target="_blank" rel="noopener">View All Jobs &rarr;</a></h2>
+    <h2 class="section-title">Event Industry Jobs <a href="/industry-news/">View All Jobs &rarr;</a></h2>
+    {% if jobs.jobs and jobs.jobs.length > 0 %}
+    <div class="jobs-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+      {% for job in jobs.jobs | limit(5) %}
+      <a href="{{ job.link }}" target="_blank" rel="noopener" class="job-card" style="display:block">
+        <div class="job-card-header"><h4>{{ job.title | excerpt(6) }}</h4><span class="job-type">{{ job.source }}</span></div>
+        {% if job.company %}<div class="job-company">{{ job.company }}</div>{% endif %}
+        <div class="job-location">{{ job.location }}{% if job.salary %} &bull; {{ job.salary }}{% endif %}</div>
+        <div class="job-tags"><span class="job-tag">{{ job.role }}</span></div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <!-- Fallback: static LinkedIn job cards -->
     <div class="jobs-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
       <a href="https://www.linkedin.com/jobs/search/?keywords=event%20manager&location=India" target="_blank" rel="noopener" class="job-card" style="display:block">
         <div class="job-card-header"><h4>Event Manager</h4><span class="job-type">Live</span></div>
@@ -352,9 +440,10 @@ title: "EventSphereX - India's #1 Event Industry Portal"
         <div class="job-tags"><span class="job-tag">Marketing</span><span class="job-tag">Digital</span></div>
       </a>
     </div>
+    {% endif %}
     <div style="text-align:center;margin-top:24px;display:flex;justify-content:center;gap:12px">
       <a href="https://www.linkedin.com/jobs/search/?keywords=event%20management&location=India" target="_blank" rel="noopener" class="btn btn-outline">Browse All Jobs &rarr;</a>
-      <a href="mailto:contact@eventspherex.com?subject=Post a Job" class="btn btn-accent">Post a Job &mdash; Free</a>
+      <a href="mailto:contact@eventspherex.com?subject=Post a Job" class="btn btn-accent">Post a Job - Free</a>
     </div>
   </div>
 </section>
