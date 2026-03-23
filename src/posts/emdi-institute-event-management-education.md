@@ -12,7 +12,7 @@ tags:
 author: "EventSphereX"
 readTime: "12 min read"
 status: publish
-layout: featured-post.njk
+layout: post.njk
 ---
 
 <p class="lead">India's events industry is on a steep upward trajectory. Valued at over ₹10,000 crore and growing at nearly 20% year-on-year, the sector now spans everything from massive music festivals and luxury destination weddings to corporate brand activations and international exhibitions. With this explosive growth comes an urgent demand for skilled professionals who can plan, produce, and execute world-class experiences.</p>
