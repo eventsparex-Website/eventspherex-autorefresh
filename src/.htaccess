@@ -12,5 +12,7 @@ RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Try adding trailing slash and index.html
+# Skip files with extensions (images, css, js, fonts, etc.)
+RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|svg|webp|ico|css|js|woff|woff2|ttf|eot|pdf|json|xml|txt|mp4|webm|zip|map)$ [NC]
+# Add trailing slash to directory-like URLs only
 RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
