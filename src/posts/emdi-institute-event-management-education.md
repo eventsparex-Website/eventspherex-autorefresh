@@ -2,7 +2,7 @@
 title: "EMDI Institute - India's Pioneer in Event Management Education"
 description: "A comprehensive look at EMDI Institute of Media & Communication - courses, placements, alumni network, live event exposure, and why it's one of India's top event management colleges."
 date: 2026-03-23 14:30:00
-featured_image: "/images/posts/emdi/corporate-event-bfsi.jpeg"
+featured_image: "/images/posts/emdi/corporate-event-bfsi.jpeg?v=2"
 imageAlt: "EMDI Institute students at Bharat Fintech Summit - professional event management"
 category: "Education"
 categorySlug: "education"

@@ -7,7 +7,7 @@ category: "Education"
 categorySlug: "education"
 badgeClass: "badge-education"
 excerpt: "India's event industry is projected to hit USD 32 billion by 2035 and the demand for trained professionals has never been higher. Here's a comprehensive guide to the best event management courses, colleges, and certifications in India — with honest advice on fees, placements, and career prospects."
-featured_image: "/images/posts/article-31.jpg"
+featured_image: "/images/posts/article-31.jpg?v=2"
 status: publish
 tags:
   - posts
