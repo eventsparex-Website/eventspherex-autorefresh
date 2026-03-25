@@ -1,11 +1,10 @@
 name: Auto-Refresh News, Jobs & Tenders
 
 on:
-  # schedule:
-    # DISABLED until April 1 - only 58 min left in billing cycle
-    # Re-enable with 3x/day: '30 0,6,12 * * *'
-    # - cron: '30 0,6,12 * * *'
-  workflow_dispatch: # Manual trigger only until April 1
+  schedule:
+    # Run 3x/day: 6AM, 12PM, 6PM IST (12:30AM, 6:30AM, 12:30PM UTC)
+    - cron: '30 0,6,12 * * *'
+  workflow_dispatch: # Allow manual trigger
 
 concurrency:
   group: deploy-hostinger
@@ -61,4 +60,8 @@ jobs:
             --exclude='.htaccess.wp-backup' \
             --exclude='staged-posts' \
             --exclude='staged-pages' \
-            --exclude='backups'
+            --exclude='backups' \
+            --exclude='scripts' \
+            --exclude='publish-scheduled.sh' \
+            --exclude='publish-scheduled.php' \
+            --exclude='publish-log.txt'
