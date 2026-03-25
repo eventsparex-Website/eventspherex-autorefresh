@@ -1,11 +1,11 @@
 name: Auto-Refresh News, Jobs & Tenders
 
 on:
-  schedule:
-    # Run 3x/day: 6AM, 12PM, 6PM IST (12:30AM, 6:30AM, 12:30PM UTC)
-    # Saves ~900 min/month vs previous 4-hourly (1800 min/month)
-    - cron: '30 0,6,12 * * *'
-  workflow_dispatch: # Allow manual trigger
+  # schedule:
+    # DISABLED until April 1 - only 58 min left in billing cycle
+    # Re-enable with 3x/day: '30 0,6,12 * * *'
+    # - cron: '30 0,6,12 * * *'
+  workflow_dispatch: # Manual trigger only until April 1
 
 concurrency:
   group: deploy-hostinger
