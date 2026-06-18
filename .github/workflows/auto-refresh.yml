@@ -13,6 +13,7 @@ concurrency:
 jobs:
   fetch-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repository
@@ -51,11 +52,11 @@ jobs:
 
       - name: Deploy to Hostinger (news/jobs/tenders only - preserves manual content)
         run: |
-          rsync -avz -e "ssh -p 65002 -o StrictHostKeyChecking=no" \
+          rsync -avz -e "ssh -p 65002 -o StrictHostKeyChecking=no -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=4 -o BatchMode=yes" \
             _site/industry-news/ u410945448@157.173.216.223:~/domains/eventspherex.com/public_html/industry-news/ \
             --delete
-          rsync -avz -e "ssh -p 65002 -o StrictHostKeyChecking=no" \
+          rsync -avz -e "ssh -p 65002 -o StrictHostKeyChecking=no -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=4 -o BatchMode=yes" \
             _site/tenders/ u410945448@157.173.216.223:~/domains/eventspherex.com/public_html/tenders/ \
             --delete
-          rsync -avz -e "ssh -p 65002 -o StrictHostKeyChecking=no" \
+          rsync -avz -e "ssh -p 65002 -o StrictHostKeyChecking=no -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=4 -o BatchMode=yes" \
             _site/tools/job-board.html u410945448@157.173.216.223:~/domains/eventspherex.com/public_html/tools/job-board.html
