@@ -6,6 +6,9 @@ on:
     - cron: '30 0,6,12 * * *'
   workflow_dispatch: # Allow manual trigger
 
+permissions:
+  contents: write
+
 concurrency:
   group: deploy-hostinger
   cancel-in-progress: true
@@ -60,3 +63,11 @@ jobs:
             --delete
           rsync -avz -e "ssh -p 65002 -o StrictHostKeyChecking=no -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=4 -o BatchMode=yes" \
             _site/tools/job-board.html u410945448@157.173.216.223:~/domains/eventspherex.com/public_html/tools/job-board.html
+
+      - name: Keepalive commit (prevents 60-day auto-disable)
+        if: github.event_name == 'schedule'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git commit --allow-empty -m "keepalive: scheduled refresh"
+          git push
